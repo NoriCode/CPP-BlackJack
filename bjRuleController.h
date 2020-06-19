@@ -1,0 +1,10 @@
+#ifndef CCPP_EXAM_BJRULECONTROLLER_H
+#define CCPP_EXAM_BJRULECONTROLLER_H
+
+
+class bjRuleController {
+
+};
+
+
+#endif //CCPP_EXAM_BJRULECONTROLLER_H

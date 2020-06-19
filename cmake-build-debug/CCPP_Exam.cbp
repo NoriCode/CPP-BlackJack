@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjRuleController.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjRuleController.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/cards.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/cards.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/main.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>

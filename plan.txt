@@ -1,0 +1,25 @@
+blackjack
+	rulecontroller
+		gibt regeln aus
+		überprüft siegbedingungen
+		mischt die karten
+	kartendeck
+		beinhaltet alle karten
+			6 decks mit je 52 karten
+
+	karten
+		interface karte
+			printfunktion
+			ausgabe des zeichens und der nummer
+			variablen
+				zeichen
+				nummer
+		blackjack karte implemnts interface karte
+			varaiblen
+				zeichen
+				nummer
+				wert
+			funktionen
+				printfunktion
+					ausgabe des zeichens und der nummer
+				

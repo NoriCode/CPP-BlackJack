@@ -3,4 +3,4 @@ project(CCPP_Exam)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CCPP_Exam main.cpp)
+add_executable(CCPP_Exam main.cpp bjRuleController.cpp bjRuleController.h cards.cpp cards.h)

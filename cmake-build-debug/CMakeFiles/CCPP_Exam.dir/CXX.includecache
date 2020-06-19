@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/philip_nori/CCPP_Exam/helpers/println.hpp
+iostream
+-
+iomanip
+-
+sstream
+-
+
+/home/philip_nori/CCPP_Exam/main.cpp
+stdio.h
+-
+helpers/println.hpp
+/home/philip_nori/CCPP_Exam/helpers/println.hpp
+

@@ -123,6 +123,60 @@ CCPP_Exam/fast:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/build
 .PHONY : CCPP_Exam/fast
 
+bjRuleController.o: bjRuleController.cpp.o
+
+.PHONY : bjRuleController.o
+
+# target to build an object file
+bjRuleController.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o
+.PHONY : bjRuleController.cpp.o
+
+bjRuleController.i: bjRuleController.cpp.i
+
+.PHONY : bjRuleController.i
+
+# target to preprocess a source file
+bjRuleController.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.i
+.PHONY : bjRuleController.cpp.i
+
+bjRuleController.s: bjRuleController.cpp.s
+
+.PHONY : bjRuleController.s
+
+# target to generate assembly for a file
+bjRuleController.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.s
+.PHONY : bjRuleController.cpp.s
+
+cards.o: cards.cpp.o
+
+.PHONY : cards.o
+
+# target to build an object file
+cards.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/cards.cpp.o
+.PHONY : cards.cpp.o
+
+cards.i: cards.cpp.i
+
+.PHONY : cards.i
+
+# target to preprocess a source file
+cards.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/cards.cpp.i
+.PHONY : cards.cpp.i
+
+cards.s: cards.cpp.s
+
+.PHONY : cards.s
+
+# target to generate assembly for a file
+cards.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/cards.cpp.s
+.PHONY : cards.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CCPP_Exam"
+	@echo "... bjRuleController.o"
+	@echo "... bjRuleController.i"
+	@echo "... bjRuleController.s"
+	@echo "... cards.o"
+	@echo "... cards.i"
+	@echo "... cards.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
