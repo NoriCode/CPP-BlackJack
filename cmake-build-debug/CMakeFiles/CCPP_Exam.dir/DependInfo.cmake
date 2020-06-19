@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/philip_nori/CCPP_Exam/bjCards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
   "/home/philip_nori/CCPP_Exam/bjRuleController.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "/home/philip_nori/CCPP_Exam/cards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
   "/home/philip_nori/CCPP_Exam/main.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
+  "/home/philip_nori/CCPP_Exam/myLittlehelpers.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o"
   "/home/philip_nori/CCPP_Exam/playCardDeck.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

@@ -1,14 +1,9 @@
 #include "cards.h"
 
-class bjCards : public cards {
-protected:
-    int value;
-public:
-    void setValue(int v) {
-        value = v;
-    }
 
-    int getValue() {
-        return value;
-    }
-};
+#include "cards.h"
+
+int cards::whoAmI() {
+    printf("%s,%s", getSymbol().c_str(), getnumber().c_str());
+    return 0;
+}

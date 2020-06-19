@@ -123,6 +123,33 @@ CCPP_Exam/fast:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/build
 .PHONY : CCPP_Exam/fast
 
+bjCards.o: bjCards.cpp.o
+
+.PHONY : bjCards.o
+
+# target to build an object file
+bjCards.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o
+.PHONY : bjCards.cpp.o
+
+bjCards.i: bjCards.cpp.i
+
+.PHONY : bjCards.i
+
+# target to preprocess a source file
+bjCards.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.i
+.PHONY : bjCards.cpp.i
+
+bjCards.s: bjCards.cpp.s
+
+.PHONY : bjCards.s
+
+# target to generate assembly for a file
+bjCards.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.s
+.PHONY : bjCards.cpp.s
+
 bjRuleController.o: bjRuleController.cpp.o
 
 .PHONY : bjRuleController.o
@@ -204,6 +231,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+myLittlehelpers.o: myLittlehelpers.cpp.o
+
+.PHONY : myLittlehelpers.o
+
+# target to build an object file
+myLittlehelpers.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o
+.PHONY : myLittlehelpers.cpp.o
+
+myLittlehelpers.i: myLittlehelpers.cpp.i
+
+.PHONY : myLittlehelpers.i
+
+# target to preprocess a source file
+myLittlehelpers.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.i
+.PHONY : myLittlehelpers.cpp.i
+
+myLittlehelpers.s: myLittlehelpers.cpp.s
+
+.PHONY : myLittlehelpers.s
+
+# target to generate assembly for a file
+myLittlehelpers.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.s
+.PHONY : myLittlehelpers.cpp.s
+
 playCardDeck.o: playCardDeck.cpp.o
 
 .PHONY : playCardDeck.o
@@ -240,6 +294,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CCPP_Exam"
+	@echo "... bjCards.o"
+	@echo "... bjCards.i"
+	@echo "... bjCards.s"
 	@echo "... bjRuleController.o"
 	@echo "... bjRuleController.i"
 	@echo "... bjRuleController.s"
@@ -249,6 +306,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... myLittlehelpers.o"
+	@echo "... myLittlehelpers.i"
+	@echo "... myLittlehelpers.s"
 	@echo "... playCardDeck.o"
 	@echo "... playCardDeck.i"
 	@echo "... playCardDeck.s"

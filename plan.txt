@@ -22,4 +22,3 @@ blackjack
 			funktionen
 				printfunktion
 					ausgabe des zeichens und der nummer
-				

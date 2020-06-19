@@ -7,9 +7,10 @@
 
 class cards {
 public:
-    // pure virtual function providing interface framework.
+    cards(std::string s ="nori", std::string n = "x") :_symbol(s), _number(n){}
     virtual int whoAmI() = 0;
-    void setSymbol(char s) {
+
+    void setSymbol(std::string s) {
         _symbol = s;
     }
 
@@ -17,8 +18,16 @@ public:
         _number = n;
     }
 
+    std::string getSymbol() {
+        return _symbol ;
+    }
+
+    std::string getnumber() {
+        return _number;
+    }
+
 protected:
-    char _number;
+    std::string _number;
     std::string _symbol;
 };
 

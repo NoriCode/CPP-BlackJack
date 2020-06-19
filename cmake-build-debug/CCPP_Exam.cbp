@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjCards.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjCards.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjRuleController.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
@@ -97,6 +103,12 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/main.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/myLittlehelpers.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/myLittlehelpers.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/playCardDeck.cpp">
