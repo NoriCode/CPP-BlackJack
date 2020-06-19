@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CCPP_Exam.dir/main.cpp.o  -o CCPP_Exam 

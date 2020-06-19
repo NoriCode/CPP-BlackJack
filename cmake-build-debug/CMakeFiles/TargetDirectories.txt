@@ -1,0 +1,3 @@
+/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir
