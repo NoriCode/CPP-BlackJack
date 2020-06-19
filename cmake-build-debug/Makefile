@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+playCardDeck.o: playCardDeck.cpp.o
+
+.PHONY : playCardDeck.o
+
+# target to build an object file
+playCardDeck.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o
+.PHONY : playCardDeck.cpp.o
+
+playCardDeck.i: playCardDeck.cpp.i
+
+.PHONY : playCardDeck.i
+
+# target to preprocess a source file
+playCardDeck.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.i
+.PHONY : playCardDeck.cpp.i
+
+playCardDeck.s: playCardDeck.cpp.s
+
+.PHONY : playCardDeck.s
+
+# target to generate assembly for a file
+playCardDeck.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.s
+.PHONY : playCardDeck.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... playCardDeck.o"
+	@echo "... playCardDeck.i"
+	@echo "... playCardDeck.s"
 .PHONY : help
 
 

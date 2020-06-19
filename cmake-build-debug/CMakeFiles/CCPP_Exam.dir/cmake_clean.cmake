@@ -1,9 +1,10 @@
 file(REMOVE_RECURSE
-  "CCPP_Exam"
-  "CCPP_Exam.pdb"
+  "../CCPP_Exam"
+  "../CCPP_Exam.pdb"
   "CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/main.cpp.o"
+  "CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

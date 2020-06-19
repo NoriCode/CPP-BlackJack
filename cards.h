@@ -7,16 +7,16 @@ public:
     // pure virtual function providing interface framework.
     virtual int whoAmI() = 0;
     void setSymbol(char s) {
-        symbol = s;
+        _symbol = s;
     }
 
     void setnumber(char n) {
-        number = n;
+        _number = n;
     }
 
 protected:
-    char number;
-    char symbol;
+    char _number;
+    std::string _symbol;
 };
 
 

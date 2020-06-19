@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/CCPP_Exam.dir/main.cpp.o CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o CMakeFiles/CCPP_Exam.dir/cards.cpp.o  -o CCPP_Exam 
+/usr/bin/c++  -g   CMakeFiles/CCPP_Exam.dir/main.cpp.o CMakeFiles/CCPP_Exam.dir/cards.cpp.o CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o  -o ../CCPP_Exam 

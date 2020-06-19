@@ -3,7 +3,10 @@
 
 
 class bjRuleController {
+private:
 
+public:
+    static void printRules();
 };
 
 

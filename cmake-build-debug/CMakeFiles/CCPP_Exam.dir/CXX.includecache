@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/philip_nori/CCPP_Exam/bjRuleController.cpp
+bjRuleController.h
+/home/philip_nori/CCPP_Exam/bjRuleController.h
+stdio.h
+-
+fstream
+-
+iostream
+-
+
+/home/philip_nori/CCPP_Exam/bjRuleController.h
+
 /home/philip_nori/CCPP_Exam/helpers/println.hpp
 iostream
 -
@@ -19,4 +31,10 @@ stdio.h
 -
 helpers/println.hpp
 /home/philip_nori/CCPP_Exam/helpers/println.hpp
+playCardDeck.h
+/home/philip_nori/CCPP_Exam/playCardDeck.h
+bjRuleController.h
+/home/philip_nori/CCPP_Exam/bjRuleController.h
+
+/home/philip_nori/CCPP_Exam/playCardDeck.h
 

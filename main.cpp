@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "helpers/println.hpp"
+#include "playCardDeck.h"
+#include "bjRuleController.h"
 
 int menu(int in){
     printf("Welcome to Blackjack\n");
@@ -11,10 +13,20 @@ int menu(int in){
     return in;
 }
 
+int game(){
+    playCardDeck::generateCards();
+    return 0;
+}
+
 int main() {
     int menuOption = 0;
     while(menuOption != 3){
         menuOption = menu(menuOption);
+        if (menuOption == 1){
+            game();
+        }else if(menuOption == 2) {
+            bjRuleController::printRules();
+        }
     }
     return 0;
 }
