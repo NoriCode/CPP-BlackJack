@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "helpers/println.hpp"
 #include "playCardDeck.h"
 #include "bjRuleController.h"
 
@@ -15,17 +14,18 @@ int menu(int in) {
 
 int game() {
     playCardDeck p;
-    p.generatePlayDeck(0);
+    p.generatePlayDeck();
+    p.resetPlayDeck();
     return 0;
 }
 
 int main() {
-    game();
-    int menuOption = 3;
+    int menuOption = 0;
     while (menuOption != 3) {
         menuOption = menu(menuOption);
         if (menuOption == 1) {
             game();
+            menuOption=3;
         } else if (menuOption == 2) {
             bjRuleController::printRules();
         }

@@ -2,32 +2,35 @@
 #define CCPP_EXAM_PLAYCARDDECK_H
 
 #include <vector>
+#include <algorithm>
 #include "cards.h"
 #include "bjCards.h"
 
 class playCardDeck {
 protected:
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};
-    std::vector<bjCards *> *_playDeck;
+    std::vector<bjCards *> _playDeck;
+    std::vector<bjCards *> _playedCards;
     int _cardCounter;
+
+    void setCardCounter(int i);
+
+    void reduceCardCounter();
+
+    std::string getNumberX(int x);
+
+    void addPlayDeck(bjCards *card);
+
 public:
-    void generatePlayDeck(int count);
+    void generatePlayDeck();
 
-    void addPlayDeck(bjCards *card) {
-        _playDeck->push_back(card);
-    }
+    void resetPlayDeck();
 
-    void setCardCounter(int i) {
-        _cardCounter = i;
-    }
+    void playedCardsCollector(bjCards *card);
 
-    int getCardCounter(int i) {
-        return _cardCounter;
-    }
+    void deckShuffel();
 
-    std::string getNumberX(int x) {
-        return numberList[x];
-    }
+    int getCardCounter(int i);
 };
 
 
