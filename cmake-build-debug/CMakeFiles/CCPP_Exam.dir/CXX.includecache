@@ -17,12 +17,24 @@ helpers/println.hpp
 /home/philip_nori/CCPP_Exam/helpers/println.hpp
 
 /home/philip_nori/CCPP_Exam/bjRuleController.h
+iostream
+-
 
 /home/philip_nori/CCPP_Exam/cards.h
 stdio.h
 -
 string
 -
+
+/home/philip_nori/CCPP_Exam/deck.h
+vector
+-
+algorithm
+-
+cards.h
+/home/philip_nori/CCPP_Exam/cards.h
+bjCards.h
+/home/philip_nori/CCPP_Exam/bjCards.h
 
 /home/philip_nori/CCPP_Exam/helpers/println.hpp
 iostream
@@ -32,21 +44,25 @@ iomanip
 sstream
 -
 
-/home/philip_nori/CCPP_Exam/main.cpp
+/home/philip_nori/CCPP_Exam/player.cpp
+player.h
+/home/philip_nori/CCPP_Exam/player.h
 stdio.h
--
-playCardDeck.h
-/home/philip_nori/CCPP_Exam/playCardDeck.h
-bjRuleController.h
-/home/philip_nori/CCPP_Exam/bjRuleController.h
+/home/philip_nori/CCPP_Exam/stdio.h
 
-/home/philip_nori/CCPP_Exam/playCardDeck.h
-vector
--
-algorithm
--
+/home/philip_nori/CCPP_Exam/player.h
 cards.h
 /home/philip_nori/CCPP_Exam/cards.h
 bjCards.h
 /home/philip_nori/CCPP_Exam/bjCards.h
+vector
+-
+playerdeck.h
+/home/philip_nori/CCPP_Exam/playerdeck.h
+bjRuleController.h
+/home/philip_nori/CCPP_Exam/bjRuleController.h
+
+/home/philip_nori/CCPP_Exam/playerdeck.h
+deck.h
+/home/philip_nori/CCPP_Exam/deck.h
 

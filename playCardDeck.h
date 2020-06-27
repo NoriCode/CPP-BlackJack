@@ -5,13 +5,13 @@
 #include <algorithm>
 #include "cards.h"
 #include "bjCards.h"
+#include "deck.h"
 
-class playCardDeck {
+class playCardDeck : public deck {
 protected:
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};
-    std::vector<bjCards *> _playDeck;
+
     std::vector<bjCards *> _playedCards;
-    int _cardCounter;
 
     void setCardCounter(int i);
 
@@ -19,18 +19,14 @@ protected:
 
     std::string getNumberX(int x);
 
-    void addPlayDeck(bjCards *card);
-
 public:
-    void generatePlayDeck();
+    void generatePlayDeck(int maxDecks);
 
     void resetPlayDeck();
 
     void playedCardsCollector(bjCards *card);
 
     void deckShuffel();
-
-    int getCardCounter(int i);
 };
 
 

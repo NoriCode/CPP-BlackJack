@@ -2,8 +2,8 @@
 #include <algorithm>
 #include "bjCards.h"
 
-void playCardDeck::generatePlayDeck() {
-    for (int i = 0; i < 6; ++i) {
+void playCardDeck::generatePlayDeck(int maxDecks) {
+    for (int i = 0; i < maxDecks; ++i) {
         for (int j = 0; j < 13; ++j) {
             int value = j + 2;
             if (value > 10) {
@@ -15,16 +15,13 @@ void playCardDeck::generatePlayDeck() {
             addPlayDeck(new bjCards("acorns", getNumberX(j), value));
         }
     }
-    setCardCounter(_playDeck.size());
+    setCardCounter(_deck.size());
 }
 
-void playCardDeck::addPlayDeck(bjCards *card) {
-    _playDeck.push_back(card);
-}
 
 void playCardDeck::playedCardsCollector(bjCards *card) {
     _playedCards.push_back(card);
-    _playDeck.erase(_playDeck.begin());
+    _deck.erase(_deck.begin());
     reduceCardCounter();
 }
 
@@ -33,20 +30,18 @@ void playCardDeck::resetPlayDeck() {
         addPlayDeck(card);
     }
     _playedCards.clear();
-    setCardCounter(_playDeck.size());
+    setCardCounter(_deck.size());
 }
 
 void playCardDeck::deckShuffel() {
-    std::random_shuffle(_playDeck.begin(), _playDeck.end());
+    std::random_shuffle(_deck.begin(), _deck.end());
 }
 
 void playCardDeck::setCardCounter(int i) {
     _cardCounter = i;
 }
 
-int playCardDeck::getCardCounter(int i) {
-    return _cardCounter;
-}
+
 
 void playCardDeck::reduceCardCounter() {
     _cardCounter--;

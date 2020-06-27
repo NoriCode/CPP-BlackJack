@@ -102,6 +102,12 @@
 		<Unit filename="/home/philip_nori/CCPP_Exam/cards.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/deck.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/deck.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/main.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
@@ -115,6 +121,18 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/playCardDeck.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/player.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/player.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/playerdeck.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/playerdeck.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/test.txt">

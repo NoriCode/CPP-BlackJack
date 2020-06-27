@@ -204,6 +204,33 @@ cards.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/cards.cpp.s
 .PHONY : cards.cpp.s
 
+deck.o: deck.cpp.o
+
+.PHONY : deck.o
+
+# target to build an object file
+deck.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/deck.cpp.o
+.PHONY : deck.cpp.o
+
+deck.i: deck.cpp.i
+
+.PHONY : deck.i
+
+# target to preprocess a source file
+deck.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/deck.cpp.i
+.PHONY : deck.cpp.i
+
+deck.s: deck.cpp.s
+
+.PHONY : deck.s
+
+# target to generate assembly for a file
+deck.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/deck.cpp.s
+.PHONY : deck.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -285,6 +312,60 @@ playCardDeck.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.s
 .PHONY : playCardDeck.cpp.s
 
+player.o: player.cpp.o
+
+.PHONY : player.o
+
+# target to build an object file
+player.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/player.cpp.o
+.PHONY : player.cpp.o
+
+player.i: player.cpp.i
+
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/player.cpp.i
+.PHONY : player.cpp.i
+
+player.s: player.cpp.s
+
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/player.cpp.s
+.PHONY : player.cpp.s
+
+playerdeck.o: playerdeck.cpp.o
+
+.PHONY : playerdeck.o
+
+# target to build an object file
+playerdeck.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o
+.PHONY : playerdeck.cpp.o
+
+playerdeck.i: playerdeck.cpp.i
+
+.PHONY : playerdeck.i
+
+# target to preprocess a source file
+playerdeck.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.i
+.PHONY : playerdeck.cpp.i
+
+playerdeck.s: playerdeck.cpp.s
+
+.PHONY : playerdeck.s
+
+# target to generate assembly for a file
+playerdeck.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.s
+.PHONY : playerdeck.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -303,6 +384,9 @@ help:
 	@echo "... cards.o"
 	@echo "... cards.i"
 	@echo "... cards.s"
+	@echo "... deck.o"
+	@echo "... deck.i"
+	@echo "... deck.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -312,6 +396,12 @@ help:
 	@echo "... playCardDeck.o"
 	@echo "... playCardDeck.i"
 	@echo "... playCardDeck.s"
+	@echo "... player.o"
+	@echo "... player.i"
+	@echo "... player.s"
+	@echo "... playerdeck.o"
+	@echo "... playerdeck.i"
+	@echo "... playerdeck.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-Rules used as a baseline for this Game:
+Rules used as a baseline for this Game, some rules are modified:
 https://bicyclecards.com/how-to-play/blackjack/
 Cards:
 	6 Decks with 52 cards each
@@ -42,6 +42,7 @@ dealers play:
 
 splitting pairs:
 	if the player has two cards with the same value he can split them and his bet is doubled
+	the player can only split once after getting the second card
 	left and is played until he stands then the right hand is played
 	pair of aces:
 		only one hit
