@@ -13,10 +13,13 @@ private:
     playerdeck left;
     playerdeck right;
     int chips;
+    int betAmount;
     bool splitAllowed;
     bool hasSplit;
 
+
     int rightBet(int bet, int min, int max);
+
     int oneEleven();
 
 
@@ -42,6 +45,14 @@ public:
     bool hasSplited();
 
     void blackjack();
+
+    int getBetAmount();
+
+    void resetBetamount();
+
+    void halfBetamount();
+
+    void payout(int bet);
 
 };
 

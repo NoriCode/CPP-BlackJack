@@ -41,7 +41,7 @@ int playerOptions(int in, bool canSplit, bool hasSplit) {
     return in;
 }
 
-int kickPlayer(int pChips, int minChips) {
+void kickPlayer(int pChips, int minChips) {
     if (pChips < minChips) {
         printf("Bouncer: You dont own enough Chips to play. You have to leave the Casino\n");
         exit(1);
@@ -58,7 +58,13 @@ int game() {
 
     // kickPlayer(0,1);
 
+    for()
+
     while (playerChoice != 3) {
+        bool leftPlayed, rightPlayed;
+
+        kickPlayer(p->getChips(), bjR->getMinBet());
+
         if (pCD.getCardCounter() <= bjR->getReshuffelTrigger()) {
             pCD.deckShuffel();
         }
@@ -69,33 +75,60 @@ int game() {
 
         if (playerChoice == 0) {
             p->split();
+
         }
 
+        if (leftPlayed) {
+            if (playerChoice == 1) {
+                p->giveLeftCard(pCD.getCardX(0));
+                //  p->giveLeftCard(new bjCards("heart", "A", 11));
+                pCD.playedCardsCollector(pCD.getCardX(0));
+                p->leftValue();
+            } else if (playerChoice == 2) {
+                leftPlayed = true;
+            }
 
-        if (playerChoice == 1) {
-            p->giveLeftCard(pCD.getCardX(0));
-            //  p->giveLeftCard(new bjCards("heart", "A", 11));
-            pCD.playedCardsCollector(pCD.getCardX(0));
-            p->leftValue();
+            if (p->leftValue() == 21) {
+                p->payout(p->getBetAmount() / 2);
+                leftPlayed = true;
+            } else if (p->leftValue() > 21 && p->hasSplited()) {
+                p->halfBetamount();
+                leftPlayed = true;
+            }
+        } else if (p->hasSplited() && !rightPlayed) {
+
+            if (playerChoice == 1) {
+                p->giveRightCard(pCD.getCardX(0));
+                //  p->giveLeftCard(new bjCards("heart", "A", 11));
+                pCD.playedCardsCollector(pCD.getCardX(0));
+                p->rightValue();
+            } else if (playerChoice == 2) {
+                rightPlayed = true;
+            }
+
+            if (p->rightValue() == 21) {
+                p->payout(p->getBetAmount() / 2);
+
+                rightPlayed = true;
+            } else if (p->rightValue() > 21 && p->hasSplited()) {
+                p->halfBetamount();
+
+                rightPlayed = true;
+            }
         }
 
-        if (p->leftValue() == 21) {
-
-            //todo give player  bet
-        } else if (p->leftValue() > 21) {
-            //todo end turn
-        }
-
-
-        //  kickPlayer(p->getChips(), bjR->getMinBet());
     }
+
+
     printf("Good Bye\n");
 
     pCD.resetPlayDeck();
+
     return 0;
 }
 
 int main() {
+
     int menuOption = 0;
     while (menuOption != 3) {
         menuOption = menu();

@@ -4,6 +4,7 @@
 void player::split() {
     giveRightCard(left.getCardX(1));
     hasSplit = true;
+    betAmount *= 2;
 }
 
 void player::bet(int min, int max) {
@@ -23,6 +24,7 @@ void player::bet(int min, int max) {
         correctBet = rightBet(playerBet, min, max);
     }
     chips -= playerBet;
+    betAmount = playerBet;
 }
 
 void player::giveLeftCard(bjCards *card) {
@@ -87,6 +89,22 @@ int player::oneEleven() {
 void player::blackjack() {
     printf("You have Blackjack");
 
+}
+
+int player::getBetAmount() {
+    return betAmount;
+}
+
+void player::payout(int bet) {
+    chips += (int) bet * 1.5;
+}
+
+void player::resetBetamount() {
+    betAmount = 0;
+}
+
+void player::halfBetamount() {
+    betAmount /= 2;
 }
 
 
