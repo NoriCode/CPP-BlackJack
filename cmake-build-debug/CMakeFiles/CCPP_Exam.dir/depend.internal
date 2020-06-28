@@ -6,9 +6,29 @@ CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o
  /home/philip_nori/CCPP_Exam/bjCards.h
  /home/philip_nori/CCPP_Exam/cards.h
  /home/philip_nori/CCPP_Exam/helpers/println.hpp
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o
+ /home/philip_nori/CCPP_Exam/bjCards.h
+ /home/philip_nori/CCPP_Exam/bjNonPlayer.cpp
+ /home/philip_nori/CCPP_Exam/bjNonPlayer.h
+ /home/philip_nori/CCPP_Exam/bjRuleController.h
+ /home/philip_nori/CCPP_Exam/cards.h
+ /home/philip_nori/CCPP_Exam/deck.h
+ /home/philip_nori/CCPP_Exam/helpers/println.hpp
+ /home/philip_nori/CCPP_Exam/player.h
+ /home/philip_nori/CCPP_Exam/playerdeck.h
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o
  /home/philip_nori/CCPP_Exam/bjRuleController.cpp
  /home/philip_nori/CCPP_Exam/bjRuleController.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o
+ /home/philip_nori/CCPP_Exam/bjCards.h
+ /home/philip_nori/CCPP_Exam/bjRuleController.h
+ /home/philip_nori/CCPP_Exam/bjplayer.cpp
+ /home/philip_nori/CCPP_Exam/bjplayer.h
+ /home/philip_nori/CCPP_Exam/cards.h
+ /home/philip_nori/CCPP_Exam/deck.h
+ /home/philip_nori/CCPP_Exam/helpers/println.hpp
+ /home/philip_nori/CCPP_Exam/player.h
+ /home/philip_nori/CCPP_Exam/playerdeck.h
 CMakeFiles/CCPP_Exam.dir/cards.cpp.o
  /home/philip_nori/CCPP_Exam/cards.cpp
  /home/philip_nori/CCPP_Exam/cards.h
@@ -20,7 +40,9 @@ CMakeFiles/CCPP_Exam.dir/deck.cpp.o
  /home/philip_nori/CCPP_Exam/helpers/println.hpp
 CMakeFiles/CCPP_Exam.dir/main.cpp.o
  /home/philip_nori/CCPP_Exam/bjCards.h
+ /home/philip_nori/CCPP_Exam/bjNonPlayer.h
  /home/philip_nori/CCPP_Exam/bjRuleController.h
+ /home/philip_nori/CCPP_Exam/bjplayer.h
  /home/philip_nori/CCPP_Exam/cards.h
  /home/philip_nori/CCPP_Exam/deck.h
  /home/philip_nori/CCPP_Exam/helpers/println.hpp

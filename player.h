@@ -1,5 +1,10 @@
+//
+// Created by philip_nori on 28.06.20.
+//
+
 #ifndef CCPP_EXAM_PLAYER_H
 #define CCPP_EXAM_PLAYER_H
+
 
 #include "cards.h"
 #include "bjCards.h"
@@ -9,51 +14,20 @@
 
 
 class player {
-private:
-    playerdeck left;
-    playerdeck right;
-    int chips;
-    int betAmount;
-    bool splitAllowed;
-    bool hasSplit;
-
-
-    int rightBet(int bet, int min, int max);
+protected:
+    playerdeck _mainDeck;
 
     int oneEleven();
-
-
 public:
-    explicit player(int c = 0) : chips(c) {}
 
-    bool canSplit();
 
-    void split();
+    void giveMainCard(bjCards *card);
 
-    void bet(int min, int max);
+    int mainValue();
 
-    void giveLeftCard(bjCards *card);
+    void showCards();
 
-    void giveRightCard(bjCards *card);
-
-    int rightValue();
-
-    int leftValue();
-
-    int getChips();
-
-    bool hasSplited();
-
-    void blackjack();
-
-    int getBetAmount();
-
-    void resetBetamount();
-
-    void halfBetamount();
-
-    void payout(int bet);
-
+    void showCards(std::string name);
 };
 
 

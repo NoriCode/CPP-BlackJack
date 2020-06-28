@@ -90,10 +90,22 @@
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjCards.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjNonPlayer.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjNonPlayer.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjRuleController.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjRuleController.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjplayer.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjplayer.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/cards.cpp">

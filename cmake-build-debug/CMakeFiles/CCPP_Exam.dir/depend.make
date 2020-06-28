@@ -6,8 +6,28 @@ CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../cards.h
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../helpers/println.hpp
 
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjNonPlayer.cpp
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjNonPlayer.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjRuleController.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../cards.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../deck.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../helpers/println.hpp
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../player.h
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../playerdeck.h
+
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.cpp
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.h
+
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../bjRuleController.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../bjplayer.cpp
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../bjplayer.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../cards.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../deck.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../helpers/println.hpp
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../player.h
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../playerdeck.h
 
 CMakeFiles/CCPP_Exam.dir/cards.cpp.o: ../cards.cpp
 CMakeFiles/CCPP_Exam.dir/cards.cpp.o: ../cards.h
@@ -19,7 +39,9 @@ CMakeFiles/CCPP_Exam.dir/deck.cpp.o: ../deck.h
 CMakeFiles/CCPP_Exam.dir/deck.cpp.o: ../helpers/println.hpp
 
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjNonPlayer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjRuleController.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjplayer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../cards.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../deck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../helpers/println.hpp

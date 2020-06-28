@@ -135,18 +135,18 @@ CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/myLittlehelpers.cpp -o CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.s
 
-CMakeFiles/CCPP_Exam.dir/player.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
-CMakeFiles/CCPP_Exam.dir/player.cpp.o: ../player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CCPP_Exam.dir/player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/player.cpp.o -c /home/philip_nori/CCPP_Exam/player.cpp
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../bjplayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o -c /home/philip_nori/CCPP_Exam/bjplayer.cpp
 
-CMakeFiles/CCPP_Exam.dir/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/philip_nori/CCPP_Exam/player.cpp > CMakeFiles/CCPP_Exam.dir/player.cpp.i
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/philip_nori/CCPP_Exam/bjplayer.cpp > CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.i
 
-CMakeFiles/CCPP_Exam.dir/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/player.cpp -o CMakeFiles/CCPP_Exam.dir/player.cpp.s
+CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/bjplayer.cpp -o CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.s
 
 CMakeFiles/CCPP_Exam.dir/deck.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
 CMakeFiles/CCPP_Exam.dir/deck.cpp.o: ../deck.cpp
@@ -174,6 +174,32 @@ CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/playerdeck.cpp -o CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.s
 
+CMakeFiles/CCPP_Exam.dir/player.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
+CMakeFiles/CCPP_Exam.dir/player.cpp.o: ../player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CCPP_Exam.dir/player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/player.cpp.o -c /home/philip_nori/CCPP_Exam/player.cpp
+
+CMakeFiles/CCPP_Exam.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/philip_nori/CCPP_Exam/player.cpp > CMakeFiles/CCPP_Exam.dir/player.cpp.i
+
+CMakeFiles/CCPP_Exam.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/player.cpp -o CMakeFiles/CCPP_Exam.dir/player.cpp.s
+
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjNonPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o -c /home/philip_nori/CCPP_Exam/bjNonPlayer.cpp
+
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/philip_nori/CCPP_Exam/bjNonPlayer.cpp > CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.i
+
+CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/philip_nori/CCPP_Exam/bjNonPlayer.cpp -o CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.s
+
 # Object files for target CCPP_Exam
 CCPP_Exam_OBJECTS = \
 "CMakeFiles/CCPP_Exam.dir/main.cpp.o" \
@@ -182,9 +208,11 @@ CCPP_Exam_OBJECTS = \
 "CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o" \
 "CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o" \
 "CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o" \
-"CMakeFiles/CCPP_Exam.dir/player.cpp.o" \
+"CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o" \
 "CMakeFiles/CCPP_Exam.dir/deck.cpp.o" \
-"CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o"
+"CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o" \
+"CMakeFiles/CCPP_Exam.dir/player.cpp.o" \
+"CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o"
 
 # External object files for target CCPP_Exam
 CCPP_Exam_EXTERNAL_OBJECTS =
@@ -195,12 +223,14 @@ CCPP_Exam_EXTERNAL_OBJECTS =
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o
-../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/player.cpp.o
+../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/deck.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o
+../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/player.cpp.o
+../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/build.make
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../CCPP_Exam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ../CCPP_Exam"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CCPP_Exam.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

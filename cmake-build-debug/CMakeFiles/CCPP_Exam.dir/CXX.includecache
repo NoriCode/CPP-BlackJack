@@ -16,9 +16,27 @@ cards.h
 helpers/println.hpp
 /home/philip_nori/CCPP_Exam/helpers/println.hpp
 
+/home/philip_nori/CCPP_Exam/bjNonPlayer.h
+player.h
+/home/philip_nori/CCPP_Exam/player.h
+
 /home/philip_nori/CCPP_Exam/bjRuleController.h
 iostream
 -
+
+/home/philip_nori/CCPP_Exam/bjplayer.h
+cards.h
+/home/philip_nori/CCPP_Exam/cards.h
+bjCards.h
+/home/philip_nori/CCPP_Exam/bjCards.h
+vector
+-
+playerdeck.h
+/home/philip_nori/CCPP_Exam/playerdeck.h
+bjRuleController.h
+/home/philip_nori/CCPP_Exam/bjRuleController.h
+player.h
+/home/philip_nori/CCPP_Exam/player.h
 
 /home/philip_nori/CCPP_Exam/cards.h
 stdio.h
@@ -45,14 +63,16 @@ sstream
 -
 
 /home/philip_nori/CCPP_Exam/main.cpp
-stdio.h
+cstdio
 -
 playCardDeck.h
 /home/philip_nori/CCPP_Exam/playCardDeck.h
 bjRuleController.h
 /home/philip_nori/CCPP_Exam/bjRuleController.h
-player.h
-/home/philip_nori/CCPP_Exam/player.h
+bjplayer.h
+/home/philip_nori/CCPP_Exam/bjplayer.h
+bjNonPlayer.h
+/home/philip_nori/CCPP_Exam/bjNonPlayer.h
 
 /home/philip_nori/CCPP_Exam/playCardDeck.h
 vector
@@ -65,12 +85,6 @@ bjCards.h
 /home/philip_nori/CCPP_Exam/bjCards.h
 deck.h
 /home/philip_nori/CCPP_Exam/deck.h
-
-/home/philip_nori/CCPP_Exam/player.cpp
-player.h
-/home/philip_nori/CCPP_Exam/player.h
-stdio.h
-/home/philip_nori/CCPP_Exam/stdio.h
 
 /home/philip_nori/CCPP_Exam/player.h
 cards.h

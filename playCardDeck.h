@@ -11,11 +11,9 @@ class playCardDeck : public deck {
 protected:
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};
 
-    std::vector<bjCards *> _playedCards;
+
 
     void setCardCounter(int i);
-
-    void reduceCardCounter();
 
     std::string getNumberX(int x);
 
@@ -24,7 +22,6 @@ public:
 
     void resetPlayDeck();
 
-    void playedCardsCollector(bjCards *card);
 
     void deckShuffel();
 };

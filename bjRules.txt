@@ -43,7 +43,7 @@ dealers play:
 splitting pairs:
 	if the player has two cards with the same value he can split them and his bet is doubled
 	the player can only split once after getting the second card
-	left and is played until he stands then the right hand is played
+	left and is played until he stands then the splitdeck hand is played
 	pair of aces:
 		only one hit
 		when getting a ten: bet is repayed

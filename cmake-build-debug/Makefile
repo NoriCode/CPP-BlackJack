@@ -150,6 +150,33 @@ bjCards.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.s
 .PHONY : bjCards.cpp.s
 
+bjNonPlayer.o: bjNonPlayer.cpp.o
+
+.PHONY : bjNonPlayer.o
+
+# target to build an object file
+bjNonPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o
+.PHONY : bjNonPlayer.cpp.o
+
+bjNonPlayer.i: bjNonPlayer.cpp.i
+
+.PHONY : bjNonPlayer.i
+
+# target to preprocess a source file
+bjNonPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.i
+.PHONY : bjNonPlayer.cpp.i
+
+bjNonPlayer.s: bjNonPlayer.cpp.s
+
+.PHONY : bjNonPlayer.s
+
+# target to generate assembly for a file
+bjNonPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.s
+.PHONY : bjNonPlayer.cpp.s
+
 bjRuleController.o: bjRuleController.cpp.o
 
 .PHONY : bjRuleController.o
@@ -176,6 +203,33 @@ bjRuleController.s: bjRuleController.cpp.s
 bjRuleController.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.s
 .PHONY : bjRuleController.cpp.s
+
+bjplayer.o: bjplayer.cpp.o
+
+.PHONY : bjplayer.o
+
+# target to build an object file
+bjplayer.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o
+.PHONY : bjplayer.cpp.o
+
+bjplayer.i: bjplayer.cpp.i
+
+.PHONY : bjplayer.i
+
+# target to preprocess a source file
+bjplayer.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.i
+.PHONY : bjplayer.cpp.i
+
+bjplayer.s: bjplayer.cpp.s
+
+.PHONY : bjplayer.s
+
+# target to generate assembly for a file
+bjplayer.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.s
+.PHONY : bjplayer.cpp.s
 
 cards.o: cards.cpp.o
 
@@ -378,9 +432,15 @@ help:
 	@echo "... bjCards.o"
 	@echo "... bjCards.i"
 	@echo "... bjCards.s"
+	@echo "... bjNonPlayer.o"
+	@echo "... bjNonPlayer.i"
+	@echo "... bjNonPlayer.s"
 	@echo "... bjRuleController.o"
 	@echo "... bjRuleController.i"
 	@echo "... bjRuleController.s"
+	@echo "... bjplayer.o"
+	@echo "... bjplayer.i"
+	@echo "... bjplayer.s"
 	@echo "... cards.o"
 	@echo "... cards.i"
 	@echo "... cards.s"

@@ -5,7 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/philip_nori/CCPP_Exam/bjCards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
+  "/home/philip_nori/CCPP_Exam/bjNonPlayer.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o"
   "/home/philip_nori/CCPP_Exam/bjRuleController.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
+  "/home/philip_nori/CCPP_Exam/bjplayer.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o"
   "/home/philip_nori/CCPP_Exam/cards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
   "/home/philip_nori/CCPP_Exam/deck.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/deck.cpp.o"
   "/home/philip_nori/CCPP_Exam/main.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
