@@ -91,8 +91,8 @@ int game() {
 
         if (!leftPlayed) {
             if (playerChoice == 1) {
-                p->giveMainCard(pCD.getCardX(0));
-                pCD.playedCardsCollector(pCD.getCardX(0));
+                p->giveMainCard(pCD.giveOutCard());
+                pCD.playedCardsCollector(pCD.giveOutCard());
                 p->mainValue();
             } else if (playerChoice == 2) {
                 leftPlayed = true;
@@ -125,7 +125,8 @@ int game() {
                 rightPlayed = true;
             }
         }
-        d->showCards("dealer");
+
+
         while (d->mainValue() < 17) {
             d->showCards("dealer");
             d->giveMainCard(pCD.giveOutCard());
