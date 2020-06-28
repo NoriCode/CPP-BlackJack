@@ -22,7 +22,6 @@ int playerOptions(int in, bool canSplit, bool hasSplit) {
 
     while (invalid) {
 
-
         printf("Your options are\n");
 
         if (canSplit) {
@@ -45,6 +44,22 @@ int playerOptions(int in, bool canSplit, bool hasSplit) {
     return in;
 }
 
+int playAgain() {
+    int in;
+    printf("Do you want to play a new round?\n");
+
+    printf("0 - no\n");
+    printf("1 - yes\n");
+    printf("Your choice: ");
+    std::cin >> in;
+    printf("\n");
+
+    if(in !=  1){
+        in = 3;
+    }
+    return in;
+}
+
 void kickPlayer(int pChips, int minChips) {
     if (pChips < minChips) {
         printf("Bouncer: You dont own enough Chips to play. You have to leave the Casino\n");
@@ -61,32 +76,43 @@ int game() {
 
     bool leftPlayed = false;
     bool rightPlayed = false;
+    bool newGame = true;
 
     while (playerChoice != 3) {
-        pCD.generatePlayDeck(bjR->getNumberOfDecks());
-        pCD.deckShuffel();
-        for (int i = 0; i < 2; i++) {
-            p->giveMainCard(pCD.giveOutCard());
-
-            d->giveMainCard(pCD.giveOutCard());
-        }
-
         kickPlayer(p->getChips(), bjR->getMinBet());
-
-        if (pCD.getCardCounter() <= bjR->getReshuffelTrigger()) {
+        if (newGame) {
+            pCD.generatePlayDeck(bjR->getNumberOfDecks());
             pCD.deckShuffel();
+            for (int i = 0; i < 2; i++) {
+                p->giveMainCard(pCD.giveOutCard());
+
+                d->giveMainCard(pCD.giveOutCard());
+            }
+
+
+            if (pCD.getCardCounter() <= bjR->getReshuffelTrigger()) {
+                pCD.deckShuffel();
+            }
+            printf("The open Card of the dealer is: ");
+            d->showOPenCard();
+
+            p->showCards("You");
+            p->bet(bjR->getMinBet(), bjR->getMaxBet());
+            newGame = false;
+            leftPlayed = false;
+            rightPlayed = false;
         }
-        printf("The open Card of the dealer is: ");
-        d->showOPenCard();
-
         p->showCards("You");
-        p->bet(bjR->getMinBet(), bjR->getMaxBet());
-
 
         playerChoice = playerOptions(0, p->canSplit(), p->hasSplited());
 
+
         if (playerChoice == 0) {
             p->split();
+        }
+
+        if (playerChoice == 2) {
+            leftPlayed = true;
         }
 
         if (!leftPlayed) {
@@ -94,20 +120,20 @@ int game() {
                 p->giveMainCard(pCD.giveOutCard());
                 pCD.playedCardsCollector(pCD.giveOutCard());
                 p->mainValue();
-            } else if (playerChoice == 2) {
-                leftPlayed = true;
             }
 
-            if (p->mainValue() == 21) {
+            if (p->getMainDeck().getTotalValue() == 21) {
                 p->payout(p->getBetAmount() / 2);
                 p->blackjack();
                 leftPlayed = true;
-            } else if (p->getMainDeck().getTotalValue() > 21) {
+            } else if (p->getSplitDeck().getTotalValue() > 21) {
                 p->halfBetamount();
+                printf("\n you lost\n");
                 leftPlayed = true;
             }
         } else if (p->hasSplited() && !rightPlayed) {
 
+            printf("splitarea");
             if (playerChoice == 1) {
                 p->giveSplitCard(pCD.getCardX(0));
                 pCD.playedCardsCollector(pCD.getCardX(0));
@@ -124,26 +150,44 @@ int game() {
                 p->halfBetamount();
                 rightPlayed = true;
             }
-        }
+        } else {
 
 
-        while (d->mainValue() < 17) {
-            d->showCards("dealer");
-            d->giveMainCard(pCD.giveOutCard());
-        }
-        if (p->hasSplited()) {
-            if (d->mainValue() < p->getSplitDeck().getTotalValue()) {
-                p->payout(p->getBetAmount() / 2);
-            } else if (d->mainValue() == p->getSplitDeck().getTotalValue()) {
-                p->repayBet(p->getBetAmount() / 2);
+            while (d->mainValue() < 17) {
+                d->showCards("dealer");
+                d->giveMainCard(pCD.giveOutCard());
             }
+            d->showCards("dealer");
+            if (p->hasSplited()) {
+                if (d->mainValue() < p->getSplitDeck().getTotalValue()) {
+                    p->payout(p->getBetAmount() / 2);
+                     bjR->playerWin();
+                } else if (d->mainValue() == p->getSplitDeck().getTotalValue()) {
+                    p->repayBet(p->getBetAmount() / 2);
+                    bjR->playerTie();
+                }else{
+                    bjR->playerLoose();
+                    p->halfBetamount();
+                }
+                p->ResetSplitDeck();
+            }
+            if (d->mainValue() < p->getMainDeck().getTotalValue()) {
+                p->payout(p->getBetAmount());
+                bjR->playerWin();
+            } else if (d->mainValue() == p->getMainDeck().getTotalValue()) {
+                p->repayBet();
+                bjR->playerTie();
+            }else{
+                bjR->playerLoose();
+            }
+            p->resetBetamount();
+            p->resetMainDeck();
+            pCD.resetPlayDeck();
+
+            playerChoice = playAgain();
+
+            newGame = true;
         }
-        if (d->mainValue() < p->getMainDeck().getTotalValue()) {
-            p->payout(p->getBetAmount());
-        } else if (d->mainValue() == p->getMainDeck().getTotalValue()) {
-            p->repayBet();
-        }
-        p->resetBetamount();
     }
 
 

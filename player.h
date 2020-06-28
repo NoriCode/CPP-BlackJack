@@ -28,6 +28,8 @@ public:
     void showCards();
 
     void showCards(std::string name);
+
+    void resetMainDeck();
 };
 
 

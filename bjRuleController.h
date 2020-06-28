@@ -57,6 +57,12 @@ public:
 
     int getMinBet();
     int getMaxBet();
+
+    void playerWin();
+
+    void playerLoose();
+
+    void playerTie();
 };
 
 

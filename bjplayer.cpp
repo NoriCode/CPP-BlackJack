@@ -71,7 +71,7 @@ bool bjplayer::hasSplited() {
 
 
 void bjplayer::blackjack() {
-    printf("You have Blackjack");
+    printf("You have Blackjack\n");
 
 }
 
@@ -109,4 +109,6 @@ void bjplayer::repayBet(int betAmount) {
     halfBetamount();
 }
 
-
+void bjplayer::ResetSplitDeck() {
+    splitDeck.getDeck().clear();
+}

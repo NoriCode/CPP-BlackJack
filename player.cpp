@@ -11,10 +11,10 @@ int player::mainValue() {
 void player::giveMainCard(bjCards *card) {
     if (card->getnumber() == ("A")) {
         card->setValue(oneEleven());
+        card->whoAmI();
     }
 
     _mainDeck.addPlayDeck(card);
-    printf("%i", mainValue());
     //todo karten genau anzeigen nicht nur wert
 }
 
@@ -34,5 +34,9 @@ void player::showCards(std::string name) {
         cards->whoAmI();
     }
 
+}
+
+void player::resetMainDeck() {
+    _mainDeck.getDeck().clear();
 }
 

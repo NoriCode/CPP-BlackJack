@@ -18,7 +18,6 @@ private:
     bool splitAllowed;
     bool hasSplit;
 
-
     int splitBet(int bet, int min, int max);
 
 
@@ -56,6 +55,10 @@ public:
     void repayBet();
 
     void repayBet(int betAmount);
+
+    void ResetSplitDeck();
+
+
 };
 
 

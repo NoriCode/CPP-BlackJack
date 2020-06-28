@@ -86,3 +86,15 @@ int bjRuleController::getMaxBet() {
     return maxBet;
 }
 
+void bjRuleController::playerWin() {
+    printf("\n You have won your bet is multiplied by 1.5\n");
+}
+
+void bjRuleController::playerLoose() {
+    printf("\n You have lost.\n");
+}
+
+void bjRuleController::playerTie() {
+    printf("\n Tie. You get your bet back\n");
+}
+
