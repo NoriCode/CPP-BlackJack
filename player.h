@@ -15,7 +15,6 @@
 
 class player {
 protected:
-    playerdeck _mainDeck;
 
 public:
 

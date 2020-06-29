@@ -150,6 +150,33 @@ bjCards.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.s
 .PHONY : bjCards.cpp.s
 
+bjHand.o: bjHand.cpp.o
+
+.PHONY : bjHand.o
+
+# target to build an object file
+bjHand.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o
+.PHONY : bjHand.cpp.o
+
+bjHand.i: bjHand.cpp.i
+
+.PHONY : bjHand.i
+
+# target to preprocess a source file
+bjHand.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.i
+.PHONY : bjHand.cpp.i
+
+bjHand.s: bjHand.cpp.s
+
+.PHONY : bjHand.s
+
+# target to generate assembly for a file
+bjHand.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.s
+.PHONY : bjHand.cpp.s
+
 bjNonPlayer.o: bjNonPlayer.cpp.o
 
 .PHONY : bjNonPlayer.o
@@ -230,6 +257,33 @@ bjplayer.s: bjplayer.cpp.s
 bjplayer.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.s
 .PHONY : bjplayer.cpp.s
+
+blackJack.o: blackJack.cpp.o
+
+.PHONY : blackJack.o
+
+# target to build an object file
+blackJack.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o
+.PHONY : blackJack.cpp.o
+
+blackJack.i: blackJack.cpp.i
+
+.PHONY : blackJack.i
+
+# target to preprocess a source file
+blackJack.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.i
+.PHONY : blackJack.cpp.i
+
+blackJack.s: blackJack.cpp.s
+
+.PHONY : blackJack.s
+
+# target to generate assembly for a file
+blackJack.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.s
+.PHONY : blackJack.cpp.s
 
 cards.o: cards.cpp.o
 
@@ -405,6 +459,9 @@ help:
 	@echo "... bjCards.o"
 	@echo "... bjCards.i"
 	@echo "... bjCards.s"
+	@echo "... bjHand.o"
+	@echo "... bjHand.i"
+	@echo "... bjHand.s"
 	@echo "... bjNonPlayer.o"
 	@echo "... bjNonPlayer.i"
 	@echo "... bjNonPlayer.s"
@@ -414,6 +471,9 @@ help:
 	@echo "... bjplayer.o"
 	@echo "... bjplayer.i"
 	@echo "... bjplayer.s"
+	@echo "... blackJack.o"
+	@echo "... blackJack.i"
+	@echo "... blackJack.s"
 	@echo "... cards.o"
 	@echo "... cards.i"
 	@echo "... cards.s"

@@ -9,12 +9,9 @@
 #include "player.h"
 
 
-class bjplayer : public player{
+class bjplayer : public player {
 private:
-    playerdeck left;
-    playerdeck splitDeck;
     int chips;
-    int betAmount;
     bool splitAllowed;
     bool hasSplit;
 
@@ -52,13 +49,12 @@ public:
 
     playerdeck getSplitDeck();
 
-    void repayBet();
-
     void repayBet(int betAmount);
 
-    void ResetSplitDeck();
+    void getPayout();
 
 
+    void getPayout(int payout);
 };
 
 

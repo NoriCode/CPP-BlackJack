@@ -90,6 +90,12 @@
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjCards.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjHand.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/bjHand.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjNonPlayer.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
@@ -106,6 +112,12 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/bjplayer.h">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/blackJack.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/philip_nori/CCPP_Exam/blackJack.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/cards.cpp">

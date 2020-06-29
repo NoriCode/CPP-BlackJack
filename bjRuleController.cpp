@@ -99,12 +99,12 @@ void bjRuleController::playerTie() {
 }
 
 int bjRuleController::oneEleven() {
-        int in;
-        while (in != 1 && in != 11) {
-            printf("You have drawn an Ace. You can decide if it has the value 1 or 11\n");
-            printf("Which Value has your Ace: ");
-            std::cin >> in;
-        }
-        return in;
+    int in;
+    while (in != 1 && in != 11) {
+        printf("You have drawn an Ace. You can decide if it has the value 1 or 11\n");
+        printf("Which Value has your Ace: ");
+        std::cin >> in;
+    }
+    return in;
 }
 

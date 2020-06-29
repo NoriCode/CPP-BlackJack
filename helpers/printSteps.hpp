@@ -7,17 +7,19 @@
 #include "AnsiConsole.hpp"
 
 struct printCmd {
-  int line;
-  std::string func;
-  int stepNum;
-  int colOffset;
+    int line;
+    std::string func;
+    int stepNum;
+    int colOffset;
 };
 
 extern int stepNum;
 extern int colorOffset;
 extern bool printSource;
 extern std::vector<printCmd> commands;
+
 void printCommands(std::string fileName);
+
 void resetCommands();
 
 // NOP stand for "no operation"; it does log the step and line number though

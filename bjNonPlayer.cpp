@@ -4,7 +4,7 @@
 
 #include "bjNonPlayer.h"
 
-
+/*
 void bjNonPlayer::showHiddenCard() {
     _mainDeck.getCardX(1)->whoAmI();
 }
@@ -15,3 +15,4 @@ void bjNonPlayer::showOPenCard() {
 
 bjNonPlayer::bjNonPlayer() = default;
 
+*/

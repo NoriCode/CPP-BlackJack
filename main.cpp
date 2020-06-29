@@ -4,6 +4,11 @@
 #include "bjplayer.h"
 #include "bjNonPlayer.h"
 #include "bjCards.h"
+#include "blackJack.h"
+
+enum GameState {
+    split = 0, hit, stand, leave, newGame
+};
 
 int menu() {
     int in;
@@ -42,7 +47,7 @@ int playerOptions(int in, bool canSplit, bool hasSplit) {
         }
     }
     printf("\n");
-    return in;
+    return GameState(in);
 }
 
 int playAgain() {
@@ -55,7 +60,7 @@ int playAgain() {
     std::cin >> in;
     printf("\n");
 
-    if(in !=  1){
+    if (in != 1) {
         in = 3;
     }
     return in;
@@ -68,6 +73,7 @@ void kickPlayer(int pChips, int minChips) {
     }
 }
 
+/*make game great again
 int game() {
     int playerChoice = 0;
     bjRuleController *bjR = bjRuleController::getInstance();
@@ -119,13 +125,13 @@ int game() {
         if (!leftPlayed) {
             if (playerChoice == 1) {
                 bjCards *drawnCard = pCD.giveOutCard();
-                if (drawnCard->getnumber() == ("A")){
-                    if(drawnCard->getValue()+p->getMainDeck().getTotalValue()>21){
+                if (drawnCard->getnumber() == ("A")) {
+                    if (drawnCard->getValue() + p->getMainDeck().getTotalValue() > 21) {
                         drawnCard->setValue(1);
                     }
                 }
-                p->giveMainCard(pCD.giveOutCard());
-                pCD.playedCardsCollector(pCD.giveOutCard());
+                p->giveMainCard(drawnCard);
+                pCD.playedCardsCollector(drawnCard);
                 p->mainValue();
             }
 
@@ -168,11 +174,11 @@ int game() {
             if (p->hasSplited()) {
                 if (d->mainValue() < p->getSplitDeck().getTotalValue()) {
                     p->payout(p->getBetAmount() / 2);
-                     bjR->playerWin();
+                    bjR->playerWin();
                 } else if (d->mainValue() == p->getSplitDeck().getTotalValue()) {
                     p->repayBet(p->getBetAmount() / 2);
                     bjR->playerTie();
-                }else{
+                } else {
                     bjR->playerLoose();
                     p->halfBetamount();
                 }
@@ -184,7 +190,7 @@ int game() {
             } else if (d->mainValue() == p->getMainDeck().getTotalValue()) {
                 p->repayBet();
                 bjR->playerTie();
-            }else{
+            } else {
                 bjR->playerLoose();
             }
             p->resetBetamount();
@@ -203,9 +209,20 @@ int game() {
     return 0;
 
 }
+ */
 
 int main() {
+    blackJack *bJ = new blackJack();
 
+    bJ->menu();
+
+    while (!bJ->exitGame()){
+        while (!bJ->leaveTable()){
+            bJ->game();
+        }
+    }
+
+    /*
     int menuOption = 0;
     while (menuOption != 3) {
         menuOption = menu();
@@ -214,6 +231,6 @@ int main() {
         } else if (menuOption == 2) {
             bjRuleController::printRules();
         }
-    }
+    }*/
     return 0;
 }

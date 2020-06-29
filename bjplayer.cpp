@@ -1,11 +1,6 @@
 #include "bjplayer.h"
 #include "stdio.h"
 
-void bjplayer::split() {
-    giveSplitCard(left.getCardX(1));
-    hasSplit = true;
-    betAmount *= 2;
-}
 
 void bjplayer::bet(int min, int max) {
     int playerBet = 0;
@@ -24,23 +19,9 @@ void bjplayer::bet(int min, int max) {
         correctBet = splitBet(playerBet, min, max);
     }
     chips -= playerBet;
-    betAmount = playerBet;
+    //betAmount = playerBet;
 }
 
-
-void bjplayer::giveSplitCard(bjCards *card) {
-    splitDeck.addPlayDeck(card);
-    printf("%i", mainValue());
-    //todo karten genau anzeigen nicht nur wert
-}
-
-int bjplayer::splitValue() {
-    return splitDeck.getTotalValue();
-}
-
-bool bjplayer::canSplit() {
-    return splitAllowed;
-}
 
 int bjplayer::getChips() {
     return chips;
@@ -70,40 +51,11 @@ void bjplayer::blackjack() {
 
 }
 
-int bjplayer::getBetAmount() {
-    return betAmount;
-}
 
 void bjplayer::payout(int bet) {
     chips += (int) bet * 1.5;
 }
 
-void bjplayer::resetBetamount() {
-    betAmount = 0;
-}
 
-void bjplayer::halfBetamount() {
-    betAmount /= 2;
-}
 
-playerdeck bjplayer::getMainDeck() {
-    return _mainDeck;
-}
 
-playerdeck bjplayer::getSplitDeck() {
-    return splitDeck;
-}
-
-void bjplayer::repayBet() {
-    chips += betAmount;
-    resetBetamount();
-}
-
-void bjplayer::repayBet(int betAmount) {
-    chips += betAmount;
-    halfBetamount();
-}
-
-void bjplayer::ResetSplitDeck() {
-    splitDeck.getDeck().clear();
-}

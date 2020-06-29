@@ -15,13 +15,13 @@ protected:
     int _value;
 public:
     explicit bjCards(std::string symbol = "nori", std::string number = "0", int value = 0) : cards(symbol, number),
-                                                                                       _value(value) {}
+                                                                                             _value(value) {}
 
-    void setValue(int v) ;
+    void setValue(int v);
 
-    int getValue() ;
+    int getValue();
 
-    int whoAmI() override ;
+    int whoAmI() override;
 };
 
 

@@ -13,10 +13,10 @@ void playCardDeck::generatePlayDeck(int maxDecks) {
                     value = 11;
                 }
             }
-            addPlayDeck(new bjCards("hearts", getNumberX(j), value));
-            addPlayDeck(new bjCards("bells", getNumberX(j), value));
-            addPlayDeck(new bjCards("leaves", getNumberX(j), value));
-            addPlayDeck(new bjCards("acorns", getNumberX(j), value));
+            addPlayDeck(new bjCards("Diamonds", getNumberX(j), value));
+            addPlayDeck(new bjCards("Hearts", getNumberX(j), value));
+            addPlayDeck(new bjCards("Slubs", getNumberX(j), value));
+            addPlayDeck(new bjCards("Spades", getNumberX(j), value));
         }
     }
     setCardCounter(deck.size());

@@ -19,6 +19,7 @@ protected:
 
 
     void reduceCardCounter();
+
 public:
 
     void addPlayDeck(bjCards *card);
@@ -29,7 +30,7 @@ public:
 
     std::vector<bjCards *> getDeck();
 
-    bjCards * giveOutCard();
+    bjCards *giveOutCard();
 
     void playedCardsCollector(bjCards *card);
 };

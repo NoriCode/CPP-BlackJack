@@ -3,18 +3,15 @@
 //
 
 #include "player.h"
-
+/*
 int player::mainValue() {
     return _mainDeck.getTotalValue();
 }
 
 void player::giveMainCard(bjCards *card) {
     _mainDeck.addPlayDeck(card);
-    printf("You drawn this card");
     card->whoAmI();
-    //todo karten genau anzeigen nicht nur wert
 }
-
 
 
 void player::showCards(std::string name) {
@@ -29,3 +26,4 @@ void player::resetMainDeck() {
     _mainDeck.getDeck().clear();
 }
 
+*/

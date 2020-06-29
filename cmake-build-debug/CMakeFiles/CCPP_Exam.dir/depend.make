@@ -6,6 +6,14 @@ CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../cards.h
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../helpers/println.hpp
 
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.cpp
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../cards.h
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../deck.h
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../helpers/println.hpp
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../playerdeck.h
+
 CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjNonPlayer.cpp
 CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o: ../bjNonPlayer.h
@@ -29,6 +37,19 @@ CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../helpers/println.hpp
 CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../player.h
 CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o: ../playerdeck.h
 
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjNonPlayer.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjRuleController.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjplayer.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.cpp
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../cards.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../deck.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../helpers/println.hpp
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../playCardDeck.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../player.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../playerdeck.h
+
 CMakeFiles/CCPP_Exam.dir/cards.cpp.o: ../cards.cpp
 CMakeFiles/CCPP_Exam.dir/cards.cpp.o: ../cards.h
 
@@ -42,6 +63,7 @@ CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjNonPlayer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjplayer.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../blackJack.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../cards.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../deck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../helpers/println.hpp
@@ -49,9 +71,6 @@ CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../playCardDeck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../player.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../playerdeck.h
-
-CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o: ../myLittlehelpers.cpp
-CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o: ../myLittlehelpers.h
 
 CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o: ../cards.h
