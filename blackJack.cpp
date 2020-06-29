@@ -5,6 +5,7 @@
 #include "blackJack.h"
 
 void blackJack::game() {
+    menu();
     if (gs == NEWGAME) {
         newGame();
         gs = static_cast<gameState>(3);

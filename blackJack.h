@@ -36,14 +36,10 @@ private:
         DNF
     };
 
-    gameState gs;
+    gameState gs ;
     playerOption po;
     mainMenu mm;
     playerStatus ps;
-
-
-    bjHand main;
-    bjHand split;
 
     bjRuleController *bjR = bjRuleController::getInstance();
     tempDeck cD;
@@ -77,7 +73,7 @@ private:
 
 
 public:
-    explicit blackJack() : gs(static_cast<gameState>(1)) {}
+    explicit blackJack() {    }
 
 
     void game();
