@@ -1,4 +1,4 @@
-# Install script for directory: /home/nori/CCPP_Exam
+# Install script for directory: /home/philip_nori/CCPP_Exam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nori/CCPP_Exam/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/philip_nori/CCPP_Exam/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

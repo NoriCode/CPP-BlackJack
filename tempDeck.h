@@ -46,7 +46,7 @@ public:
 
     int getTotalValue();
 
-    void reshuffelIfNeeded();
+    void reshuffelIfNeeded(int trigger);
 
 
 };

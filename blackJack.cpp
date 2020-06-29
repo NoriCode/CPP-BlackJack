@@ -118,7 +118,7 @@ bool blackJack::leaveTable() {
 void blackJack::newGame() {
     cD.generatePlayCardsAndAddtoDeck(bjR->getNumberOfDecks());
 
-    cD.reshuffelIfNeeded();
+    cD.reshuffelIfNeeded(bjR->getReshuffelTrigger());
 }
 
 void blackJack::showCards() {

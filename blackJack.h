@@ -73,7 +73,7 @@ private:
 
 
 public:
-    explicit blackJack() {    }
+    explicit blackJack(bjRuleController *pController) : bjR() {    }
 
 
     void game();
