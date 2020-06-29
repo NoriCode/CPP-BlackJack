@@ -3,71 +3,79 @@
 //
 
 #include "blackJack.h"
+#include "bjRuleController.h"
 
 void blackJack::game() {
-    menu();
-    if (gs == NEWGAME) {
-        newGame();
-        gs = static_cast<gameState>(3);
-    }
+    while (mm != EXIT) {
+        menu();
+        if (mm == PLAY) {
+            if (gs == NEWGAME) {
+                newGame();
+                gs = static_cast<gameState>(3);
+            }
 
-    //bet
-    p->bet(bjR->getMinBet(), bjR->getMaxBet());
+            //bet
+            p->bet(bjR->getMinBet(), bjR->getMaxBet());
 
-    //spieler und dealer bekommen Karte P,D,P,D
-    drawInitialCards();
-    //karten werden gedreht
-    showCards();
-    //spieler: hit stand loop unterbrochen durch 21 oder höher
-    {
-        bool checkMain = true;
-        while (gs == PLAYING) {
-            playerRoundOptions();
-            if (po == SPLIT) {
-                p->splitCards();
-            } else if (po == HIT) {
-                draw(checkMain);
-            } else if (po == STAND) {
-                if (p->playerHasSplit() && checkMain) {
-                    checkMain = false;
-                    ps = static_cast<playerStatus>(3);
-                } else {
-                    gs = static_cast<gameState>(4);
+            //spieler und dealer bekommen Karte P,D,P,D
+            drawInitialCards();
+            //karten werden gedreht
+            showCards();
+            //spieler: hit stand loop unterbrochen durch 21 oder höher
+            {
+                bool checkMain = true;
+                while (gs == PLAYING) {
+                    playerRoundOptions();
+                    if (po == SPLIT) {
+                        p->splitCards();
+                    } else if (po == HIT) {
+                        draw(checkMain);
+                    } else if (po == STAND) {
+                        if (p->playerHasSplit() && checkMain) {
+                            checkMain = false;
+                            ps = static_cast<playerStatus>(3);
+                        } else {
+                            gs = static_cast<gameState>(4);
+                        }
+                    }
+                    checkEarlyVictoryCondidtion(checkMain);
                 }
             }
-            checkEarlyVictoryCondidtion(checkMain);
-        }
-    }
 
-    //dealer phase
-    while (d->getValue(true) < bjR->getDealerMaxPoints()) {
-        if (p->playerHasSplit()) {
-            draw(true);
-        }
-    }
+            //dealer phase
+            while (d->getValue(true) < bjR->getDealerMaxPoints()) {
+                if (p->playerHasSplit()) {
+                    draw(true);
+                }
+            }
 
-    //cashout
-    if (ps == DNF) {
-        bool exit = false;
-        bool checkMain = true;
-        while (!exit) {
-            if (p->getValue(checkMain) < d->getValue(true)) {
-                p->collectBet(checkMain);
-            } else if (p->getValue(checkMain) == d->getValue(true)) {
-                p->giveBetBack(checkMain);
-            } else if (p->getValue(checkMain) > d->getValue(true)) {
-                p->payWinSum(checkMain);
+            //cashout
+            if (ps == DNF) {
+                bool exit = false;
+                bool checkMain = true;
+                while (!exit) {
+                    if (p->getValue(checkMain) < d->getValue(true)) {
+                        p->collectBet(checkMain);
+                    } else if (p->getValue(checkMain) == d->getValue(true)) {
+                        p->giveBetBack(checkMain);
+                    } else if (p->getValue(checkMain) > d->getValue(true)) {
+                        p->payWinSum(checkMain);
+                    }
+                    if (p->playerHasSplit()) {
+                        checkMain = false;
+                    } else {
+                        exit = true;
+                    }
+                }
+                p->resetHand();
+                d->resetHand();
             }
-            if (p->playerHasSplit()) {
-                checkMain = false;
-            } else {
-                exit = true;
-            }
+            playAnotherRound();
+        } else if (mm == RULES) {
+            bjR->printRules();
         }
-        p->resetHand();
-        d->resetHand();
     }
-    playAnotherRound();
+    exitGame();
 
 }
 

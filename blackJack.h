@@ -1,7 +1,3 @@
-//
-// Created by philip_nori on 29.06.20.
-//
-
 #ifndef CCPP_EXAM_BLACKJACK_H
 #define CCPP_EXAM_BLACKJACK_H
 
@@ -18,6 +14,8 @@
 class blackJack {
 
 private:
+    blackJack() = default;
+
     enum playerOption {
         SPLIT = 0, HIT, STAND
     };
@@ -41,7 +39,7 @@ private:
     mainMenu mm;
     playerStatus ps;
 
-    bjRuleController *bjR = bjRuleController::getInstance();
+    bjRuleController *bjR;
     tempDeck cD;
 
 
@@ -73,7 +71,11 @@ private:
 
 
 public:
-    explicit blackJack(bjRuleController *pController) : bjR() {    }
+   // explicit blackJack(bjRuleController *pController) : bjR() {    }
+
+    static blackJack* instance() { static blackJack s; return &s; }
+    blackJack(const blackJack&) = delete;
+    void operator=(const blackJack&) = delete;
 
 
     void game();

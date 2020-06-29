@@ -1,6 +1,8 @@
 #include "bjRuleController.h"
 #include <fstream>
 #include <iostream>
+/*
+bjRuleController* bjRuleController::instance = 0;
 
 bjRuleController* bjRuleController::getInstance()  {
     if (instance == 0)
@@ -12,7 +14,7 @@ bjRuleController* bjRuleController::getInstance()  {
 }
 
 bjRuleController::bjRuleController() = default;
-
+*/
 void bjRuleController::printRules() {
     std::string line;
     std::ifstream file;
@@ -24,6 +26,7 @@ void bjRuleController::printRules() {
         }
     }
 }
+
 /*
 bjRuleController *bjRuleController::getInstance() {
     if (instance) {
@@ -32,25 +35,25 @@ bjRuleController *bjRuleController::getInstance() {
 
     return instance;
 }*/
+/*
 
-
-int bjRuleController::getDealerMaxPoints() const {
+int bjRuleController::getDealerMaxPoints()  {
     return dealerMaxPoints;
 }
 
 
 
-int bjRuleController::getReshuffelTrigger() const {
+int bjRuleController::getReshuffelTrigger()  {
     return reshuffelTrigger;
 }
 
 
-int bjRuleController::getNumberOfDecks() const {
+int bjRuleController::getNumberOfDecks() {
     return numberOfDecks;
 }
 
-
-int bjRuleController::getInitChips() const {
+/*
+int bjRuleController::getInitChips() {
     return initChips;
 }
 
@@ -72,6 +75,33 @@ void bjRuleController::playerLoose() {
 
 void bjRuleController::playerTie() {
     printf("\n Tie. You get your bet back\n");
+}*/
+
+bjRuleController::bjRuleController() {
+
 }
 
 
+int bjRuleController::getDealerMaxPoints() const {
+    return dealerMaxPoints;
+}
+
+int bjRuleController::getReshuffelTrigger() const {
+    return reshuffelTrigger;
+}
+
+int bjRuleController::getNumberOfDecks() const {
+    return numberOfDecks;r
+}
+
+int bjRuleController::getInitChips() const {
+    return initChips;
+}
+
+int bjRuleController::getMinBet() const {
+    return minBet;
+}
+
+int bjRuleController::getMaxBet() const {
+    return maxBet;
+}
