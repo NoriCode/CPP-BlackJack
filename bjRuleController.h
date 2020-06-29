@@ -64,6 +64,9 @@ public:
     void playerTie();
 
     int oneEleven();
+
+
+    bool roundEndChecker();
 };
 
 

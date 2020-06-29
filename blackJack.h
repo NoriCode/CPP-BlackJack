@@ -5,10 +5,10 @@
 #ifndef CCPP_EXAM_BLACKJACK_H
 #define CCPP_EXAM_BLACKJACK_H
 
-#include "playCardDeck.h"
+#include "replaced/playCardDeck.h"
 #include "bjRuleController.h"
-#include "bjplayer.h"
-#include "bjNonPlayer.h"
+#include "replaced/bjplayer.h"
+#include "replaced/bjNonPlayer.h"
 #include "bjCards.h"
 #include "bjHand.h"
 
@@ -28,6 +28,12 @@ private:
         PLAY = 1, RULES, EXIT
     };
 
+    enum playerStatus {
+        VICTORY = 0,
+        TIE,
+        DEFEAD,
+        BROKE
+    };
 
     gameState gs;
     playerOption po;
@@ -38,14 +44,11 @@ private:
     bjHand split;
 
     bjRuleController *bjR = bjRuleController::getInstance();
-    playCardDeck pCD;
-
+    tempDeck cD;
 
 
     bjplayer *p = new bjplayer(bjR->getInitChips());
     bjNonPlayer *d = new bjNonPlayer();
-
-
 
 
     void newGame();
@@ -63,6 +66,7 @@ public:
     bool exitGame();
 
     bool leaveTable();
+
 
 };
 

@@ -3,16 +3,11 @@ file(REMOVE_RECURSE
   "../CCPP_Exam.pdb"
   "CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/deck.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/player.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o"
+  "CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o"
+  "CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

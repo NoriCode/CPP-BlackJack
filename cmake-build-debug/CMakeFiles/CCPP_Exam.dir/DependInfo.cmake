@@ -4,20 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/philip_nori/CCPP_Exam/bjCards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
-  "/home/philip_nori/CCPP_Exam/bjHand.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o"
-  "/home/philip_nori/CCPP_Exam/bjNonPlayer.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjNonPlayer.cpp.o"
-  "/home/philip_nori/CCPP_Exam/bjRuleController.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
-  "/home/philip_nori/CCPP_Exam/bjplayer.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjplayer.cpp.o"
-  "/home/philip_nori/CCPP_Exam/blackJack.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
-  "/home/philip_nori/CCPP_Exam/cards.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
-  "/home/philip_nori/CCPP_Exam/deck.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/deck.cpp.o"
-  "/home/philip_nori/CCPP_Exam/main.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "/home/philip_nori/CCPP_Exam/playCardDeck.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o"
-  "/home/philip_nori/CCPP_Exam/player.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/player.cpp.o"
-  "/home/philip_nori/CCPP_Exam/playerdeck.cpp" "/home/philip_nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o"
+  "/home/nori/CCPP_Exam/bjCards.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
+  "/home/nori/CCPP_Exam/bjHand.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o"
+  "/home/nori/CCPP_Exam/bjRuleController.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
+  "/home/nori/CCPP_Exam/blackJack.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
+  "/home/nori/CCPP_Exam/main.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
+  "/home/nori/CCPP_Exam/tempDeck.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o"
+  "/home/nori/CCPP_Exam/tempPlayer.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

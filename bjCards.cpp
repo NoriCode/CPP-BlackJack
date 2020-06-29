@@ -5,17 +5,18 @@
 #include "bjCards.h"
 
 void bjCards::setValue(int v) {
-    _value = v;
+    value = v;
 }
 
 int bjCards::getValue() {
-    return _value;
+    return value;
 }
 
 int bjCards::whoAmI() {
-    getValue();
-    getSymbol();
-    getnumber();
-    printf("%s, %s, %i \n", getSymbol().c_str(), getnumber().c_str(), getValue());
+    printf("%s, %s \n", symbol.c_str(), number.c_str());
     return 0;
+}
+
+std::string bjCards::getnumber() {
+    return number;
 }

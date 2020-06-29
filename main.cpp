@@ -1,8 +1,8 @@
 #include <cstdio>
-#include "playCardDeck.h"
+#include "replaced/playCardDeck.h"
 #include "bjRuleController.h"
-#include "bjplayer.h"
-#include "bjNonPlayer.h"
+#include "replaced/bjplayer.h"
+#include "replaced/bjNonPlayer.h"
 #include "bjCards.h"
 #include "blackJack.h"
 
@@ -149,7 +149,7 @@ int game() {
             printf("splitarea");
             if (playerChoice == 1) {
                 p->giveSplitCard(pCD.getCardX(0));
-                pCD.playedCardsCollector(pCD.getCardX(0));
+                pCD.collectPlayedCards(pCD.getCardX(0));
                 p->splitValue();
             } else if (playerChoice == 2) {
                 rightPlayed = true;

@@ -29,12 +29,14 @@ Naturals:
 		dealer collects the bet
 	dealer has a ten or an ace face value up:
 		dealer checks the hidden card
+
 players play:
 	stand
 		no additional card
 	hit
 		gets another card
 		repeats till stand
+
 dealers play:
 	after the players
 	face down card is turned up

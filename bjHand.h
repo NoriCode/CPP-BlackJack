@@ -5,25 +5,26 @@
 #ifndef CCPP_EXAM_BJHAND_H
 #define CCPP_EXAM_BJHAND_H
 #include "bjCards.h"
-#include "playerdeck.h"
+#include "replaced/playerdeck.h"
+#include "tempDeck.h"
 
 class bjHand {
 private:
     int betAmount;
-    playerdeck mainDeck;
+    tempDeck deck;
     bool splitAllowed;
-
+    bool amIReal;
 public:
 
     void split();
 
-    void repayBet();
+    int givePlayerBetBack();
 
     void resetDeck();
 
     void resetBetamount();
 
-    void giveCard();
+    void giveCard(bjCards *card);
 
     bool canSplit();
 
@@ -32,9 +33,17 @@ public:
 
     int getBetAmount();
 
-    int payout(int bet);
+    int payout();
 
-    bjCards *removeCard();
+    bjCards *removeFirstCard();
+
+    void showcards();
+
+    void bet(int playerBet);
+
+    void clear();
+
+    bool exist();
 };
 
 

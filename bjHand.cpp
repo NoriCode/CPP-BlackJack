@@ -15,19 +15,42 @@ int bjHand::getBetAmount() {
     return betAmount;
 }
 
-int bjHand::payout(int bet) {
-    return (int) bet * 1.5;
+int bjHand::payout() {
+    return (int) betAmount * 1.5;
 }
 
 void bjHand::resetBetamount() {
     betAmount = 0;
 }
 
-bjCards *bjHand::removeCard() {
-
-    return mainDeck.getDeck().front();
+bjCards *bjHand::removeFirstCard() {
+    return deck.getDeck().front();
 }
 
-void bjHand::giveCard() {
-    mainDeck.a
+void bjHand::giveCard(bjCards *card) {
+    amIReal = true;
+    deck.addCardtoDeck(card);
+}
+
+void bjHand::showcards() {
+    for(bjCards *card: deck.getDeck()){
+        card->whoAmI();
+    }
+}
+
+void bjHand::bet(int playerBet) {
+    betAmount = playerBet;
+}
+
+int bjHand::givePlayerBetBack() {
+    return betAmount;
+}
+
+void bjHand::clear() {
+    deck.getDeck().empty();
+    amIReal = false;
+}
+
+bool bjHand::exist() {
+    return amIReal;
 }

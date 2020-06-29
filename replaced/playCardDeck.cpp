@@ -1,7 +1,7 @@
 #include "playCardDeck.h"
 #include <algorithm>
 #include <random>
-#include "bjCards.h"
+#include "../bjCards.h"
 
 void playCardDeck::generatePlayDeck(int maxDecks) {
     for (int i = 0; i < maxDecks; ++i) {

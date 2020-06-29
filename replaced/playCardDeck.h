@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include "cards.h"
-#include "bjCards.h"
+#include "../bjCards.h"
 #include "deck.h"
 
 class playCardDeck : public deck {

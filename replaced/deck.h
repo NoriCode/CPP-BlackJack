@@ -8,7 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include "cards.h"
-#include "bjCards.h"
+#include "../bjCards.h"
 
 
 class deck {

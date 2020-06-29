@@ -5,6 +5,19 @@
 #include "blackJack.h"
 
 void blackJack::game() {
+    if(gs==NEWGAME){
+        newGame();
+        gs = static_cast<gameState>(1);
+    }
+
+    //bet
+    p->bet(bjR->getMinBet(),bjR->getMaxBet());
+
+    //spieler und dealer bekommen Karte P,D,P,D
+    //karten werden gedreht
+    //spieler: hit stand loop unterbrochen durch 21 oder höher
+    //dealer phase
+    //cashout
 
 }
 
@@ -46,22 +59,18 @@ bool blackJack::leaveTable() {
 }
 
 void blackJack::newGame() {
-    pCD.generatePlayDeck(bjR->getNumberOfDecks());
-    pCD.deckShuffel();
+    cD.generatePlayCardsAndAddtoDeck(bjR->getNumberOfDecks());
+
     for (int i = 0; i < 2; i++) {
-        p->giveMainCard(pCD.giveOutCard());
+        p->giveMainCard(cD.playFirstCardFromStack());
 
-        d->giveMainCard(pCD.giveOutCard());
+        d->giveMainCard(cD.playFirstCardFromStack());
     }
 
 
-    if (pCD.getCardCounter() <= bjR->getReshuffelTrigger()) {
-        pCD.deckShuffel();
-    }
     printf("The open Card of the dealer is: ");
     d->showOPenCard();
 
     p->showCards("You");
     p->bet(bjR->getMinBet(), bjR->getMaxBet());
-
 }

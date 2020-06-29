@@ -7,21 +7,24 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "cards.h"
-#include "helpers/println.hpp"
 
-class bjCards : public cards {
+class bjCards {
 protected:
-    int _value;
+    int value;
+    std::string number;
+    std::string symbol;
+
 public:
-    explicit bjCards(std::string symbol = "nori", std::string number = "0", int value = 0) : cards(symbol, number),
-                                                                                             _value(value) {}
+    explicit bjCards(std::string s = "nori", std::string n = "0", int v = 0) : symbol(s), number(n), value(v) {}
 
     void setValue(int v);
 
     int getValue();
 
-    int whoAmI() override;
+    int whoAmI();
+
+    std::string getnumber();
+
 };
 
 

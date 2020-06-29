@@ -2,10 +2,10 @@
 #define CCPP_EXAM_BJPLAYER_H
 
 #include "cards.h"
-#include "bjCards.h"
+#include "../bjCards.h"
 #include <vector>
 #include "playerdeck.h"
-#include "bjRuleController.h"
+#include "../bjRuleController.h"
 #include "player.h"
 
 

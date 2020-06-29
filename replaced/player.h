@@ -7,10 +7,10 @@
 
 
 #include "cards.h"
-#include "bjCards.h"
+#include "../bjCards.h"
 #include <vector>
 #include "playerdeck.h"
-#include "bjRuleController.h"
+#include "../bjRuleController.h"
 
 
 class player {
@@ -18,16 +18,6 @@ protected:
 
 public:
 
-
-    void giveMainCard(bjCards *card);
-
-    int mainValue();
-
-    void showCards();
-
-    void showCards(std::string name);
-
-    void resetMainDeck();
 };
 
 
