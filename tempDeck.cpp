@@ -85,10 +85,8 @@ int tempDeck::getTotalValue() {
     return value;
 }
 
-bool tempDeck::reShuffelWasNeeded() {
+void tempDeck::reshuffelIfNeeded() {
     if (cardCounter <= 75) {
         deckShuffel();
-        return true;
     }
-    return false;
 }

@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/nori/CCPP_Exam/bjCards.cpp
-bjCards.h
-/home/nori/CCPP_Exam/bjCards.h
-
 /home/nori/CCPP_Exam/bjCards.h
 stdio.h
 -
 iostream
 -
-
-/home/nori/CCPP_Exam/bjHand.cpp
-bjHand.h
-/home/nori/CCPP_Exam/bjHand.h
 
 /home/nori/CCPP_Exam/bjHand.h
 bjCards.h
@@ -27,14 +19,6 @@ replaced/playerdeck.h
 /home/nori/CCPP_Exam/replaced/playerdeck.h
 tempDeck.h
 /home/nori/CCPP_Exam/tempDeck.h
-
-/home/nori/CCPP_Exam/bjRuleController.cpp
-bjRuleController.h
-/home/nori/CCPP_Exam/bjRuleController.h
-fstream
--
-iostream
--
 
 /home/nori/CCPP_Exam/bjRuleController.h
 iostream
@@ -57,20 +41,12 @@ bjCards.h
 /home/nori/CCPP_Exam/bjCards.h
 bjHand.h
 /home/nori/CCPP_Exam/bjHand.h
+tempDeck.h
+/home/nori/CCPP_Exam/tempDeck.h
+tempPlayer.h
+/home/nori/CCPP_Exam/tempPlayer.h
 
 /home/nori/CCPP_Exam/main.cpp
-cstdio
--
-replaced/playCardDeck.h
-/home/nori/CCPP_Exam/replaced/playCardDeck.h
-bjRuleController.h
-/home/nori/CCPP_Exam/bjRuleController.h
-replaced/bjplayer.h
-/home/nori/CCPP_Exam/replaced/bjplayer.h
-replaced/bjNonPlayer.h
-/home/nori/CCPP_Exam/replaced/bjNonPlayer.h
-bjCards.h
-/home/nori/CCPP_Exam/bjCards.h
 blackJack.h
 /home/nori/CCPP_Exam/blackJack.h
 
@@ -136,16 +112,6 @@ playerdeck.h
 deck.h
 /home/nori/CCPP_Exam/replaced/deck.h
 
-/home/nori/CCPP_Exam/tempDeck.cpp
-tempDeck.h
-/home/nori/CCPP_Exam/tempDeck.h
-algorithm
--
-random
--
-bjCards.h
-/home/nori/CCPP_Exam/bjCards.h
-
 /home/nori/CCPP_Exam/tempDeck.h
 vector
 -
@@ -155,10 +121,6 @@ replaced/cards.h
 /home/nori/CCPP_Exam/replaced/cards.h
 bjCards.h
 /home/nori/CCPP_Exam/bjCards.h
-
-/home/nori/CCPP_Exam/tempPlayer.cpp
-tempPlayer.h
-/home/nori/CCPP_Exam/tempPlayer.h
 
 /home/nori/CCPP_Exam/tempPlayer.h
 bjCards.h

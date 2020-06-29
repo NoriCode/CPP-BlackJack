@@ -14,17 +14,16 @@ private:
     bjHand main;
     bjHand split;
 
-    int chips;
+    int chips = 0;
 
-    bool hasSplit;
+    bool hasSplit = false;
 
 public:
     explicit tempPlayer(int c = 0) : chips(c) {}
 
-    explicit tempPlayer() {}
+    explicit tempPlayer() = default;
 
-    void givePlayercard(bjCards *card);
-
+    bool canPlayerSplit();
 
     void splitCards();
 
@@ -43,6 +42,14 @@ public:
     void collectBet(bool checkMain);
 
     void giveBetBack(bool checkMain);
+
+    void showFirstCard();
+
+    void showAllCards(bool checkMain);
+
+    bool playerHasSplit();
+
+    void givePlayercard(bjCards *card, bool checkMain);
 };
 
 

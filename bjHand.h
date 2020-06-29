@@ -12,7 +12,7 @@ class bjHand {
 private:
     int betAmount;
     tempDeck deck;
-    bool splitAllowed;
+    bool splitAllowed = true;
     bool amIReal;
 public:
 
@@ -28,7 +28,7 @@ public:
 
     bool canSplit();
 
-    int getTotalvalue();
+    int getPlayerTotalvalue();
 
 
     int getBetAmount();
@@ -44,6 +44,8 @@ public:
     void clear();
 
     bool exist();
+
+    void showfirstCard();
 };
 
 

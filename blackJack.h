@@ -11,17 +11,19 @@
 #include "replaced/bjNonPlayer.h"
 #include "bjCards.h"
 #include "bjHand.h"
+#include "tempDeck.h"
+#include "tempPlayer.h"
 
 
 class blackJack {
 
 private:
     enum playerOption {
-        SPLIT = 0, HIT, STAND, LEAVE
+        SPLIT = 0, HIT, STAND
     };
 
     enum gameState {
-        NEWGAME = 0, PLAYMAIN, PLAYSPLIT
+        NEWGAME = 1, LEAVE, PLAYING
     };
 
     enum mainMenu {
@@ -30,14 +32,14 @@ private:
 
     enum playerStatus {
         VICTORY = 0,
-        TIE,
         DEFEAD,
-        BROKE
+        DNF
     };
 
     gameState gs;
     playerOption po;
     mainMenu mm;
+    playerStatus ps;
 
 
     bjHand main;
@@ -47,27 +49,38 @@ private:
     tempDeck cD;
 
 
-    bjplayer *p = new bjplayer(bjR->getInitChips());
-    bjNonPlayer *d = new bjNonPlayer();
+    tempPlayer *p = new tempPlayer(bjR->getInitChips());
+    tempPlayer *d;
 
 
     void newGame();
 
-public:
+    void drawInitialCards();
+
+    void draw(bool checkMain);
 
     void menu();
 
-    void game();
+    void showCards();
 
-    void draw();
+    void playAnotherRound();
 
-    void kickPlayer();
+    void playerRoundOptions();
+
+    void kickPlayerIfBroke();
 
     bool exitGame();
 
     bool leaveTable();
 
+    void checkEarlyVictoryCondidtion(bool checkMain);
 
+
+public:
+    explicit blackJack() : gs(static_cast<gameState>(1)) {}
+
+
+    void game();
 };
 
 

@@ -28,6 +28,7 @@ CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/playCardDeck.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/player.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/playerdeck.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempDeck.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempPlayer.h
 
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjHand.h
@@ -42,6 +43,7 @@ CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/playCardDeck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/player.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/playerdeck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../tempDeck.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../tempPlayer.h
 
 CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../replaced/cards.h

@@ -28,6 +28,10 @@ private:
     void deckShuffel();
 
 
+    void resetPlayDeck();
+
+
+
 public:
 
     void addCardtoDeck(bjCards *card);
@@ -36,17 +40,13 @@ public:
 
     bjCards *playFirstCardFromStack();
 
-
     void collectPlayedCards(bjCards *card);
-
 
     void generatePlayCardsAndAddtoDeck(int maxDecks);
 
-    void resetPlayDeck();
-
     int getTotalValue();
 
-    bool reShuffelWasNeeded();
+    void reshuffelIfNeeded();
 
 
 };

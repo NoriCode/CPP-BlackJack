@@ -8,6 +8,10 @@ void bjHand::split() {
 }
 
 bool bjHand::canSplit() {
+    if (splitAllowed) {
+        splitAllowed = false;
+        return deck.getDeck().front()->getValue() == deck.getDeck().at(1)->getValue();
+    }
     return splitAllowed;
 }
 
@@ -33,7 +37,7 @@ void bjHand::giveCard(bjCards *card) {
 }
 
 void bjHand::showcards() {
-    for(bjCards *card: deck.getDeck()){
+    for (bjCards *card: deck.getDeck()) {
         card->whoAmI();
     }
 }
@@ -53,4 +57,20 @@ void bjHand::clear() {
 
 bool bjHand::exist() {
     return amIReal;
+}
+
+void bjHand::showfirstCard() {
+    deck.getDeck().front()->whoAmI();
+}
+
+
+int bjHand::getPlayerTotalvalue() {
+    for(bjCards *card: deck.getDeck()){
+        if(card->getnumber() == "A"){
+            if(deck.getTotalValue()>21){
+                card->setValue(1);
+            }
+        }
+    }
+    return deck.getTotalValue();
 }

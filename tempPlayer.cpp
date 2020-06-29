@@ -5,13 +5,18 @@
 #include "tempPlayer.h"
 
 
-void tempPlayer::givePlayercard(bjCards *card) {
-    main.giveCard(card);
+void tempPlayer::givePlayercard(bjCards *card, bool checkMain) {
+    if (checkMain) {
+        main.giveCard(card);
+    } else {
+        split.giveCard(card);
+    }
 }
 
 void tempPlayer::splitCards() {
     split.giveCard(main.removeFirstCard());
     split.bet(main.getBetAmount());
+    hasSplit = true;
 }
 
 void tempPlayer::bet(int min, int max) {
@@ -44,9 +49,9 @@ void tempPlayer::bet(int min, int max) {
 
 int tempPlayer::getValue(bool checkMain) {
     if (checkMain) {
-        return main.getTotalvalue();
+        return main.getPlayerTotalvalue();
     } else {
-        return split.getTotalvalue();
+        return split.getPlayerTotalvalue();
     }
 }
 
@@ -55,7 +60,7 @@ void tempPlayer::resetHand() {
     main.resetBetamount();
     main.clear();
     if (split.exist()) {
-        split.resetDeck();
+        split.resetBetamount();
         split.clear();
     }
 }
@@ -68,7 +73,7 @@ void tempPlayer::payWinSum(bool checkMain) {
     if (checkMain) {
         main.payout();
     } else {
-        split.payout()
+        split.payout();
     };
 }
 
@@ -93,3 +98,24 @@ void tempPlayer::giveBetBack(bool checkMain) {
 int tempPlayer::getChips() {
     return chips;
 }
+
+void tempPlayer::showFirstCard() {
+    main.showfirstCard();
+}
+
+void tempPlayer::showAllCards(bool checkMain) {
+    if (checkMain) {
+        main.showcards();
+    } else {
+        split.showcards();
+    }
+}
+
+bool tempPlayer::playerHasSplit() {
+    return hasSplit;
+}
+
+bool tempPlayer::canPlayerSplit() {
+    main.canSplit();
+}
+
