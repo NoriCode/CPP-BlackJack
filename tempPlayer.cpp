@@ -116,6 +116,6 @@ bool tempPlayer::playerHasSplit() {
 }
 
 bool tempPlayer::canPlayerSplit() {
-    main.canSplit();
+    return main.canSplit();
 }
 

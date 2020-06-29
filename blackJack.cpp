@@ -25,7 +25,7 @@ void blackJack::game() {
             playerRoundOptions();
             if (po == SPLIT) {
                 p->splitCards();
-            } else if (po = HIT) {
+            } else if (po == HIT) {
                 draw(checkMain);
             } else if (po == STAND) {
                 if (p->playerHasSplit() && checkMain) {

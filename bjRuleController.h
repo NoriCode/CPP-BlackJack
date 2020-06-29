@@ -6,17 +6,13 @@
 class bjRuleController {
 private:
     /* Here will be the instance stored. */
-    static bjRuleController *instance = nullptr;
+    static bjRuleController *instance;
+
 
     /* Private constructor to prevent instancing. */
-    bjRuleController()= default;;
-
-    bjRuleController ( const bjRuleController& );
+    bjRuleController();
 
     int dealerMaxPoints = 17;
-    int blackjack = 21;
-    double returnValue = 1.5;
-    int playerBet;
     int reshuffelTrigger = 75;
     int numberOfDecks = 6;
     int initChips = 1000;

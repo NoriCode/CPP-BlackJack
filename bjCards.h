@@ -10,9 +10,11 @@
 
 class bjCards {
 protected:
-    int value;
-    std::string number;
+
     std::string symbol;
+
+    std::string number;
+    int value;
 
 public:
     explicit bjCards(std::string s = "nori", std::string n = "0", int v = 0) : symbol(s), number(n), value(v) {}
