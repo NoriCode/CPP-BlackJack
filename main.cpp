@@ -3,6 +3,7 @@
 #include "bjRuleController.h"
 #include "bjplayer.h"
 #include "bjNonPlayer.h"
+#include "bjCards.h"
 
 int menu() {
     int in;
@@ -117,6 +118,12 @@ int game() {
 
         if (!leftPlayed) {
             if (playerChoice == 1) {
+                bjCards *drawnCard = pCD.giveOutCard();
+                if (drawnCard->getnumber() == ("A")){
+                    if(drawnCard->getValue()+p->getMainDeck().getTotalValue()>21){
+                        drawnCard->setValue(1);
+                    }
+                }
                 p->giveMainCard(pCD.giveOutCard());
                 pCD.playedCardsCollector(pCD.giveOutCard());
                 p->mainValue();

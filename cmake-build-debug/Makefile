@@ -312,33 +312,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-myLittlehelpers.o: myLittlehelpers.cpp.o
-
-.PHONY : myLittlehelpers.o
-
-# target to build an object file
-myLittlehelpers.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o
-.PHONY : myLittlehelpers.cpp.o
-
-myLittlehelpers.i: myLittlehelpers.cpp.i
-
-.PHONY : myLittlehelpers.i
-
-# target to preprocess a source file
-myLittlehelpers.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.i
-.PHONY : myLittlehelpers.cpp.i
-
-myLittlehelpers.s: myLittlehelpers.cpp.s
-
-.PHONY : myLittlehelpers.s
-
-# target to generate assembly for a file
-myLittlehelpers.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.s
-.PHONY : myLittlehelpers.cpp.s
-
 playCardDeck.o: playCardDeck.cpp.o
 
 .PHONY : playCardDeck.o
@@ -450,9 +423,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... myLittlehelpers.o"
-	@echo "... myLittlehelpers.i"
-	@echo "... myLittlehelpers.s"
 	@echo "... playCardDeck.o"
 	@echo "... playCardDeck.i"
 	@echo "... playCardDeck.s"

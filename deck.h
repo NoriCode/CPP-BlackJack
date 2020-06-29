@@ -13,9 +13,9 @@
 
 class deck {
 protected:
-    std::vector<bjCards *> _deck;
-    int _cardCounter;
-    std::vector<bjCards *> _playedCards;
+    std::vector<bjCards *> deck;
+    int cardCounter;
+    std::vector<bjCards *> playedCards;
 
 
     void reduceCardCounter();

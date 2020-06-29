@@ -17,7 +17,6 @@ class player {
 protected:
     playerdeck _mainDeck;
 
-    int oneEleven();
 public:
 
 

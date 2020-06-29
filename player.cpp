@@ -9,24 +9,13 @@ int player::mainValue() {
 }
 
 void player::giveMainCard(bjCards *card) {
-    if (card->getnumber() == ("A")) {
-        card->setValue(oneEleven());
-        card->whoAmI();
-    }
-
     _mainDeck.addPlayDeck(card);
+    printf("You drawn this card");
+    card->whoAmI();
     //todo karten genau anzeigen nicht nur wert
 }
 
-int player::oneEleven() {
-    int in;
-    while (in != 1 && in != 11) {
-        printf("You have drawn an Ace. You can decide if it has the value 1 or 11\n");
-        printf("Which Value has your Ace: ");
-        std::cin >> in;
-    }
-    return in;
-}
+
 
 void player::showCards(std::string name) {
     printf("The Player %s has this Cards: \n", name.c_str());

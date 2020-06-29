@@ -63,6 +63,8 @@ public:
     void playerLoose();
 
     void playerTie();
+
+    int oneEleven();
 };
 
 

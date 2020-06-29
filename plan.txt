@@ -21,3 +21,15 @@ blackjack
 			funktionen
 				printfunktion
 					ausgabe des zeichens und der nummer und des wertes
+
+
+
+	1 oder 11 automatisch regeln, nicht den spieler fragen
+	enums für den  state of game nutzen
+        spieler
+        dealer
+        new game
+
+    enum für welches deck
+
+    das deck mit der wette als eigene object

@@ -123,12 +123,6 @@
 		<Unit filename="/home/philip_nori/CCPP_Exam/main.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
-		<Unit filename="/home/philip_nori/CCPP_Exam/myLittlehelpers.cpp">
-			<Option target="CCPP_Exam"/>
-		</Unit>
-		<Unit filename="/home/philip_nori/CCPP_Exam/myLittlehelpers.h">
-			<Option target="CCPP_Exam"/>
-		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/playCardDeck.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
@@ -145,9 +139,6 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/playerdeck.h">
-			<Option target="CCPP_Exam"/>
-		</Unit>
-		<Unit filename="/home/philip_nori/CCPP_Exam/test.txt">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/philip_nori/CCPP_Exam/CMakeLists.txt">

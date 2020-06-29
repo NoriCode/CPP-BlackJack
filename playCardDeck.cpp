@@ -9,6 +9,9 @@ void playCardDeck::generatePlayDeck(int maxDecks) {
             int value = j + 2;
             if (value > 10) {
                 value = 10;
+                if (j == 12) {
+                    value = 11;
+                }
             }
             addPlayDeck(new bjCards("hearts", getNumberX(j), value));
             addPlayDeck(new bjCards("bells", getNumberX(j), value));
@@ -16,25 +19,24 @@ void playCardDeck::generatePlayDeck(int maxDecks) {
             addPlayDeck(new bjCards("acorns", getNumberX(j), value));
         }
     }
-    setCardCounter(_deck.size());
+    setCardCounter(deck.size());
 }
-
 
 
 void playCardDeck::resetPlayDeck() {
-    for (bjCards *card : _playedCards) {
+    for (bjCards *card : playedCards) {
         addPlayDeck(card);
     }
-    _playedCards.clear();
-    setCardCounter(_deck.size());
+    playedCards.clear();
+    setCardCounter(deck.size());
 }
 
 void playCardDeck::deckShuffel() {
-    std::shuffle(_deck.begin(), _deck.end(), std::mt19937(std::random_device()()));
+    std::shuffle(deck.begin(), deck.end(), std::mt19937(std::random_device()()));
 }
 
 void playCardDeck::setCardCounter(int i) {
-    _cardCounter = i;
+    cardCounter = i;
 }
 
 std::string playCardDeck::getNumberX(int x) {

@@ -6,7 +6,7 @@
 
 int playerdeck::getTotalValue() {
     int value = 0;
-    for (bjCards *card : _deck) {
+    for (bjCards *card : deck) {
         value += card->getValue();
     }
     return value;

@@ -29,11 +29,6 @@ void bjplayer::bet(int min, int max) {
 
 
 void bjplayer::giveSplitCard(bjCards *card) {
-
-    if (card->getSymbol().compare("A")) {
-        card->setValue(oneEleven());
-    }
-
     splitDeck.addPlayDeck(card);
     printf("%i", mainValue());
     //todo karten genau anzeigen nicht nur wert

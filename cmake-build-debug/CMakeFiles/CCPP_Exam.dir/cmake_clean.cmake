@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/CCPP_Exam.dir/cards.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/deck.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/myLittlehelpers.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/playCardDeck.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/player.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/playerdeck.cpp.o"
