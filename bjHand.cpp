@@ -23,17 +23,17 @@ void bjHand::resetBetamount() {
     betAmount = 0;
 }
 
-bjCards *bjHand::removeFirstCard() {
+std::shared_ptr<bjCards> bjHand::removeFirstCard() {
     return deck.getDeck().front();
 }
 
-void bjHand::giveCard(bjCards *card) {
+void bjHand::giveCard(std::shared_ptr<bjCards> card) {
     amIReal = true;
     deck.addCardtoDeck(card);
 }
 
 void bjHand::showcards() {
-    for (bjCards *card: deck.getDeck()) {
+    for (std::shared_ptr<bjCards> card: deck.getDeck()) {
         card->whoAmI();
     }
 }
@@ -47,8 +47,11 @@ int bjHand::givePlayerBetBack() {
 }
 
 void bjHand::clear() {
-    deck.getDeck().clear();
+    //deck.getDeck().
 
+    for (std::shared_ptr<bjCards> card: deck.getDeck()) {
+        card.reset();
+    }
     amIReal = false;
 }
 
@@ -62,7 +65,7 @@ void bjHand::showfirstCard() {
 
 
 int bjHand::getPlayerTotalvalue() {
-    for (bjCards *card: deck.getDeck()) {
+    for (std::shared_ptr<bjCards> card: deck.getDeck()) {
         if (card->getnumber() == "A") {
             if (deck.getTotalValue() > 21) {
                 card->setValue(1);

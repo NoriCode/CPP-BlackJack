@@ -54,7 +54,7 @@ public:
 
     bool playerHasSplit();
 
-    void givePlayercard(bjCards *card, bool checkMain);
+    void givePlayercard(std::shared_ptr<bjCards> card, bool checkMain);
 
     void setHasSplit();
 

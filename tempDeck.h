@@ -14,9 +14,9 @@
 
 class tempDeck {
 private:
-    std::vector< bjCards *> deck;
+    std::vector< std::shared_ptr<bjCards>> deck;
     int cardCounter;
-    std::vector<bjCards *> playedCards;
+    std::vector<std::shared_ptr<bjCards>> playedCards;
     void reduceCardCounter();
 
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};
@@ -35,11 +35,11 @@ private:
 
 public:
 
-    void addCardtoDeck(bjCards *card);
+    void addCardtoDeck(std::shared_ptr<bjCards> card);
 
-    std::vector<bjCards *> getDeck();
+    std::vector<std::shared_ptr<bjCards>> getDeck();
 
-    bjCards *playFirstCardFromStack();
+    std::shared_ptr<bjCards> playFirstCardFromStack();
 
     void collectPlayedCards(bjCards *card);
 
@@ -50,6 +50,7 @@ public:
     void reshuffelIfNeeded(int trigger);
 
 
+    void collectPlayedCards(std::shared_ptr<bjCards> card);
 };
 
 

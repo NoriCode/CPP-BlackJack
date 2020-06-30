@@ -24,7 +24,7 @@ public:
 
     void resetBetamount();
 
-    void giveCard(bjCards *card);
+    void giveCard(std::shared_ptr<bjCards> card);
 
     bool canSplit();
 
@@ -35,7 +35,7 @@ public:
 
     int payout();
 
-    bjCards *removeFirstCard();
+    std::shared_ptr<bjCards> removeFirstCard();
 
     void showcards();
 

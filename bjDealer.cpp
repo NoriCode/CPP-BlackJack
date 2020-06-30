@@ -4,7 +4,7 @@
 
 #include "bjDealer.h"
 
-void bjDealer::givePlayercard(bjCards *card, bool checkMain) {
+void bjDealer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
 
         main.giveCard(card);
 }

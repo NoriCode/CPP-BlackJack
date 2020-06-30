@@ -7,17 +7,17 @@
 #include <random>
 #include "bjCards.h"
 
-void tempDeck::addCardtoDeck(bjCards *card) {
+void tempDeck::addCardtoDeck(std::shared_ptr<bjCards> card) {
     deck.push_back(card);
 }
 
 
-std::vector<bjCards *> tempDeck::getDeck() {
+std::vector<std::shared_ptr<bjCards>> tempDeck::getDeck() {
     return deck;
 }
 
-bjCards *tempDeck::playFirstCardFromStack() {
-    bjCards *output = deck.front();
+std::shared_ptr<bjCards> tempDeck::playFirstCardFromStack() {
+    std::shared_ptr<bjCards> output = deck.front();
     collectPlayedCards(output);
     deck.erase(deck.begin());
     return output;
@@ -28,7 +28,8 @@ void tempDeck::reduceCardCounter() {
     cardCounter--;
 }
 
-void tempDeck::collectPlayedCards(bjCards *card) {
+void tempDeck::collectPlayedCards(std::shared_ptr<bjCards> card) {
+
     playedCards.push_back(card);
     //deck.erase(deck.at(0)));
     deck.empty();
@@ -45,10 +46,10 @@ void tempDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
                     value = 11;
                 }
             }
-            addCardtoDeck(new bjCards("hearts", getNumberX(j), value));
-            addCardtoDeck(new bjCards("bells", getNumberX(j), value));
-            addCardtoDeck(new bjCards("leaves", getNumberX(j), value));
-            addCardtoDeck(new bjCards("acorns", getNumberX(j), value));
+            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("hearts", getNumberX(j), value)));
+            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("bells", getNumberX(j), value)));
+            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("leaves", getNumberX(j), value)));
+            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("acorns", getNumberX(j), value)));
         }
         deckShuffel();
     }
@@ -58,7 +59,7 @@ void tempDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
 
 
 void tempDeck::resetPlayDeck() {
-    for (bjCards *card : playedCards) {
+    for (std::shared_ptr<bjCards> card : playedCards) {
         addCardtoDeck(card);
     }
     playedCards.clear();
@@ -80,7 +81,7 @@ std::string tempDeck::getNumberX(int x) {
 
 int tempDeck::getTotalValue() {
     int value = 0;
-    for (bjCards *card : deck) {
+    for (std::shared_ptr<bjCards> card : deck) {
         value += card->getValue();
     }
     return value;

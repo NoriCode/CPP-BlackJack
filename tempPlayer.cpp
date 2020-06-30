@@ -5,7 +5,7 @@
 #include "tempPlayer.h"
 
 
-void tempPlayer::givePlayercard(bjCards *card, bool checkMain) {
+void tempPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
     if (checkMain) {
         main.giveCard(card);
     } else {
