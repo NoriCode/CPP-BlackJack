@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/nori/CCPP_Exam/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/CCPP_Exam.dir/all
+all: CMakeFiles/main.cpp.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/CCPP_Exam.dir/clean
+clean: CMakeFiles/main.cpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/CCPP_Exam.dir
+# Target rules for target CMakeFiles/main.cpp.dir
 
 # All Build rule for target.
-CMakeFiles/CCPP_Exam.dir/all:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/depend
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target CCPP_Exam"
-.PHONY : CMakeFiles/CCPP_Exam.dir/all
+CMakeFiles/main.cpp.dir/all:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/depend
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target main.cpp"
+.PHONY : CMakeFiles/main.cpp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/CCPP_Exam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CCPP_Exam.dir/all
+CMakeFiles/main.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/CCPP_Exam.dir/rule
+.PHONY : CMakeFiles/main.cpp.dir/rule
 
 # Convenience name for target.
-CCPP_Exam: CMakeFiles/CCPP_Exam.dir/rule
+main.cpp: CMakeFiles/main.cpp.dir/rule
 
-.PHONY : CCPP_Exam
+.PHONY : main.cpp
 
 # clean rule for target.
-CMakeFiles/CCPP_Exam.dir/clean:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/clean
-.PHONY : CMakeFiles/CCPP_Exam.dir/clean
+CMakeFiles/main.cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/clean
+.PHONY : CMakeFiles/main.cpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

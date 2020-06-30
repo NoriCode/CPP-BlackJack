@@ -1,17 +1,13 @@
-//
-// Created by nori on 29.06.20.
-//
-
-#ifndef CCPP_EXAM_TEMPPLAYER_H
-#define CCPP_EXAM_TEMPPLAYER_H
+#ifndef CCPP_EXAM_BJPLAYER_H
+#define CCPP_EXAM_BJPLAYER_H
 
 
 #include "bjCards.h"
 #include "bjHand.h"
 
-class tempPlayer {
+class bjPlayer {
 private:
-    tempPlayer();
+    bjPlayer();
 
     bjHand main;
     bjHand split;
@@ -21,11 +17,11 @@ private:
     bool hasSplit = false;
 
 public:
-    explicit tempPlayer(int c = 0) : chips(c) {
+    explicit bjPlayer(int c = 0) : chips(c) {
         if (chips != 0) {
             split = new bjHand();
         }
-            main = new bjHand();
+        main = new bjHand();
     };
 
     bool canPlayerSplit();
@@ -33,8 +29,6 @@ public:
     void splitCards();
 
     void bet(int min, int max);
-
-    int getChips();
 
     int getValue(bool checkMain);
 
@@ -48,8 +42,6 @@ public:
 
     void giveBetBack(bool checkMain);
 
-    void showFirstCard();
-
     void showAllCards(bool checkMain);
 
     bool playerHasSplit();
@@ -58,7 +50,9 @@ public:
 
     void setHasSplit();
 
+    void printValue(bool checkMain);
+
 };
 
 
-#endif //CCPP_EXAM_TEMPPLAYER_H
+#endif //CCPP_EXAM_BJPLAYER_H

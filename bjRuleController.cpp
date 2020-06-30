@@ -1,20 +1,7 @@
 #include "bjRuleController.h"
 #include <fstream>
 #include <iostream>
-/*
-bjRuleController* bjRuleController::instance = 0;
 
-bjRuleController* bjRuleController::getInstance()  {
-    if (instance == 0)
-    {
-        instance = new bjRuleController();
-    }
-
-    return instance;
-}
-
-bjRuleController::bjRuleController() = default;
-*/
 void bjRuleController::printRules() {
     std::string line;
     std::ifstream file;
@@ -27,44 +14,6 @@ void bjRuleController::printRules() {
     }
     printf("\n\n\n");
 }
-
-/*
-bjRuleController *bjRuleController::getInstance() {
-    if (instance) {
-        instance = new bjRuleController();
-    }
-
-    return instance;
-}*/
-/*
-
-int bjRuleController::getDealerMaxPoints()  {
-    return dealerMaxPoints;
-}
-
-
-
-int bjRuleController::getReshuffelTrigger()  {
-    return reshuffelTrigger;
-}
-
-
-int bjRuleController::getNumberOfDecks() {
-    return numberOfDecks;
-}
-
-/*
-int bjRuleController::getInitChips() {
-    return initChips;
-}
-
-int bjRuleController::getMinBet() {
-    return minBet;
-}
-
-int bjRuleController::getMaxBet() {
-    return maxBet;
-}*/
 
 void bjRuleController::playerWin() {
     printf("\n You have won your bet is multiplied by 1.5\n");
@@ -79,12 +28,12 @@ void bjRuleController::playerTie() {
 }
 
 bjRuleController::bjRuleController() {
-     dealerMaxPoints = 17;
-     reshuffelTrigger = 75;
-     numberOfDecks = 6;
-     initChips = 1000;
-     minBet = 2;
-     maxBet = 500;
+    dealerMaxPoints = 17;
+    reshuffelTrigger = 75;
+    numberOfDecks = 6;
+    initChips = 1000;
+    minBet = 2;
+    maxBet = 500;
 }
 
 

@@ -1,26 +1,25 @@
-//
-// Created by philip_nori on 29.06.20.
-//
 
 #ifndef CCPP_EXAM_BJHAND_H
 #define CCPP_EXAM_BJHAND_H
+
 #include "bjCards.h"
-#include "replaced/playerdeck.h"
-#include "tempDeck.h"
+#include "bjDeck.h"
 
 class bjHand {
 private:
-    int betAmount;
-    tempDeck deck;
-    bool splitAllowed = true;
-    bool amIReal;
+    int betAmount{};
+    bjDeck deck;
+    bool amIReal{};
 public:
+
+
+   bjHand(bjHand *pHand);
+
+    bjHand();
 
     void split();
 
-    int givePlayerBetBack();
-
-    void resetDeck();
+    int givePlayerBetBack() const;
 
     void resetBetamount();
 
@@ -31,9 +30,9 @@ public:
     int getPlayerTotalvalue();
 
 
-    int getBetAmount();
+    int getBetAmount() const;
 
-    int payout();
+    int payout() const;
 
     std::shared_ptr<bjCards> removeFirstCard();
 
@@ -43,13 +42,13 @@ public:
 
     void clear();
 
-    bool exist();
+    bool exist() const;
 
     void showfirstCard();
 
-    bjHand(bjHand *pHand);
+    void showValue();
 
-    bjHand();
+    void showHiddenCard();
 };
 
 

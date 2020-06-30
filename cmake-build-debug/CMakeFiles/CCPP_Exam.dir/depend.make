@@ -7,66 +7,42 @@ CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.cpp
 CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjHand.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/deck.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/playerdeck.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../tempDeck.h
+
+CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjDeck.cpp
+CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjDeck.h
 
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.cpp
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.h
-CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../replaced/deck.h
-CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../replaced/playerdeck.h
-CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../tempDeck.h
+
+CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o: ../bjDeck.h
+CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o: ../bjPlayer.cpp
+CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o: ../bjPlayer.h
 
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.cpp
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.h
 
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjDealer.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjPlayer.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.cpp
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/bjNonPlayer.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/bjplayer.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/deck.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/playCardDeck.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/player.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../replaced/playerdeck.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempDeck.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempPlayer.h
 
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjDealer.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjPlayer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../blackJack.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../main.cpp
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/bjNonPlayer.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/bjplayer.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/deck.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/playCardDeck.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/player.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../replaced/playerdeck.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../tempDeck.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../tempPlayer.h
-
-CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../tempDeck.cpp
-CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o: ../tempDeck.h
-
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../bjHand.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../replaced/cards.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../replaced/deck.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../replaced/playerdeck.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../tempDeck.h
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../tempPlayer.cpp
-CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o: ../tempPlayer.h
 

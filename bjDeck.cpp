@@ -1,22 +1,19 @@
-//
-// Created by nori on 29.06.20.
-//
 
-#include "tempDeck.h"
+#include "bjDeck.h"
 #include <algorithm>
 #include <random>
 #include "bjCards.h"
 
-void tempDeck::addCardtoDeck(std::shared_ptr<bjCards> card) {
+void bjDeck::addCardtoDeck(const std::shared_ptr<bjCards>& card) {
     deck.push_back(card);
 }
 
 
-std::vector<std::shared_ptr<bjCards>> tempDeck::getDeck() {
+std::vector<std::shared_ptr<bjCards>> bjDeck::getDeck() {
     return deck;
 }
 
-std::shared_ptr<bjCards> tempDeck::playFirstCardFromStack() {
+std::shared_ptr<bjCards> bjDeck::playFirstCardFromStack() {
     std::shared_ptr<bjCards> output = deck.front();
     collectPlayedCards(output);
     deck.erase(deck.begin());
@@ -24,11 +21,11 @@ std::shared_ptr<bjCards> tempDeck::playFirstCardFromStack() {
 }
 
 
-void tempDeck::reduceCardCounter() {
+void bjDeck::reduceCardCounter() {
     cardCounter--;
 }
 
-void tempDeck::collectPlayedCards(std::shared_ptr<bjCards> card) {
+void bjDeck::collectPlayedCards(const std::shared_ptr<bjCards>& card) {
 
     playedCards.push_back(card);
     //deck.erase(deck.at(0)));
@@ -36,7 +33,7 @@ void tempDeck::collectPlayedCards(std::shared_ptr<bjCards> card) {
     reduceCardCounter();
 }
 
-void tempDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
+void bjDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
     for (int i = 0; i < maxDecks; ++i) {
         for (int j = 0; j < 13; j++) {
             int value = j + 2;
@@ -57,29 +54,20 @@ void tempDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
     setCardCounter(deck.size());
 }
 
-
-void tempDeck::resetPlayDeck() {
-    for (std::shared_ptr<bjCards> card : playedCards) {
-        addCardtoDeck(card);
-    }
-    playedCards.clear();
-    setCardCounter(deck.size());
-}
-
-void tempDeck::deckShuffel() {
+void bjDeck::deckShuffel() {
     std::shuffle(deck.begin(), deck.end(), std::mt19937(std::random_device()()));
 }
 
-void tempDeck::setCardCounter(int i) {
+void bjDeck::setCardCounter(int i) {
     cardCounter = i;
 }
 
-std::string tempDeck::getNumberX(int x) {
+std::string bjDeck::getNumberX(int x) {
     return numberList[x];
 }
 
 
-int tempDeck::getTotalValue() {
+int bjDeck::getTotalValue() {
     int value = 0;
     for (std::shared_ptr<bjCards> card : deck) {
         value += card->getValue();
@@ -87,7 +75,7 @@ int tempDeck::getTotalValue() {
     return value;
 }
 
-void tempDeck::reshuffelIfNeeded(int ttrigger) {
+void bjDeck::reshuffelIfNeeded(int ttrigger) {
     if (cardCounter <= 75) {
         deckShuffel();
     }

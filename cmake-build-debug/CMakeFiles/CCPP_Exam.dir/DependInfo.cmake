@@ -6,12 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/nori/CCPP_Exam/bjCards.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
   "/home/nori/CCPP_Exam/bjDealer.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o"
+  "/home/nori/CCPP_Exam/bjDeck.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o"
   "/home/nori/CCPP_Exam/bjHand.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o"
+  "/home/nori/CCPP_Exam/bjPlayer.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o"
   "/home/nori/CCPP_Exam/bjRuleController.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "/home/nori/CCPP_Exam/blackJack.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
   "/home/nori/CCPP_Exam/main.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "/home/nori/CCPP_Exam/tempDeck.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o"
-  "/home/nori/CCPP_Exam/tempPlayer.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

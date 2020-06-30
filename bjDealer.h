@@ -1,7 +1,3 @@
-//
-// Created by nori on 30.06.20.
-//
-
 #ifndef CCPP_EXAM_BJDEALER_H
 #define CCPP_EXAM_BJDEALER_H
 
@@ -13,7 +9,7 @@ private:
 
     bjHand main;
 public:
-    explicit bjDealer()  {
+    explicit bjDealer() {
         main = new bjHand();
     }
 
@@ -26,6 +22,8 @@ public:
     void showFirstCard();
 
     void showAllCards(bool checkMain);
+
+    void printValue();
 
 };
 

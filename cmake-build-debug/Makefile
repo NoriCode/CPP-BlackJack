@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/nori/CCPP_Exam/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/nori/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7846.88/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/nori/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7846.88/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CCPP_Exam
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-CCPP_Exam: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CCPP_Exam
-.PHONY : CCPP_Exam
+main.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-CCPP_Exam/fast:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/build
-.PHONY : CCPP_Exam/fast
+main.cpp/fast:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 bjCards.o: bjCards.cpp.o
 
@@ -129,7 +129,7 @@ bjCards.o: bjCards.cpp.o
 
 # target to build an object file
 bjCards.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjCards.cpp.o
 .PHONY : bjCards.cpp.o
 
 bjCards.i: bjCards.cpp.i
@@ -138,7 +138,7 @@ bjCards.i: bjCards.cpp.i
 
 # target to preprocess a source file
 bjCards.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.i
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjCards.cpp.i
 .PHONY : bjCards.cpp.i
 
 bjCards.s: bjCards.cpp.s
@@ -147,7 +147,7 @@ bjCards.s: bjCards.cpp.s
 
 # target to generate assembly for a file
 bjCards.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.s
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjCards.cpp.s
 .PHONY : bjCards.cpp.s
 
 bjDealer.o: bjDealer.cpp.o
@@ -156,7 +156,7 @@ bjDealer.o: bjDealer.cpp.o
 
 # target to build an object file
 bjDealer.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDealer.cpp.o
 .PHONY : bjDealer.cpp.o
 
 bjDealer.i: bjDealer.cpp.i
@@ -165,7 +165,7 @@ bjDealer.i: bjDealer.cpp.i
 
 # target to preprocess a source file
 bjDealer.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.i
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDealer.cpp.i
 .PHONY : bjDealer.cpp.i
 
 bjDealer.s: bjDealer.cpp.s
@@ -174,8 +174,35 @@ bjDealer.s: bjDealer.cpp.s
 
 # target to generate assembly for a file
 bjDealer.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.s
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDealer.cpp.s
 .PHONY : bjDealer.cpp.s
+
+bjDeck.o: bjDeck.cpp.o
+
+.PHONY : bjDeck.o
+
+# target to build an object file
+bjDeck.cpp.o:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDeck.cpp.o
+.PHONY : bjDeck.cpp.o
+
+bjDeck.i: bjDeck.cpp.i
+
+.PHONY : bjDeck.i
+
+# target to preprocess a source file
+bjDeck.cpp.i:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDeck.cpp.i
+.PHONY : bjDeck.cpp.i
+
+bjDeck.s: bjDeck.cpp.s
+
+.PHONY : bjDeck.s
+
+# target to generate assembly for a file
+bjDeck.cpp.s:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjDeck.cpp.s
+.PHONY : bjDeck.cpp.s
 
 bjHand.o: bjHand.cpp.o
 
@@ -183,7 +210,7 @@ bjHand.o: bjHand.cpp.o
 
 # target to build an object file
 bjHand.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjHand.cpp.o
 .PHONY : bjHand.cpp.o
 
 bjHand.i: bjHand.cpp.i
@@ -192,7 +219,7 @@ bjHand.i: bjHand.cpp.i
 
 # target to preprocess a source file
 bjHand.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.i
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjHand.cpp.i
 .PHONY : bjHand.cpp.i
 
 bjHand.s: bjHand.cpp.s
@@ -201,8 +228,35 @@ bjHand.s: bjHand.cpp.s
 
 # target to generate assembly for a file
 bjHand.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjHand.cpp.s
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjHand.cpp.s
 .PHONY : bjHand.cpp.s
+
+bjPlayer.o: bjPlayer.cpp.o
+
+.PHONY : bjPlayer.o
+
+# target to build an object file
+bjPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjPlayer.cpp.o
+.PHONY : bjPlayer.cpp.o
+
+bjPlayer.i: bjPlayer.cpp.i
+
+.PHONY : bjPlayer.i
+
+# target to preprocess a source file
+bjPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjPlayer.cpp.i
+.PHONY : bjPlayer.cpp.i
+
+bjPlayer.s: bjPlayer.cpp.s
+
+.PHONY : bjPlayer.s
+
+# target to generate assembly for a file
+bjPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjPlayer.cpp.s
+.PHONY : bjPlayer.cpp.s
 
 bjRuleController.o: bjRuleController.cpp.o
 
@@ -210,7 +264,7 @@ bjRuleController.o: bjRuleController.cpp.o
 
 # target to build an object file
 bjRuleController.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjRuleController.cpp.o
 .PHONY : bjRuleController.cpp.o
 
 bjRuleController.i: bjRuleController.cpp.i
@@ -219,7 +273,7 @@ bjRuleController.i: bjRuleController.cpp.i
 
 # target to preprocess a source file
 bjRuleController.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.i
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjRuleController.cpp.i
 .PHONY : bjRuleController.cpp.i
 
 bjRuleController.s: bjRuleController.cpp.s
@@ -228,7 +282,7 @@ bjRuleController.s: bjRuleController.cpp.s
 
 # target to generate assembly for a file
 bjRuleController.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.s
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/bjRuleController.cpp.s
 .PHONY : bjRuleController.cpp.s
 
 blackJack.o: blackJack.cpp.o
@@ -237,7 +291,7 @@ blackJack.o: blackJack.cpp.o
 
 # target to build an object file
 blackJack.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/blackJack.cpp.o
 .PHONY : blackJack.cpp.o
 
 blackJack.i: blackJack.cpp.i
@@ -246,7 +300,7 @@ blackJack.i: blackJack.cpp.i
 
 # target to preprocess a source file
 blackJack.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.i
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/blackJack.cpp.i
 .PHONY : blackJack.cpp.i
 
 blackJack.s: blackJack.cpp.s
@@ -255,89 +309,8 @@ blackJack.s: blackJack.cpp.s
 
 # target to generate assembly for a file
 blackJack.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/blackJack.cpp.s
+	$(MAKE) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/blackJack.cpp.s
 .PHONY : blackJack.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-tempDeck.o: tempDeck.cpp.o
-
-.PHONY : tempDeck.o
-
-# target to build an object file
-tempDeck.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.o
-.PHONY : tempDeck.cpp.o
-
-tempDeck.i: tempDeck.cpp.i
-
-.PHONY : tempDeck.i
-
-# target to preprocess a source file
-tempDeck.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.i
-.PHONY : tempDeck.cpp.i
-
-tempDeck.s: tempDeck.cpp.s
-
-.PHONY : tempDeck.s
-
-# target to generate assembly for a file
-tempDeck.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempDeck.cpp.s
-.PHONY : tempDeck.cpp.s
-
-tempPlayer.o: tempPlayer.cpp.o
-
-.PHONY : tempPlayer.o
-
-# target to build an object file
-tempPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.o
-.PHONY : tempPlayer.cpp.o
-
-tempPlayer.i: tempPlayer.cpp.i
-
-.PHONY : tempPlayer.i
-
-# target to preprocess a source file
-tempPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.i
-.PHONY : tempPlayer.cpp.i
-
-tempPlayer.s: tempPlayer.cpp.s
-
-.PHONY : tempPlayer.s
-
-# target to generate assembly for a file
-tempPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/tempPlayer.cpp.s
-.PHONY : tempPlayer.cpp.s
 
 # Help Target
 help:
@@ -345,33 +318,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CCPP_Exam"
+	@echo "... edit_cache"
+	@echo "... main.cpp"
 	@echo "... bjCards.o"
 	@echo "... bjCards.i"
 	@echo "... bjCards.s"
 	@echo "... bjDealer.o"
 	@echo "... bjDealer.i"
 	@echo "... bjDealer.s"
+	@echo "... bjDeck.o"
+	@echo "... bjDeck.i"
+	@echo "... bjDeck.s"
 	@echo "... bjHand.o"
 	@echo "... bjHand.i"
 	@echo "... bjHand.s"
+	@echo "... bjPlayer.o"
+	@echo "... bjPlayer.i"
+	@echo "... bjPlayer.s"
 	@echo "... bjRuleController.o"
 	@echo "... bjRuleController.i"
 	@echo "... bjRuleController.s"
 	@echo "... blackJack.o"
 	@echo "... blackJack.i"
 	@echo "... blackJack.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... tempDeck.o"
-	@echo "... tempDeck.i"
-	@echo "... tempDeck.s"
-	@echo "... tempPlayer.o"
-	@echo "... tempPlayer.i"
-	@echo "... tempPlayer.s"
 .PHONY : help
 
 

@@ -6,7 +6,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(CCPP_Exam main.cpp
+add_executable(#CCPP_Exam
+        main.cpp
         bjRuleController.cpp
         bjCards.cpp
 
@@ -14,9 +15,9 @@ add_executable(CCPP_Exam main.cpp
 
         blackJack.cpp
 
-        tempDeck.cpp
+        bjDeck.cpp
 
-        tempPlayer.cpp
+        bjPlayer.cpp
         bjDealer.cpp bjDealer.h)
 
 

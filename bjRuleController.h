@@ -5,35 +5,25 @@
 
 class bjRuleController {
 private:
-    /*
-    /* Here will be the instance stored. */
-  //  static bjRuleController *instance;
 
-
-    /* Private constructor to prevent instancing.
-    bjRuleController();
-*/
-
-    int dealerMaxPoints ;
+    int dealerMaxPoints;
     int reshuffelTrigger;
-    int numberOfDecks ;
-    int initChips ;
-    int minBet ;
-    int maxBet ;
+    int numberOfDecks;
+    int initChips;
+    int minBet;
+    int maxBet;
 
 
 public:
-    // static bjRuleController *getInstance();
-
     bjRuleController();
 
     static void printRules();
 
-    void playerWin();
+    static void playerWin();
 
-    void playerLoose();
+    static void playerLoose();
 
-    void playerTie();
+    static void playerTie();
 
     int getDealerMaxPoints() const;
 

@@ -1,23 +1,20 @@
 #ifndef CCPP_EXAM_BLACKJACK_H
 #define CCPP_EXAM_BLACKJACK_H
 
-#include "replaced/playCardDeck.h"
 #include "bjRuleController.h"
-#include "replaced/bjplayer.h"
-#include "replaced/bjNonPlayer.h"
 #include "bjCards.h"
 #include "bjHand.h"
-#include "tempDeck.h"
-#include "tempPlayer.h"
+#include "bjDeck.h"
+#include "bjPlayer.h"
 #include "bjDealer.h"
 
 
 class blackJack {
 
 private:
-    blackJack(){    };
+    blackJack() = default;;
 
-    blackJack(nullptr_t pVoid);
+    explicit blackJack(nullptr_t pVoid);
 
     enum playerOption {
         SPLIT = 0, HIT, STAND
@@ -39,14 +36,14 @@ private:
 
     gameState gs = static_cast<gameState>(1);
     playerOption po = static_cast<playerOption>(4);
-    mainMenu mm  = static_cast<mainMenu>(4);
+    mainMenu mm = static_cast<mainMenu>(4);
     playerStatus ps = static_cast<playerStatus>(2);
 
     bjRuleController *bjR = new bjRuleController();
-    tempDeck cD;
+    bjDeck cD;
 
 
-    tempPlayer *p = new tempPlayer(bjR->getInitChips());
+    bjPlayer *p = new bjPlayer(bjR->getInitChips());
     bjDealer *d = new bjDealer();
 
 
@@ -74,11 +71,16 @@ private:
 
 
 public:
-   // explicit blackJack(bjRuleController *pController) : bjR() {    }
+    // explicit blackJack(bjRuleController *pController) : bjR() {    }
 
-    static blackJack* getInstance() { static blackJack s(nullptr); return &s; }
-    blackJack(const blackJack&) = delete;
-    void operator=(const blackJack&) = delete;
+    static blackJack *getInstance() {
+        static blackJack s(nullptr);
+        return &s;
+    }
+
+    blackJack(const blackJack &) = delete;
+
+    void operator=(const blackJack &) = delete;
 
 
     void game();

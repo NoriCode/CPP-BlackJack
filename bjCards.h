@@ -21,7 +21,7 @@ public:
 
     void setValue(int v);
 
-    int getValue();
+    int getValue() const;
 
     int whoAmI();
 

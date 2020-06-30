@@ -1,17 +1,14 @@
-//
-// Created by nori on 30.06.20.
-//
 
 #include "bjDealer.h"
 
 void bjDealer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
 
-        main.giveCard(card);
+    main.giveCard(card);
 }
 
 
 int bjDealer::getValue(bool checkMain) {
-        return main.getPlayerTotalvalue();
+    return main.getPlayerTotalvalue();
 }
 
 
@@ -26,7 +23,12 @@ void bjDealer::showFirstCard() {
 
 void bjDealer::showAllCards(bool checkMain) {
 
-        main.showcards();
+    main.showcards();
 }
+
+void bjDealer::printValue() {
+    main.showValue();
+}
+
 
 

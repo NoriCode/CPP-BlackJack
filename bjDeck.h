@@ -1,22 +1,19 @@
-//
-// Created by nori on 29.06.20.
-//
 
-#ifndef CCPP_EXAM_TEMPDECK_H
-#define CCPP_EXAM_TEMPDECK_H
+#ifndef CCPP_EXAM_BJDECK_H
+#define CCPP_EXAM_BJDECK_H
 
 #include <vector>
 #include <algorithm>
-#include "replaced/cards.h"
 #include "bjCards.h"
 #include <cstdio>
 #include <memory>
 
-class tempDeck {
+class bjDeck {
 private:
-    std::vector< std::shared_ptr<bjCards>> deck;
+    std::vector<std::shared_ptr<bjCards>> deck;
     int cardCounter;
     std::vector<std::shared_ptr<bjCards>> playedCards;
+
     void reduceCardCounter();
 
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};
@@ -29,13 +26,9 @@ private:
     void deckShuffel();
 
 
-    void resetPlayDeck();
-
-
-
 public:
 
-    void addCardtoDeck(std::shared_ptr<bjCards> card);
+    void addCardtoDeck(const std::shared_ptr<bjCards>& card);
 
     std::vector<std::shared_ptr<bjCards>> getDeck();
 
@@ -50,8 +43,8 @@ public:
     void reshuffelIfNeeded(int trigger);
 
 
-    void collectPlayedCards(std::shared_ptr<bjCards> card);
+    void collectPlayedCards(const std::shared_ptr<bjCards>& card);
 };
 
 
-#endif //CCPP_EXAM_TEMPDECK_H
+#endif //CCPP_EXAM_BJDECK_H

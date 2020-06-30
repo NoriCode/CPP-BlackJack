@@ -1,6 +1,3 @@
-//
-// Created by philip_nori on 19.06.20.
-//
 
 #include "bjCards.h"
 
@@ -8,7 +5,7 @@ void bjCards::setValue(int v) {
     value = v;
 }
 
-int bjCards::getValue() {
+int bjCards::getValue() const {
     return value;
 }
 

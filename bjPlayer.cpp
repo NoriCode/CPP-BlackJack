@@ -1,11 +1,8 @@
-//
-// Created by nori on 29.06.20.
-//
 
-#include "tempPlayer.h"
+#include "bjPlayer.h"
 
 
-void tempPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
+void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
     if (checkMain) {
         main.giveCard(card);
     } else {
@@ -13,13 +10,13 @@ void tempPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
     }
 }
 
-void tempPlayer::splitCards() {
+void bjPlayer::splitCards() {
     split.giveCard(main.removeFirstCard());
     split.bet(main.getBetAmount());
     hasSplit = true;
 }
 
-void tempPlayer::bet(int min, int max) {
+void bjPlayer::bet(int min, int max) {
     int playerBet = 0;
     bool wrongbet = true;
     printf("You have %i chips, place your bet.\n", chips);
@@ -52,7 +49,7 @@ void tempPlayer::bet(int min, int max) {
     main.bet(playerBet);
 }
 
-int tempPlayer::getValue(bool checkMain) {
+int bjPlayer::getValue(bool checkMain) {
     if (checkMain) {
         return main.getPlayerTotalvalue();
     } else {
@@ -61,20 +58,18 @@ int tempPlayer::getValue(bool checkMain) {
 }
 
 
-void tempPlayer::resetHand() {
-    main.resetBetamount();
-    main.clear();
+void bjPlayer::resetHand() {
+    main = new bjHand();
     if (split.exist()) {
-        split.resetBetamount();
-        split.clear();
+        split = new bjHand();
     }
 }
 
-bool tempPlayer::isBroke(int min) {
+bool bjPlayer::isBroke(int min) {
     return chips < min;
 }
 
-void tempPlayer::payWinSum(bool checkMain) {
+void bjPlayer::payWinSum(bool checkMain) {
     if (checkMain) {
         main.payout();
     } else {
@@ -82,7 +77,7 @@ void tempPlayer::payWinSum(bool checkMain) {
     };
 }
 
-void tempPlayer::collectBet(bool checkMain) {
+void bjPlayer::collectBet(bool checkMain) {
     if (checkMain) {
         main.resetBetamount();
     } else {
@@ -91,7 +86,7 @@ void tempPlayer::collectBet(bool checkMain) {
 
 }
 
-void tempPlayer::giveBetBack(bool checkMain) {
+void bjPlayer::giveBetBack(bool checkMain) {
     if (checkMain) {
         main.givePlayerBetBack();
     } else {
@@ -99,16 +94,7 @@ void tempPlayer::giveBetBack(bool checkMain) {
     };
 }
 
-
-int tempPlayer::getChips() {
-    return chips;
-}
-
-void tempPlayer::showFirstCard() {
-    main.showfirstCard();
-}
-
-void tempPlayer::showAllCards(bool checkMain) {
+void bjPlayer::showAllCards(bool checkMain) {
     if (checkMain) {
         main.showcards();
     } else {
@@ -116,16 +102,25 @@ void tempPlayer::showAllCards(bool checkMain) {
     }
 }
 
-bool tempPlayer::playerHasSplit() {
+bool bjPlayer::playerHasSplit() {
     return hasSplit;
 }
 
-bool tempPlayer::canPlayerSplit() {
+bool bjPlayer::canPlayerSplit() {
     return main.canSplit();
 }
 
-void tempPlayer::setHasSplit() {
+void bjPlayer::setHasSplit() {
     hasSplit = !hasSplit;
+}
+
+void bjPlayer::printValue(bool checkMain) {
+    if (checkMain) {
+        main.showValue();
+    } else {
+        split.showValue();
+    }
+
 }
 
 
