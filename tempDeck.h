@@ -9,13 +9,14 @@
 #include <algorithm>
 #include "replaced/cards.h"
 #include "bjCards.h"
+#include <cstdio>
+#include <memory>
 
 class tempDeck {
 private:
-    std::vector<bjCards *> deck;
+    std::vector< bjCards *> deck;
     int cardCounter;
     std::vector<bjCards *> playedCards;
-
     void reduceCardCounter();
 
     std::string numberList[13] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "D", "K", "A"};

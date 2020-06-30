@@ -4,6 +4,15 @@
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.cpp
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.h
 
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.cpp
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/cards.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/deck.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../replaced/playerdeck.h
+CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../tempDeck.h
+
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.cpp
 CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o: ../bjHand.h
@@ -16,6 +25,7 @@ CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.cpp
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.h
 
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjDealer.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjHand.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.cpp
@@ -31,6 +41,7 @@ CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempDeck.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../tempPlayer.h
 
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjDealer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjHand.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../blackJack.h

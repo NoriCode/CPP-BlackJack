@@ -17,7 +17,7 @@ add_executable(CCPP_Exam main.cpp
         tempDeck.cpp
 
         tempPlayer.cpp
-        )
+        bjDealer.cpp bjDealer.h)
 
 
 #set_target_properties(CCPP_Exam PROPERTIES SUFFIX ".out")

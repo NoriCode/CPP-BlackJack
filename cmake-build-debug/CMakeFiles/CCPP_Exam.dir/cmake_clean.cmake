@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../CCPP_Exam"
   "../CCPP_Exam.pdb"
   "CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
+  "CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"

@@ -46,6 +46,10 @@ public:
     bool exist();
 
     void showfirstCard();
+
+    bjHand(bjHand *pHand);
+
+    bjHand();
 };
 
 

@@ -25,6 +25,7 @@ void bjRuleController::printRules() {
             std::cout << line << std::endl;
         }
     }
+    printf("\n\n\n");
 }
 
 /*
@@ -63,7 +64,7 @@ int bjRuleController::getMinBet() {
 
 int bjRuleController::getMaxBet() {
     return maxBet;
-}
+}*/
 
 void bjRuleController::playerWin() {
     printf("\n You have won your bet is multiplied by 1.5\n");
@@ -75,10 +76,15 @@ void bjRuleController::playerLoose() {
 
 void bjRuleController::playerTie() {
     printf("\n Tie. You get your bet back\n");
-}*/
+}
 
 bjRuleController::bjRuleController() {
-
+     dealerMaxPoints = 17;
+     reshuffelTrigger = 75;
+     numberOfDecks = 6;
+     initChips = 1000;
+     minBet = 2;
+     maxBet = 500;
 }
 
 
@@ -91,7 +97,7 @@ int bjRuleController::getReshuffelTrigger() const {
 }
 
 int bjRuleController::getNumberOfDecks() const {
-    return numberOfDecks;r
+    return numberOfDecks;
 }
 
 int bjRuleController::getInitChips() const {

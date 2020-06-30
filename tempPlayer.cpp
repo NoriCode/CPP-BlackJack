@@ -31,16 +31,21 @@ void tempPlayer::bet(int min, int max) {
     while (wrongbet) {
         if (playerBet > chips) {
             printf("You placed more chips than you own.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
         } else if (playerBet < min) {
             printf("You placed less chips than allowed.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
         } else if (playerBet > max) {
             printf("You placed more chips than allowed.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
         } else {
             wrongbet = false;
         }
 
-        printf("Place your bet again: ");
-        std::cin >> playerBet;
+
     }
     chips -= playerBet;
 
@@ -118,4 +123,10 @@ bool tempPlayer::playerHasSplit() {
 bool tempPlayer::canPlayerSplit() {
     return main.canSplit();
 }
+
+void tempPlayer::setHasSplit() {
+    hasSplit = !hasSplit;
+}
+
+
 

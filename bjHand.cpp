@@ -8,11 +8,7 @@ void bjHand::split() {
 }
 
 bool bjHand::canSplit() {
-    if (splitAllowed) {
-        splitAllowed = false;
-        return deck.getDeck().front()->getValue() == deck.getDeck().at(1)->getValue();
-    }
-    return splitAllowed;
+    return deck.getDeck().at(0)->getValue() == deck.getDeck().at(1)->getValue();
 }
 
 int bjHand::getBetAmount() {
@@ -51,7 +47,8 @@ int bjHand::givePlayerBetBack() {
 }
 
 void bjHand::clear() {
-    deck.getDeck().empty();
+    deck.getDeck().clear();
+
     amIReal = false;
 }
 
@@ -65,12 +62,20 @@ void bjHand::showfirstCard() {
 
 
 int bjHand::getPlayerTotalvalue() {
-    for(bjCards *card: deck.getDeck()){
-        if(card->getnumber() == "A"){
-            if(deck.getTotalValue()>21){
+    for (bjCards *card: deck.getDeck()) {
+        if (card->getnumber() == "A") {
+            if (deck.getTotalValue() > 21) {
                 card->setValue(1);
             }
         }
     }
     return deck.getTotalValue();
 }
+
+bjHand::bjHand(bjHand *pHand) {
+
+}
+
+bjHand::bjHand() {
+}
+

@@ -14,12 +14,12 @@ private:
     bjRuleController();
 */
 
-    int dealerMaxPoints = 17;
-    int reshuffelTrigger = 75;
-    int numberOfDecks = 6;
-    int initChips = 1000;
-    int minBet = 2;
-    int maxBet = 500;
+    int dealerMaxPoints ;
+    int reshuffelTrigger;
+    int numberOfDecks ;
+    int initChips ;
+    int minBet ;
+    int maxBet ;
 
 
 public:

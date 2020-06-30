@@ -11,6 +11,8 @@
 
 class tempPlayer {
 private:
+    tempPlayer();
+
     bjHand main;
     bjHand split;
 
@@ -19,9 +21,12 @@ private:
     bool hasSplit = false;
 
 public:
-    explicit tempPlayer(int c = 0) : chips(c) {}
-
-    explicit tempPlayer() = default;
+    explicit tempPlayer(int c = 0) : chips(c) {
+        if (chips != 0) {
+            split = new bjHand();
+        }
+            main = new bjHand();
+    };
 
     bool canPlayerSplit();
 
@@ -50,6 +55,9 @@ public:
     bool playerHasSplit();
 
     void givePlayercard(bjCards *card, bool checkMain);
+
+    void setHasSplit();
+
 };
 
 

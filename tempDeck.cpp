@@ -30,7 +30,8 @@ void tempDeck::reduceCardCounter() {
 
 void tempDeck::collectPlayedCards(bjCards *card) {
     playedCards.push_back(card);
-    deck.erase(deck.begin());
+    //deck.erase(deck.at(0)));
+    deck.empty();
     reduceCardCounter();
 }
 
