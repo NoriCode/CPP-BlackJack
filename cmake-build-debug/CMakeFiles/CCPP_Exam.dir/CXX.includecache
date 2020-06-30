@@ -34,10 +34,6 @@ bjCards.h
 bjDeck.h
 /home/nori/CCPP_Exam/bjDeck.h
 
-/home/nori/CCPP_Exam/bjPlayer.cpp
-bjPlayer.h
-/home/nori/CCPP_Exam/bjPlayer.h
-
 /home/nori/CCPP_Exam/bjPlayer.h
 bjCards.h
 /home/nori/CCPP_Exam/bjCards.h
@@ -47,12 +43,6 @@ bjHand.h
 /home/nori/CCPP_Exam/bjRuleController.h
 iostream
 -
-
-/home/nori/CCPP_Exam/blackJack.cpp
-blackJack.h
-/home/nori/CCPP_Exam/blackJack.h
-bjRuleController.h
-/home/nori/CCPP_Exam/bjRuleController.h
 
 /home/nori/CCPP_Exam/blackJack.h
 bjRuleController.h
@@ -71,4 +61,6 @@ bjDealer.h
 /home/nori/CCPP_Exam/main.cpp
 blackJack.h
 /home/nori/CCPP_Exam/blackJack.h
+bjRuleController.h
+/home/nori/CCPP_Exam/bjRuleController.h
 

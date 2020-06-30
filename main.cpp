@@ -5,8 +5,6 @@
 int main() {
     blackJack *bJ;
 
-    //bJ->getInstance();
-
     bJ->getInstance()->game();
 
     return 0;

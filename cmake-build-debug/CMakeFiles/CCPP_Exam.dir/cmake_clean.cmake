@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../CCPP_Exam.out"
+  "../CCPP_Exam"
   "../CCPP_Exam.pdb"
   "CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o"
