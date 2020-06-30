@@ -71,9 +71,9 @@ bool bjPlayer::isBroke(int min) {
 
 void bjPlayer::payWinSum(bool checkMain) {
     if (checkMain) {
-        main.payout();
+        chips += main.payout();
     } else {
-        split.payout();
+        chips += split.payout();
     };
 }
 
@@ -88,9 +88,9 @@ void bjPlayer::collectBet(bool checkMain) {
 
 void bjPlayer::giveBetBack(bool checkMain) {
     if (checkMain) {
-        main.givePlayerBetBack();
+        chips += main.givePlayerBetBack();
     } else {
-        split.givePlayerBetBack();
+        chips += split.givePlayerBetBack();
     };
 }
 

@@ -84,7 +84,7 @@ void bjHand::showValue() {
     printf("The cards have a value of: %i\n", getPlayerTotalvalue());
 }
 
-void bjHand::showHiddenCard() {
-    deck.getDeck().back()->whoAmI();
-}
+int bjHand::getDealerTotalValue() {
 
+    return deck.getTotalValue();
+}

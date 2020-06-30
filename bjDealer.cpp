@@ -13,8 +13,7 @@ int bjDealer::getValue(bool checkMain) {
 
 
 void bjDealer::resetHand() {
-    main.resetBetamount();
-    main.clear();
+    main = new bjHand();
 }
 
 void bjDealer::showFirstCard() {

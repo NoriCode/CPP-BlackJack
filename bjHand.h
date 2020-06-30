@@ -29,6 +29,7 @@ public:
 
     int getPlayerTotalvalue();
 
+    int getDealerTotalValue();
 
     int getBetAmount() const;
 
@@ -47,8 +48,6 @@ public:
     void showfirstCard();
 
     void showValue();
-
-    void showHiddenCard();
 };
 
 

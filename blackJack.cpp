@@ -36,6 +36,7 @@ void blackJack::game() {
                         } else if (po == STAND) {
                             if (p->playerHasSplit() && checkMain) {
                                 checkMain = false;
+                                p->showAllCards(checkMain);
                                 ps = static_cast<playerStatus>(3);
                             } else {
                                 printf("You:\n");
@@ -47,16 +48,12 @@ void blackJack::game() {
                 }
                 if (ps == DNF) {
                     //dealer phase
-                    printf("The Dealer has this cards: \n");
+                    printf("\n\nThe Dealer has this cards: \n");
                     d->showAllCards(true);
 
 
                     while (d->getValue(true) < bjR->getDealerMaxPoints()) {
                         printf("\n \nThe dealer draws one Card and has now: \n");
-                        draw(true);
-                        d->showAllCards(true);
-                    }
-                    while (d->getValue(true) < bjR->getDealerMaxPoints()) {
                         draw(true);
                         d->showAllCards(true);
                     }
@@ -71,6 +68,7 @@ void blackJack::game() {
                     bool dealerLoss = false;
 
                     if (d->getValue(true) > 21) {
+                        printf("debug");
                         dealerLoss = true;
                     }
 
@@ -108,6 +106,8 @@ void blackJack::game() {
                 playAnotherRound();
             } else if (mm == RULES) {
                 bjR->printRules();
+                mm = static_cast<mainMenu>(4);
+                gs = static_cast<gameState>(2);
             }
         }
     }
@@ -127,7 +127,7 @@ void blackJack::kickPlayerIfBroke() {
     if (p->isBroke(bjR->getMinBet())) {
         mm = static_cast<mainMenu>(3);
         printf("Bouncer: You dont own enough Chips to play. You have to leave the Casino\n");
-        exitGame();
+        exit(1);
     }
 }
 
@@ -155,9 +155,10 @@ void blackJack::menu() {
     printf("\n\n");
 
 
-    printf("\n");
-
     mm = static_cast<mainMenu>(in);
+    gs = static_cast<gameState>(1);
+    po = static_cast<playerOption>(4);
+    ps = static_cast<playerStatus>(2);
 }
 
 bool blackJack::exitGame() {
@@ -195,7 +196,7 @@ void blackJack::playAnotherRound() {
     printf("Do you want to play a new round?\n");
 
     printf("1 - yes\n");
-    printf("Enter any Value to leave the table.");
+    printf("Enter any Value to leave the table.\n");
     printf("Your choice: ");
     std::cin >> in;
     printf("\n\n");
