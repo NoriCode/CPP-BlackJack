@@ -12,9 +12,9 @@
 class blackJack {
 
 private:
-    blackJack() = default;;
+    blackJack();
 
-    explicit blackJack(nullptr_t pVoid);
+    explicit blackJack(std::nullptr_t pVoid);
 
     enum playerOption {
         SPLIT = 0, HIT, STAND
@@ -63,11 +63,9 @@ private:
 
     void kickPlayerIfBroke();
 
-    bool exitGame();
+    void exitGame();
 
-    bool leaveTable();
-
-    void checkEarlyVictoryCondidtion(bool checkMain);
+    void checkEarlyVictoryCondidtion(bool checkFirst);
 
 
 public:
@@ -84,6 +82,8 @@ public:
 
 
     void game();
+
+    void leave();
 };
 
 

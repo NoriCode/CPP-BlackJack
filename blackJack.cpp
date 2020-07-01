@@ -6,6 +6,9 @@
 void blackJack::game() {
     while (mm != EXIT) {
         menu();
+        if(mm == EXIT){
+            gs = static_cast<gameState>(2);
+        }
         while (gs != LEAVE) {
             if (mm == PLAY) {
                 if (gs == NEWGAME) {
@@ -64,7 +67,7 @@ void blackJack::game() {
                     //cashout
 
                     bool exit = false;
-                    bool checkMain = true;
+                    bool checkFirst = true;
                     bool dealerLoss = false;
 
                     if (d->getValue(true) > 21) {
@@ -74,27 +77,27 @@ void blackJack::game() {
 
                     while (!exit) {
                         if (dealerLoss) {
-                            if (p->getValue(checkMain) <= 21) {
-                                p->payWinSum(checkMain);
-                                bjR->playerWin();
+                            if (p->getValue(checkFirst) <= 21) {
+                                p->payWinSum(checkFirst);
+                                bjRuleController::playerWin();
                             } else {
-                                p->collectBet(checkMain);
-                                bjR->playerLoose();
+                                p->collectBet(checkFirst);
+                                bjRuleController::playerLoose();
                             }
                         } else {
-                            if (p->getValue(checkMain) < d->getValue(true)) {
-                                p->collectBet(checkMain);
-                                bjR->playerLoose();
-                            } else if (p->getValue(checkMain) == d->getValue(true)) {
-                                p->giveBetBack(checkMain);
-                                bjR->playerTie();
-                            } else if (p->getValue(checkMain) > d->getValue(true)) {
-                                p->payWinSum(checkMain);
-                                bjR->playerWin();
+                            if (p->getValue(checkFirst) < d->getValue(true)) {
+                                p->collectBet(checkFirst);
+                                bjRuleController::playerLoose();
+                            } else if (p->getValue(checkFirst) == d->getValue(true)) {
+                                p->giveBetBack(checkFirst);
+                                bjRuleController::playerTie();
+                            } else if (p->getValue(checkFirst) > d->getValue(true)) {
+                                p->payWinSum(checkFirst);
+                                bjRuleController::playerWin();
                             }
                         }
                         if (p->playerHasSplit()) {
-                            checkMain = false;
+                            checkFirst = false;
                         } else {
                             exit = true;
                         }
@@ -105,14 +108,13 @@ void blackJack::game() {
                 kickPlayerIfBroke();
                 playAnotherRound();
             } else if (mm == RULES) {
-                bjR->printRules();
+                bjRuleController::printRules();
                 mm = static_cast<mainMenu>(4);
                 gs = static_cast<gameState>(2);
             }
         }
     }
     exitGame();
-
 }
 
 void blackJack::drawInitialCards() {
@@ -128,6 +130,9 @@ void blackJack::kickPlayerIfBroke() {
         mm = static_cast<mainMenu>(3);
         printf("Bouncer: You dont own enough Chips to play. You have to leave the Casino\n");
         exit(1);
+    }
+    if(mm == EXIT){
+        exit(0);
     }
 }
 
@@ -161,20 +166,11 @@ void blackJack::menu() {
     ps = static_cast<playerStatus>(2);
 }
 
-bool blackJack::exitGame() {
-    if (mm == EXIT) {
-        return true;
-    }
-    return false;
+void blackJack::exitGame() {
+     mm = EXIT;
 }
 
-bool blackJack::leaveTable() {
-    if (gs == LEAVE) {
-        return true;
-    }
 
-    return false;
-}
 
 void blackJack::newGame() {
     cD.generatePlayCardsAndAddtoDeck(bjR->getNumberOfDecks());
@@ -207,10 +203,10 @@ void blackJack::playAnotherRound() {
     gs = static_cast<gameState>(in);
 }
 
-void blackJack::draw(bool checkMain) {
+void blackJack::draw(bool checkFirst) {
 
     if (po == HIT) {
-        p->givePlayercard(cD.playFirstCardFromStack(), checkMain);
+        p->givePlayercard(cD.playFirstCardFromStack(), checkFirst);
     } else if (po == STAND) {
         d->givePlayercard(cD.playFirstCardFromStack(), true);
     }
@@ -247,19 +243,19 @@ void blackJack::playerRoundOptions() {
 
 }
 
-void blackJack::checkEarlyVictoryCondidtion(bool checkMain) {
-    if (p->getValue(checkMain) == 21) {
+void blackJack::checkEarlyVictoryCondidtion(bool checkFirst) {
+    if (p->getValue(checkFirst) == 21) {
         ps = static_cast<playerStatus>(0);
         gs = static_cast<gameState>(2);
-        bjR->playerWin();
-    } else if (p->getValue(checkMain) > 21) {
+        bjRuleController::playerWin();
+    } else if (p->getValue(checkFirst) > 21) {
         ps = static_cast<playerStatus>(1);
         gs = static_cast<gameState>(2);
-        bjR->playerLoose();
+        bjRuleController::playerLoose();
     }
 }
 
-blackJack::blackJack(nullptr_t pVoid) {
+blackJack::blackJack(std::nullptr_t) {}
 
-}
+blackJack::blackJack() = default;
 

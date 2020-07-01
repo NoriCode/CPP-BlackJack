@@ -2,17 +2,17 @@
 #include "bjPlayer.h"
 
 
-void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkMain) {
-    if (checkMain) {
-        main.giveCard(card);
+void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkFirst) {
+    if (checkFirst) {
+        firstDeck.giveCard(card);
     } else {
         split.giveCard(card);
     }
 }
 
 void bjPlayer::splitCards() {
-    split.giveCard(main.removeFirstCard());
-    split.bet(main.getBetAmount());
+    split.giveCard(firstDeck.removeFirstCard());
+    split.bet(firstDeck.getBetAmount());
     hasSplit = true;
 }
 
@@ -46,12 +46,12 @@ void bjPlayer::bet(int min, int max) {
     }
     chips -= playerBet;
 
-    main.bet(playerBet);
+    firstDeck.bet(playerBet);
 }
 
-int bjPlayer::getValue(bool checkMain) {
-    if (checkMain) {
-        return main.getPlayerTotalvalue();
+int bjPlayer::getValue(bool checkFirst) {
+    if (checkFirst) {
+        return firstDeck.getPlayerTotalvalue();
     } else {
         return split.getPlayerTotalvalue();
     }
@@ -59,7 +59,7 @@ int bjPlayer::getValue(bool checkMain) {
 
 
 void bjPlayer::resetHand() {
-    main = new bjHand();
+    firstDeck = new bjHand();
     if (split.exist()) {
         split = new bjHand();
     }
@@ -69,34 +69,34 @@ bool bjPlayer::isBroke(int min) {
     return chips < min;
 }
 
-void bjPlayer::payWinSum(bool checkMain) {
-    if (checkMain) {
-        chips += main.payout();
+void bjPlayer::payWinSum(bool checkFirst) {
+    if (checkFirst) {
+        chips += firstDeck.payout();
     } else {
         chips += split.payout();
     };
 }
 
-void bjPlayer::collectBet(bool checkMain) {
-    if (checkMain) {
-        main.resetBetamount();
+void bjPlayer::collectBet(bool checkFirst) {
+    if (checkFirst) {
+        firstDeck.resetBetamount();
     } else {
         split.resetBetamount();
     };
 
 }
 
-void bjPlayer::giveBetBack(bool checkMain) {
-    if (checkMain) {
-        chips += main.givePlayerBetBack();
+void bjPlayer::giveBetBack(bool checkFirst) {
+    if (checkFirst) {
+        chips += firstDeck.givePlayerBetBack();
     } else {
         chips += split.givePlayerBetBack();
     };
 }
 
-void bjPlayer::showAllCards(bool checkMain) {
-    if (checkMain) {
-        main.showcards();
+void bjPlayer::showAllCards(bool checkFirst) {
+    if (checkFirst) {
+        firstDeck.showcards();
     } else {
         split.showcards();
     }
@@ -107,16 +107,16 @@ bool bjPlayer::playerHasSplit() {
 }
 
 bool bjPlayer::canPlayerSplit() {
-    return main.canSplit();
+    return firstDeck.canSplit();
 }
 
 void bjPlayer::setHasSplit() {
     hasSplit = !hasSplit;
 }
 
-void bjPlayer::printValue(bool checkMain) {
-    if (checkMain) {
-        main.showValue();
+void bjPlayer::printValue(bool checkFirst) {
+    if (checkFirst) {
+        firstDeck.showValue();
     } else {
         split.showValue();
     }

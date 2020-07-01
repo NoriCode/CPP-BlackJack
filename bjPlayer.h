@@ -9,7 +9,7 @@ class bjPlayer {
 private:
     bjPlayer();
 
-    bjHand main;
+    bjHand firstDeck;
     bjHand split;
 
     int chips = 0;
@@ -21,7 +21,7 @@ public:
         if (chips != 0) {
             split = new bjHand();
         }
-        main = new bjHand();
+        firstDeck = new bjHand();
     };
 
     bool canPlayerSplit();
@@ -30,27 +30,27 @@ public:
 
     void bet(int min, int max);
 
-    int getValue(bool checkMain);
+    int getValue(bool checkFirst);
 
     void resetHand();
 
     bool isBroke(int min);
 
-    void payWinSum(bool checkMain);
+    void payWinSum(bool checkFirst);
 
-    void collectBet(bool checkMain);
+    void collectBet(bool checkFirst);
 
-    void giveBetBack(bool checkMain);
+    void giveBetBack(bool checkFirst);
 
-    void showAllCards(bool checkMain);
+    void showAllCards(bool checkFirst);
 
     bool playerHasSplit();
 
-    void givePlayercard(std::shared_ptr<bjCards> card, bool checkMain);
+    void givePlayercard(std::shared_ptr<bjCards> card, bool checkFirst);
 
     void setHasSplit();
 
-    void printValue(bool checkMain);
+    void printValue(bool checkFirst);
 
 };
 
