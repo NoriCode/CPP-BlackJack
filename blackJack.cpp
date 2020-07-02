@@ -1,12 +1,13 @@
 
-
 #include "blackJack.h"
 #include "bjRuleController.h"
+#include <cstdio>
+#include <regex>
 
 void blackJack::game() {
     while (mm != EXIT) {
         menu();
-        if(mm == EXIT){
+        if (mm == EXIT) {
             gs = static_cast<gameState>(2);
         }
         while (gs != LEAVE) {
@@ -17,7 +18,9 @@ void blackJack::game() {
                 }
 
                 //bet
+                printDivider();
                 p->bet(bjR->getMinBet(), bjR->getMaxBet());
+                printDivider();
 
                 //spieler und dealer bekommen Karte P,D,P,D
                 drawInitialCards();
@@ -28,12 +31,14 @@ void blackJack::game() {
                     bool checkMain = true;
                     while (gs == PLAYING) {
                         playerRoundOptions();
+                        printDivider();
                         if (po == SPLIT) {
                             p->splitCards();
-                            printf("You have this Cards: \n");
+                            printf("\nYou have this Cards: \n");
                             p->showAllCards(checkMain);
                         } else if (po == HIT) {
                             draw(checkMain);
+                            printf("\nYou have this Cards: \n");
                             p->showAllCards(checkMain);
                             checkEarlyVictoryCondidtion(checkMain);
                         } else if (po == STAND) {
@@ -51,7 +56,7 @@ void blackJack::game() {
                 }
                 if (ps == DNF) {
                     //dealer phase
-                    printf("\n\nThe Dealer has this cards: \n");
+                    printf("\nThe Dealer has this cards: \n");
                     d->showAllCards(true);
 
 
@@ -128,16 +133,18 @@ void blackJack::drawInitialCards() {
 void blackJack::kickPlayerIfBroke() {
     if (p->isBroke(bjR->getMinBet())) {
         mm = static_cast<mainMenu>(3);
-        printf("Bouncer: You dont own enough Chips to play. You have to leave the Casino\n");
+        printf("\nBouncer: You dont own enough Chips to play. You have to leave the Casino\n");
         exit(1);
     }
-    if(mm == EXIT){
+    if (mm == EXIT) {
         exit(0);
     }
 }
 
 void blackJack::menu() {
-    int in;
+    std::string in;
+    int correctIn;
+    std::regex regexPattern("-?[0-9]+.?[0-9]+");
     bool invalid = true;
 
     while (invalid) {
@@ -149,27 +156,29 @@ void blackJack::menu() {
         printf("3 - Exit\n");
         printf("Your choice: ");
         std::cin >> in;
+        correctIn = inputcheck(in);
 
-        if (in < 1 || in > 3) {
-            printf("Invalid Choice. Please enter again\n\n");
+
+        if (correctIn < 1 || correctIn > 3) {
+
+            std::cin >> in;
+            correctIn = inputcheck(in);
         } else {
-
             invalid = false;
         }
     }
     printf("\n\n");
 
 
-    mm = static_cast<mainMenu>(in);
+    mm = static_cast<mainMenu>(correctIn);
     gs = static_cast<gameState>(1);
     po = static_cast<playerOption>(4);
     ps = static_cast<playerStatus>(2);
 }
 
 void blackJack::exitGame() {
-     mm = EXIT;
+    mm = EXIT;
 }
-
 
 
 void blackJack::newGame() {
@@ -179,7 +188,7 @@ void blackJack::newGame() {
 }
 
 void blackJack::showCards() {
-    printf("\n\nThe open Card of the dealer is: \n");
+    printf("\nThe open Card of the dealer is: \n");
     d->showFirstCard();
 
     printf("You have this Cards: \n");
@@ -188,19 +197,20 @@ void blackJack::showCards() {
 }
 
 void blackJack::playAnotherRound() {
-    int in;
+    std::string in;
+    int correctIn;
     printf("Do you want to play a new round?\n");
 
     printf("1 - yes\n");
     printf("Enter any Value to leave the table.\n");
     printf("Your choice: ");
     std::cin >> in;
-    printf("\n\n");
+    correctIn = inputcheck(in);
 
-    if (in != 1) {
+    if (correctIn != 1) {
         in = 2;
     }
-    gs = static_cast<gameState>(in);
+    gs = static_cast<gameState>(correctIn);
 }
 
 void blackJack::draw(bool checkFirst) {
@@ -214,32 +224,29 @@ void blackJack::draw(bool checkFirst) {
 
 void blackJack::playerRoundOptions() {
     bool invalid = true;
-    int in;
+    std::string in;
+    int correctIn;
 
-    while (invalid) {
+    printf("\n\nYour options are\n");
 
-        printf("\n\nYour options are\n");
-
-        if (p->canPlayerSplit()) {
-            printf("0 -> split\n");
-            p->setHasSplit();
-        }
-
-        printf("1 -> hit\n");
-        printf("2 -> stand\n");
-        printf("Your choice: ");
-        std::cin >> in;
-
-        if ((in == 0 && !p->playerHasSplit()) || in < 0 || in > 2) {
-            printf("Invalid Choice. Please enter again\n");
-        } else {
-
-            invalid = false;
-        }
+    if (p->canPlayerSplit()) {
+        printf("0 -> split\n");
+        p->setHasSplit();
     }
+
+    printf("1 -> hit\n");
+    printf("2 -> stand\n");
+    printf("Your choice: ");
+    std::cin >> in;
+    correctIn = inputcheck(in);
+
+    while ((correctIn == 0 && !p->playerHasSplit()) || correctIn < 0 || correctIn > 2) {
+        correctIn = inputcheck(in);
+    }
+
     printf("\n\n");
 
-    po = static_cast<playerOption>(in);
+    po = static_cast<playerOption>(correctIn);
 
 }
 
@@ -248,10 +255,12 @@ void blackJack::checkEarlyVictoryCondidtion(bool checkFirst) {
         ps = static_cast<playerStatus>(0);
         gs = static_cast<gameState>(2);
         bjRuleController::playerWin();
+        p->payWinSum(checkFirst);
     } else if (p->getValue(checkFirst) > 21) {
         ps = static_cast<playerStatus>(1);
         gs = static_cast<gameState>(2);
         bjRuleController::playerLoose();
+        p->collectBet(checkFirst);
     }
 }
 
@@ -259,3 +268,22 @@ blackJack::blackJack(std::nullptr_t) {}
 
 blackJack::blackJack() = default;
 
+void blackJack::printDivider() {
+    printf("\n\n\n\n-------------------------------------\n");
+    printf("New Action Required\n");
+    printf("-------------------------------------");
+}
+
+int blackJack::inputcheck(std::string in) {
+    std::regex regexPattern("-?[0-9]");
+    while (!regex_match(in, regexPattern)) {
+        wrongInput();
+        std::cin >> in;
+    }
+    return std::stoi(in);
+}
+
+void blackJack::wrongInput() {
+    printf("\n-------------------------------------\n");
+    printf("Invalid Choice. Please enter again\n");
+}

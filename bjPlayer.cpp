@@ -1,6 +1,7 @@
 
 #include "bjPlayer.h"
-
+#include <cstdio>
+#include <regex>
 
 void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card, bool checkFirst) {
     if (checkFirst) {
@@ -19,11 +20,22 @@ void bjPlayer::splitCards() {
 void bjPlayer::bet(int min, int max) {
     int playerBet = 0;
     bool wrongbet = true;
-    printf("You have %i chips, place your bet.\n", chips);
+    std::string in;
+
+    printf("\nYou have %i chips, place your bet.\n", chips);
     printf("Your minimum bet is %i\n", min);
     printf("Your maximum bet is %i\n", max);
     printf("Place your bet: ");
-    std::cin >> playerBet;
+    std::cin >> in;
+
+    std::regex regexPattern("-?[0-9]|[0-9][0-9]|[0-9][0-9][0-9]");
+    while (!regex_match(in, regexPattern)) {
+        printf("\n-------------------------------------\n");
+        printf("Invalid Choice. Please enter again\n");
+        std::cin >> in;
+    }
+    playerBet = std::stoi(in);
+
 
     while (wrongbet) {
         if (playerBet > chips) {

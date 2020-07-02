@@ -84,6 +84,12 @@ public:
     void game();
 
     void leave();
+
+    void printDivider();
+
+    int inputcheck(std::string in);
+
+    void wrongInput();
 };
 
 

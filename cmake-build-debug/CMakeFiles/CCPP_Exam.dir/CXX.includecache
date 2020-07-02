@@ -49,6 +49,10 @@ blackJack.h
 /home/nori/CCPP_Exam/blackJack.h
 bjRuleController.h
 /home/nori/CCPP_Exam/bjRuleController.h
+cstdio
+-
+regex
+-
 
 /home/nori/CCPP_Exam/blackJack.h
 bjRuleController.h
@@ -63,10 +67,4 @@ bjPlayer.h
 /home/nori/CCPP_Exam/bjPlayer.h
 bjDealer.h
 /home/nori/CCPP_Exam/bjDealer.h
-
-/home/nori/CCPP_Exam/main.cpp
-blackJack.h
-/home/nori/CCPP_Exam/blackJack.h
-bjRuleController.h
-/home/nori/CCPP_Exam/bjRuleController.h
 
