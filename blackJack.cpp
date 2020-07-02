@@ -89,12 +89,12 @@ void blackJack::game() {
                 p->resetHand();
                 d->resetHand();
                 kickPlayerIfBroke();
-                playAnotherRound();
             } else if (mm == RULES) {
                 bjRuleController::printRules();
                 mm = static_cast<mainMenu>(4);
                 gs = static_cast<gameState>(2);
             }
+            playAnotherRound();
         }
     }
     exitGame();
@@ -187,7 +187,7 @@ void blackJack::playAnotherRound() {
     correctIn = inputcheck(in);
 
     if (correctIn != 1) {
-        in = 2;
+      //  in = 2;
     }
     gs = static_cast<gameState>(correctIn);
 }
