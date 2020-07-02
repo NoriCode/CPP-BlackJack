@@ -69,7 +69,7 @@ std::string bjDeck::getNumberX(int x) {
 
 int bjDeck::getTotalValue() {
     int value = 0;
-    for (std::shared_ptr<bjCards> card : deck) {
+    for (const std::shared_ptr<bjCards>& card : deck) {
         value += card->getValue();
     }
     return value;

@@ -1,10 +1,11 @@
-#!/bin/bash
-CPPFLAGS="-Wall -Wextra -Wpedantic -O0 -std=c++14"
- gcc -c test bjCards.cpp
- gcc -c test bjDeck.cpp
- gcc -c test  bjHand.cpp
- gcc -c  test bjPlayer.cpp
- gcc -c  test bjRuleController.cpp
- gcc -c  test blackJack.cpp
+
+#CPPFLAGS="-Wall -Wextra -Wpedantic -O0 -std=c++14"
+ gcc -c main.cpp
+ gcc -c  bjCards.cpp
+ gcc -c  bjDeck.cpp
+ gcc -c   bjHand.cpp
+ gcc -c   bjPlayer.cpp
+ gcc -c   bjRuleController.cpp
+ gcc -c   blackJack.cpp
 # gcc -o test  blackJack main.o bjCards.o bjDeck.o bjHand.o bjPlayer.o bjRuleController.o blackJack.o
- gcc -Wall -g bjCards.o bjDeck.o bjHand.o bjPlayer.o bjRuleController.o blackJack.o -o main.cpp
+ g++ -Wall -g main.o bjCards.o bjDeck.o bjHand.o bjPlayer.o bjRuleController.o blackJack.o -o test

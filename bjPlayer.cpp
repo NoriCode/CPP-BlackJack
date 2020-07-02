@@ -2,10 +2,11 @@
 #include "bjPlayer.h"
 #include <cstdio>
 #include <regex>
+#include <utility>
 
 void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card) {
 
-    playerCards.giveCard(card);
+    playerCards.giveCard(std::move(card));
 }
 
 int bjPlayer::getValue(bool player) {

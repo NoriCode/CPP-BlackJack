@@ -6,6 +6,7 @@ int main() {
     blackJack *bJ;
 
     bJ->getInstance()->game();
+    //printf("hallo");
 
     return 0;
 }
