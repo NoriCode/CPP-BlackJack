@@ -40,9 +40,3 @@ CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../blackJack.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../main.cpp
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../old_code_thats_for_future_project/bjDealer.h
 
-CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjDeck.h
-CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjHand.h
-CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../old_code_thats_for_future_project/bjDealer.cpp
-CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../old_code_thats_for_future_project/bjDealer.h
-

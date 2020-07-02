@@ -17,9 +17,7 @@ add_executable(CCPP_Exam
 
         bjDeck.cpp
 
-        bjPlayer.cpp
-        old_code_thats_for_future_project/bjDealer.cpp
-        old_code_thats_for_future_project/bjDealer.h)
+        bjPlayer.cpp)
 
 
-#set_target_properties(CCPP_Exam PROPERTIES SUFFIX ".out")
+set_target_properties(CCPP_Exam PROPERTIES SUFFIX ".out")

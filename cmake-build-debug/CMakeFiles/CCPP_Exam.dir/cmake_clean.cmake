@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "../CCPP_Exam"
+  "../CCPP_Exam.out"
   "../CCPP_Exam.pdb"
   "CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o"
@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
   "CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

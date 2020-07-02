@@ -89,12 +89,11 @@ void blackJack::game() {
                 p->resetHand();
                 d->resetHand();
                 kickPlayerIfBroke();
+                playAnotherRound();
             } else if (mm == RULES) {
                 bjRuleController::printRules();
-                mm = static_cast<mainMenu>(4);
-                gs = static_cast<gameState>(2);
+                 menu();
             }
-            playAnotherRound();
         }
     }
     exitGame();
@@ -179,6 +178,7 @@ void blackJack::playAnotherRound() {
     int correctIn;
     printf("Do you want to play a new round?\n");
 
+
     printf("0- no\n");
     printf("1 - yes\n");
 
@@ -186,8 +186,12 @@ void blackJack::playAnotherRound() {
     std::cin >> in;
     correctIn = inputcheck(in);
 
-    if (correctIn != 1) {
-      //  in = 2;
+    if (correctIn < 0 || correctIn > 1) {
+        printf("Wrong input so back to the menu");
+        correctIn = 2;
+    }
+    for (int i = 0; i < 100; ++i) {
+        printf("\n\n");
     }
     gs = static_cast<gameState>(correctIn);
 }

@@ -33,10 +33,5 @@
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
   "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o -c /home/nori/CCPP_Exam/bjPlayer.cpp",
   "file": "/home/nori/CCPP_Exam/bjPlayer.cpp"
-},
-{
-  "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o -c /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp",
-  "file": "/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp"
 }
 ]

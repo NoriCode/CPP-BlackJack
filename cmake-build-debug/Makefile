@@ -312,33 +312,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-old_code_thats_for_future_project/bjDealer.o: old_code_thats_for_future_project/bjDealer.cpp.o
-
-.PHONY : old_code_thats_for_future_project/bjDealer.o
-
-# target to build an object file
-old_code_thats_for_future_project/bjDealer.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o
-.PHONY : old_code_thats_for_future_project/bjDealer.cpp.o
-
-old_code_thats_for_future_project/bjDealer.i: old_code_thats_for_future_project/bjDealer.cpp.i
-
-.PHONY : old_code_thats_for_future_project/bjDealer.i
-
-# target to preprocess a source file
-old_code_thats_for_future_project/bjDealer.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.i
-.PHONY : old_code_thats_for_future_project/bjDealer.cpp.i
-
-old_code_thats_for_future_project/bjDealer.s: old_code_thats_for_future_project/bjDealer.cpp.s
-
-.PHONY : old_code_thats_for_future_project/bjDealer.s
-
-# target to generate assembly for a file
-old_code_thats_for_future_project/bjDealer.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.s
-.PHONY : old_code_thats_for_future_project/bjDealer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -369,9 +342,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... old_code_thats_for_future_project/bjDealer.o"
-	@echo "... old_code_thats_for_future_project/bjDealer.i"
-	@echo "... old_code_thats_for_future_project/bjDealer.s"
 .PHONY : help
 
 

@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/nori/CCPP_Exam/bjRuleController.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o"
   "/home/nori/CCPP_Exam/blackJack.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o"
   "/home/nori/CCPP_Exam/main.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/main.cpp.o"
-  "/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp" "/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -38,7 +38,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="CCPP_Exam">
-				<Option output="/home/nori/CCPP_Exam/CCPP_Exam" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nori/CCPP_Exam/CCPP_Exam.out" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nori/CCPP_Exam"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -60,7 +60,7 @@
 				</MakeCommands>
 			</Target>
 			<Target title="CCPP_Exam/fast">
-				<Option output="/home/nori/CCPP_Exam/CCPP_Exam" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/nori/CCPP_Exam/CCPP_Exam.out" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nori/CCPP_Exam"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -119,12 +119,6 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/nori/CCPP_Exam/main.cpp">
-			<Option target="CCPP_Exam"/>
-		</Unit>
-		<Unit filename="/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp">
-			<Option target="CCPP_Exam"/>
-		</Unit>
-		<Unit filename="/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/nori/CCPP_Exam/CMakeLists.txt">

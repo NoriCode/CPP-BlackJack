@@ -1,4 +1,3 @@
-
 #include "bjCards.h"
 
 void bjCards::setValue(int v) {

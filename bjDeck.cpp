@@ -75,8 +75,8 @@ int bjDeck::getTotalValue() {
     return value;
 }
 
-void bjDeck::reshuffelIfNeeded(int ttrigger) {
-    if (cardCounter <= 75) {
+void bjDeck::reshuffelIfNeeded(int trigger) {
+    if (cardCounter <= trigger) {
         deckShuffel();
     }
 }
