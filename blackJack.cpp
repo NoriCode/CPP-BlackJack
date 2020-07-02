@@ -179,8 +179,9 @@ void blackJack::playAnotherRound() {
     int correctIn;
     printf("Do you want to play a new round?\n");
 
+    printf("0- no\n");
     printf("1 - yes\n");
-    printf("Any Value - no\n");
+
     printf("Your choice: ");
     std::cin >> in;
     correctIn = inputcheck(in);
@@ -263,7 +264,6 @@ void blackJack::wrongInput() {
 
 void blackJack::bet() {
     int playerBet = 0;
-    bool wrongbet = true;
     std::string in;
 
     printf("\nYou have %i chips, place your bet.\n", p->getChips());
