@@ -148,18 +148,18 @@ CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nori/CCPP_Exam/bjPlayer.cpp -o CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.s
 
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o -c /home/nori/CCPP_Exam/bjDealer.cpp
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: CMakeFiles/CCPP_Exam.dir/flags.make
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../old_code_thats_for_future_project/bjDealer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o -c /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp
 
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nori/CCPP_Exam/bjDealer.cpp > CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.i
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp > CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.i
 
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nori/CCPP_Exam/bjDealer.cpp -o CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.s
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp -o CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.s
 
 # Object files for target CCPP_Exam
 CCPP_Exam_OBJECTS = \
@@ -170,7 +170,7 @@ CCPP_Exam_OBJECTS = \
 "CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o" \
 "CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o" \
 "CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o" \
-"CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o"
+"CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o"
 
 # External object files for target CCPP_Exam
 CCPP_Exam_EXTERNAL_OBJECTS =
@@ -182,7 +182,7 @@ CCPP_Exam_EXTERNAL_OBJECTS =
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o
-../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o
+../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/build.make
 ../CCPP_Exam: CMakeFiles/CCPP_Exam.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nori/CCPP_Exam/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../CCPP_Exam"

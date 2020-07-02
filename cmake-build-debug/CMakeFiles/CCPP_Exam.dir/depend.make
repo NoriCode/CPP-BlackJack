@@ -4,12 +4,6 @@
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.cpp
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o: ../bjCards.h
 
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.cpp
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDealer.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjDeck.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o: ../bjHand.h
-
 CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjCards.h
 CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjDeck.cpp
 CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o: ../bjDeck.h
@@ -29,20 +23,26 @@ CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.cpp
 CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o: ../bjRuleController.h
 
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjDealer.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjHand.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjPlayer.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.cpp
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../blackJack.h
+CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o: ../old_code_thats_for_future_project/bjDealer.h
 
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjCards.h
-CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjDealer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjDeck.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjHand.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjPlayer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../blackJack.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../main.cpp
+CMakeFiles/CCPP_Exam.dir/main.cpp.o: ../old_code_thats_for_future_project/bjDealer.h
+
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjCards.h
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjDeck.h
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../bjHand.h
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../old_code_thats_for_future_project/bjDealer.cpp
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o: ../old_code_thats_for_future_project/bjDealer.h
 

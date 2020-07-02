@@ -14,16 +14,16 @@ private:
     int maxBet;
 
 
-public:
-    bjRuleController();
-
-    static void printRules();
-
     static void playerWin();
 
     static void playerLoose();
 
     static void playerTie();
+
+public:
+    bjRuleController();
+
+    static void printRules();
 
     int getDealerMaxPoints() const;
 
@@ -36,6 +36,8 @@ public:
     int getMinBet() const;
 
     int getMaxBet() const;
+
+    int winLossTieControll(int pValue, int dValue);
 
 };
 

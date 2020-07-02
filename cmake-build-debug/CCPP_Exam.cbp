@@ -88,12 +88,6 @@
 		<Unit filename="/home/nori/CCPP_Exam/bjCards.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
-		<Unit filename="/home/nori/CCPP_Exam/bjDealer.cpp">
-			<Option target="CCPP_Exam"/>
-		</Unit>
-		<Unit filename="/home/nori/CCPP_Exam/bjDealer.h">
-			<Option target="CCPP_Exam"/>
-		</Unit>
 		<Unit filename="/home/nori/CCPP_Exam/bjDeck.cpp">
 			<Option target="CCPP_Exam"/>
 		</Unit>
@@ -125,6 +119,12 @@
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/nori/CCPP_Exam/main.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp">
+			<Option target="CCPP_Exam"/>
+		</Unit>
+		<Unit filename="/home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.h">
 			<Option target="CCPP_Exam"/>
 		</Unit>
 		<Unit filename="/home/nori/CCPP_Exam/CMakeLists.txt">

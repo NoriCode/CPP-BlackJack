@@ -4,6 +4,9 @@
 #include <cstdio>
 
 int main() {
+
+
+    bjRuleController *bjR = new bjRuleController();
     blackJack *bJ;
 
     bJ->getInstance()->game();

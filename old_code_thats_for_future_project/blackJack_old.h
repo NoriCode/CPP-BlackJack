@@ -1,12 +1,12 @@
 #ifndef CCPP_EXAM_BLACKJACK_H
 #define CCPP_EXAM_BLACKJACK_H
 
-#include "bjRuleController.h"
-#include "bjCards.h"
-#include "bjHand.h"
-#include "bjDeck.h"
-#include "bjPlayer.h"
-#include "old_code_thats_for_future_project/bjDealer.h"
+#include "../bjRuleController.h"
+#include "../bjCards.h"
+#include "../bjHand.h"
+#include "../bjDeck.h"
+#include "../bjPlayer.h"
+#include "bjDealer.h"
 
 
 class blackJack {
@@ -17,7 +17,7 @@ private:
     explicit blackJack(std::nullptr_t pVoid);
 
     enum playerOption {
-        HIT=1, STAND
+        SPLIT = 0, HIT, STAND
     };
 
     enum gameState {
@@ -30,8 +30,8 @@ private:
 
     enum playerStatus {
         VICTORY = 0,
-        TIE,
-        LOSS
+        DEFEAD,
+        DNF
     };
 
     gameState gs = static_cast<gameState>(1);
@@ -44,15 +44,14 @@ private:
 
 
     bjPlayer *p = new bjPlayer(bjR->getInitChips());
-    bjPlayer *d = new bjPlayer(0);
-    // bjDealer *d = new bjDealer();
+    bjDealer *d = new bjDealer();
 
 
     void newGame();
 
     void drawInitialCards();
 
-    void draw();
+    void draw(bool checkMain);
 
     void menu();
 
@@ -66,9 +65,7 @@ private:
 
     void exitGame();
 
-    void checkEarlyVictoryCondidtion();
-
-    void bet();
+    void checkEarlyVictoryCondidtion(bool checkFirst);
 
 
 public:

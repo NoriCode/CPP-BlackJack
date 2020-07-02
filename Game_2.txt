@@ -1,0 +1,55 @@
+You have 50 chips, place your bet.
+Your minimum bet is 2
+Your maximum bet is 500
+Place your bet: 100
+You placed more chips than you own.
+Place your bet again: 50
+
+
+The open Card of the dealer is: 
+bells, 7 
+You have this Cards: 
+hearts, 5 
+acorns, 8 
+
+
+Your options are
+1 -> hit
+2 -> stand
+Your choice: 1
+
+
+hearts, 5 
+acorns, 8 
+hearts, 3 
+
+
+Your options are
+1 -> hit
+2 -> stand
+Your choice: 1
+
+
+hearts, 5 
+acorns, 8 
+hearts, 3 
+leaves, 2 
+
+
+Your options are
+1 -> hit
+2 -> stand
+Your choice: 2
+
+
+
+
+Your options are
+1 -> hit
+2 -> stand
+Your choice: 2
+
+
+You:
+The cards have a value of: 0
+Bouncer: You dont own enough Chips to play. You have to leave the Casino

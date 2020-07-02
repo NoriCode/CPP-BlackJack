@@ -4,12 +4,6 @@
 CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o
  /home/nori/CCPP_Exam/bjCards.cpp
  /home/nori/CCPP_Exam/bjCards.h
-CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o
- /home/nori/CCPP_Exam/bjCards.h
- /home/nori/CCPP_Exam/bjDealer.cpp
- /home/nori/CCPP_Exam/bjDealer.h
- /home/nori/CCPP_Exam/bjDeck.h
- /home/nori/CCPP_Exam/bjHand.h
 CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o
  /home/nori/CCPP_Exam/bjCards.h
  /home/nori/CCPP_Exam/bjDeck.cpp
@@ -30,19 +24,25 @@ CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o
  /home/nori/CCPP_Exam/bjRuleController.h
 CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o
  /home/nori/CCPP_Exam/bjCards.h
- /home/nori/CCPP_Exam/bjDealer.h
  /home/nori/CCPP_Exam/bjDeck.h
  /home/nori/CCPP_Exam/bjHand.h
  /home/nori/CCPP_Exam/bjPlayer.h
  /home/nori/CCPP_Exam/bjRuleController.h
  /home/nori/CCPP_Exam/blackJack.cpp
  /home/nori/CCPP_Exam/blackJack.h
+ /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.h
 CMakeFiles/CCPP_Exam.dir/main.cpp.o
  /home/nori/CCPP_Exam/bjCards.h
- /home/nori/CCPP_Exam/bjDealer.h
  /home/nori/CCPP_Exam/bjDeck.h
  /home/nori/CCPP_Exam/bjHand.h
  /home/nori/CCPP_Exam/bjPlayer.h
  /home/nori/CCPP_Exam/bjRuleController.h
  /home/nori/CCPP_Exam/blackJack.h
  /home/nori/CCPP_Exam/main.cpp
+ /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.h
+CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o
+ /home/nori/CCPP_Exam/bjCards.h
+ /home/nori/CCPP_Exam/bjDeck.h
+ /home/nori/CCPP_Exam/bjHand.h
+ /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.cpp
+ /home/nori/CCPP_Exam/old_code_thats_for_future_project/bjDealer.h

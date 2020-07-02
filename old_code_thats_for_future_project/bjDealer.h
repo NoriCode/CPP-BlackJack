@@ -2,7 +2,7 @@
 #define CCPP_EXAM_BJDEALER_H
 
 
-#include "bjHand.h"
+#include "../bjHand.h"
 
 class bjDealer {
 private:
@@ -13,18 +13,17 @@ public:
         main = new bjHand();
     }
 
-    int getValue(bool checkMain);
+    int getValue();
 
     void resetHand();
 
-    void givePlayercard(std::shared_ptr<bjCards> card, bool checkMain);
+    void givePlayercard(std::shared_ptr<bjCards> card);
 
     void showFirstCard();
 
     void showAllCards(bool checkMain);
 
     void printValue();
-
 };
 
 

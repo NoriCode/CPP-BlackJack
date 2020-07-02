@@ -19,95 +19,73 @@ void blackJack::game() {
 
                 //bet
                 printDivider();
-                p->bet(bjR->getMinBet(), bjR->getMaxBet());
-                printDivider();
+                bet();
 
                 //spieler und dealer bekommen Karte P,D,P,D
                 drawInitialCards();
-                //karten werden gedreht
-                showCards();
+                printDivider();
                 //spieler: hit stand loop unterbrochen durch 21 oder höher
                 {
-                    bool checkMain = true;
                     while (gs == PLAYING) {
+                        //karten werden gedreht
+                        showCards();
+                        if (p->getValue(true) >= 21) {
+                            po = static_cast<playerOption>(2);
+                            gs = static_cast<gameState>(2);
+                            if (p->getValue(true) == 21) {
+                                printf("\nyou have a BlackJack\n");
+                            } else {
+                                printf("\nYou have over 21.\n");
+                            }
+                            printf("\nYour turn ends automaticly.\n");
+                            break;
+                        }
                         playerRoundOptions();
-                        printDivider();
-                        if (po == SPLIT) {
-                            p->splitCards();
+                        if (po == HIT) {
+                            draw();
                             printf("\nYou have this Cards: \n");
-                            p->showAllCards(checkMain);
-                        } else if (po == HIT) {
-                            draw(checkMain);
-                            printf("\nYou have this Cards: \n");
-                            p->showAllCards(checkMain);
-                            checkEarlyVictoryCondidtion(checkMain);
+                            p->showAllCards();
+
+                            printDivider();
                         } else if (po == STAND) {
-                            if (p->playerHasSplit() && checkMain) {
-                                checkMain = false;
-                                p->showAllCards(checkMain);
-                                ps = static_cast<playerStatus>(3);
-                            } else {
-                                printf("You:\n");
-                                p->printValue(checkMain);
-                                gs = static_cast<gameState>(4);
-                            }
+                            printf("\nYou:\n");
+                            p->printValue(true);
+                            gs = static_cast<gameState>(4);
                         }
                     }
                 }
-                if (ps == DNF) {
-                    //dealer phase
-                    printf("\nThe Dealer has this cards: \n");
-                    d->showAllCards(true);
+                //dealer phase
+                printf("\n\n\n\n-------------------------------------\n");
+                printf("Dealer Turn\n");
+                printf("-------------------------------------");
+
+                printf("\nThe Dealer has this cards: \n");
+                d->showAllCards();
 
 
-                    while (d->getValue(true) < bjR->getDealerMaxPoints()) {
-                        printf("\n \nThe dealer draws one Card and has now: \n");
-                        draw(true);
-                        d->showAllCards(true);
-                    }
-                    printf("\nDealer:\n");
-                    d->printValue();
-
-
-                    //cashout
-
-                    bool exit = false;
-                    bool checkFirst = true;
-                    bool dealerLoss = false;
-
-                    if (d->getValue(true) > 21) {
-                        printf("debug");
-                        dealerLoss = true;
-                    }
-
-                    while (!exit) {
-                        if (dealerLoss) {
-                            if (p->getValue(checkFirst) <= 21) {
-                                p->payWinSum(checkFirst);
-                                bjRuleController::playerWin();
-                            } else {
-                                p->collectBet(checkFirst);
-                                bjRuleController::playerLoose();
-                            }
-                        } else {
-                            if (p->getValue(checkFirst) < d->getValue(true)) {
-                                p->collectBet(checkFirst);
-                                bjRuleController::playerLoose();
-                            } else if (p->getValue(checkFirst) == d->getValue(true)) {
-                                p->giveBetBack(checkFirst);
-                                bjRuleController::playerTie();
-                            } else if (p->getValue(checkFirst) > d->getValue(true)) {
-                                p->payWinSum(checkFirst);
-                                bjRuleController::playerWin();
-                            }
-                        }
-                        if (p->playerHasSplit()) {
-                            checkFirst = false;
-                        } else {
-                            exit = true;
-                        }
-                    }
+                while (d->getValue(false) < bjR->getDealerMaxPoints()) {
+                    draw();
+                    printf("\n \nThe dealer draws one Card and has now: \n");
+                    d->showAllCards();
                 }
+
+                printf("\nYou:\n");
+                p->printValue(true);
+
+                printf("\nDealer:\n");
+                d->printValue(false);
+
+                //cashout
+                ps = static_cast<playerStatus>(bjR->winLossTieControll(p->getValue(true), d->getValue(false)));
+
+                if (ps == VICTORY) {
+                    p->payWinSum();
+                } else if (ps == TIE) {
+                    p->giveBetBack();
+                } else if (ps == LOSS) {
+                    p->collectBet();
+                }
+
                 p->resetHand();
                 d->resetHand();
                 kickPlayerIfBroke();
@@ -124,8 +102,8 @@ void blackJack::game() {
 
 void blackJack::drawInitialCards() {
     for (int i = 0; i < 2; i++) {
-        p->givePlayercard(cD.playFirstCardFromStack(), true);
-        d->givePlayercard(cD.playFirstCardFromStack(), true);
+        p->givePlayercard(cD.playFirstCardFromStack());
+        d->givePlayercard(cD.playFirstCardFromStack());
     }
 
 }
@@ -173,7 +151,7 @@ void blackJack::menu() {
     mm = static_cast<mainMenu>(correctIn);
     gs = static_cast<gameState>(1);
     po = static_cast<playerOption>(4);
-    ps = static_cast<playerStatus>(2);
+    ps = static_cast<playerStatus>(4);
 }
 
 void blackJack::exitGame() {
@@ -192,7 +170,7 @@ void blackJack::showCards() {
     d->showFirstCard();
 
     printf("You have this Cards: \n");
-    p->showAllCards(true);
+    p->showAllCards();
 
 }
 
@@ -202,7 +180,7 @@ void blackJack::playAnotherRound() {
     printf("Do you want to play a new round?\n");
 
     printf("1 - yes\n");
-    printf("Enter any Value to leave the table.\n");
+    printf("Any Value - no\n");
     printf("Your choice: ");
     std::cin >> in;
     correctIn = inputcheck(in);
@@ -213,26 +191,20 @@ void blackJack::playAnotherRound() {
     gs = static_cast<gameState>(correctIn);
 }
 
-void blackJack::draw(bool checkFirst) {
+void blackJack::draw() {
 
     if (po == HIT) {
-        p->givePlayercard(cD.playFirstCardFromStack(), checkFirst);
+        p->givePlayercard(cD.playFirstCardFromStack());
     } else if (po == STAND) {
-        d->givePlayercard(cD.playFirstCardFromStack(), true);
+        d->givePlayercard(cD.playFirstCardFromStack());
     }
 }
 
 void blackJack::playerRoundOptions() {
-    bool invalid = true;
     std::string in;
     int correctIn;
 
     printf("\n\nYour options are\n");
-
-    if (p->canPlayerSplit()) {
-        printf("0 -> split\n");
-        p->setHasSplit();
-    }
 
     printf("1 -> hit\n");
     printf("2 -> stand\n");
@@ -240,7 +212,7 @@ void blackJack::playerRoundOptions() {
     std::cin >> in;
     correctIn = inputcheck(in);
 
-    while ((correctIn == 0 && !p->playerHasSplit()) || correctIn < 0 || correctIn > 2) {
+    while (correctIn < 1 || correctIn > 2) {
         correctIn = inputcheck(in);
     }
 
@@ -250,17 +222,17 @@ void blackJack::playerRoundOptions() {
 
 }
 
-void blackJack::checkEarlyVictoryCondidtion(bool checkFirst) {
-    if (p->getValue(checkFirst) == 21) {
+void blackJack::checkEarlyVictoryCondidtion() {
+    if (p->getValue(true) == 21) {
         ps = static_cast<playerStatus>(0);
         gs = static_cast<gameState>(2);
-        bjRuleController::playerWin();
-        p->payWinSum(checkFirst);
-    } else if (p->getValue(checkFirst) > 21) {
+        // bjRuleController::playerWin();
+        p->payWinSum();
+    } else if (p->getValue(true) > 21) {
         ps = static_cast<playerStatus>(1);
         gs = static_cast<gameState>(2);
-        bjRuleController::playerLoose();
-        p->collectBet(checkFirst);
+        //bjRuleController::playerLoose();
+        p->collectBet();
     }
 }
 
@@ -270,7 +242,7 @@ blackJack::blackJack() = default;
 
 void blackJack::printDivider() {
     printf("\n\n\n\n-------------------------------------\n");
-    printf("New Action Required\n");
+    printf("Next Action\n");
     printf("-------------------------------------");
 }
 
@@ -285,5 +257,53 @@ int blackJack::inputcheck(std::string in) {
 
 void blackJack::wrongInput() {
     printf("\n-------------------------------------\n");
-    printf("Invalid Choice. Please enter again\n");
+    printf("You have entered an Invalid Number\n");
+    printf("Please enter again:\n");
+}
+
+void blackJack::bet() {
+    int playerBet = 0;
+    bool wrongbet = true;
+    std::string in;
+
+    printf("\nYou have %i chips, place your bet.\n", p->getChips());
+    printf("Your minimum bet is %i\n", bjR->getMinBet());
+    printf("Your maximum bet is %i\n", bjR->getMaxBet());
+    printf("Place your bet: ");
+    std::cin >> in;
+
+
+//    std::regex regexPattern("-?[0-9]|[0-9][0-9]|[0-9][0-9][0-9]");
+    std::regex regexPattern("[2-9]|[1-8][0-9]|9[0-9]|[1-4][0-9]{2}|500");
+    while (!regex_match(in, regexPattern)) {
+        wrongInput();
+        std::cin >> in;
+    }
+
+    playerBet = std::stoi(in);
+    // playerBet = inputcheck(in);
+    printf("%i", playerBet);
+
+/*
+    while (wrongbet) {
+        if (playerBet > p->getChips()) {
+            printf("You placed more chips than you own.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
+        } else if (playerBet < bjR->getMinBet()) {
+            printf("You placed less chips than allowed.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
+        } else if (playerBet > bjR->getMaxBet()) {
+            printf("You placed more chips than allowed.\n");
+            printf("Place your bet again: ");
+            std::cin >> playerBet;
+        } else {
+            wrongbet = false;
+        }
+
+
+    }*/
+
+    p->bet(playerBet);
 }

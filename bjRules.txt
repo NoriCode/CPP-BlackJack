@@ -1,64 +1,69 @@
 Rules used as a baseline for this Game, some rules are modified:
 https://bicyclecards.com/how-to-play/blackjack/
-Cards:
-	6 Decks with 52 cards each
-	reshuffeld when 75 cards are left
-Goal:
-	Get a count as close to 21
-	hihger than the dealer
-Value:
-	Numbers have the equal value
-	Face cards have the Value 10
-	Ace depends on the player: 1 or 11
-Betting:
-	before the first cards are played
-	min. 2		chip
-	max. 500	chips
-The Deal:
-	First every player gets a first card:		face value up for the players
-							face value up for the dealer
-	Second every player gets a second card:		face value up for the players
-							face value down for the dealer
-Naturals:
-	natural = value of 21 (Ace and a 10 value card)
-	Player without dealer:
-		player gets his bet times 1.5
-	player with dealer:
-		player gets his bet back
-	dealer only:
-		dealer collects the bet
-	dealer has a ten or an ace face value up:
-		dealer checks the hidden card
+    Cards:
+        played with 6 Decks with french deck (2 - 10, B, D, K ,A)
+        reshuffeld when 75 cards are left
+    Input:
+        only numbers
 
-players play:
-	stand
-		no additional card
-	hit
-		gets another card
-		repeats till stand
+    Betting:
+       beginning of each round
+       More then 2
+       Less then 500
+       Less then your Chips
 
-dealers play:
-	after the players
-	face down card is turned up
-	dealer hits until his value is 17 or higher
+    Goal:
+        Get a value of 21
+        detailed conditions are down below
 
-splitting pairs:
-	if the player has two cards with the same value he can split them and his bet is doubled
-	the player can only split once after getting the second card
-	left and is played until he stands then the splitdeck hand is played
-	pair of aces:
-		only one hit
-		when getting a ten: bet is repayed
+    First two cards:
+        player
+            both face up
+        dealer
+            first face up
+            second face down
 
-settlement:
-	player gets over 21
-		looses his bet
-	dealer gets over 21
-		player gets paid his bet
-	dealer stays under 21
-		player gets paid when his value is higher
-	player and dealer have the same value
-		player get his bet back
 
-reshuffeld:
-	when 75 cards are left
+    Your Turn:
+        hit = new card
+        stand = no new card
+
+    Payout:
+        win:
+            1.5 Times your bet
+        tie:
+            your bet
+        loose:
+            you loose your bet
+
+    Card Values:
+        2 = 2
+        3 = 3
+        4 = 4
+        ...
+        10 = 10
+        B = 10
+        D = 10
+        K = 10
+        A = 1 or 11
+
+    Win conditions:
+        P = Player Value
+        D = Dealer Value
+        W = Win
+        T = Tie
+        L = Loose
+
+       +--------+-----------+--------+--------+
+       |        | P < 21    | P = 21 | P > 21 |
+       |--------|-----------|--------|--------|
+       | D < 21 | P < D = L | W      | L      |
+       |        | P = D = T |        |        |
+       |        | P > D = W |        |        |
+       |--------|-----------|--------|--------|
+       | D = 21 | L         | T      | L      |
+       |--------|-----------|--------|--------|
+       | D > 21 | W         | W      | L      |
+       +--------+-----------+--------+--------+
+
+    Card Value:

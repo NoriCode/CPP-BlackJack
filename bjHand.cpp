@@ -32,7 +32,7 @@ void bjHand::giveCard(std::shared_ptr<bjCards> card) {
 }
 
 void bjHand::showcards() {
-    for (const std::shared_ptr<bjCards>& card: deck.getDeck()) {
+    for (const std::shared_ptr<bjCards> &card: deck.getDeck()) {
         card->whoAmI();
     }
 }
@@ -63,11 +63,13 @@ void bjHand::showfirstCard() {
 }
 
 
-int bjHand::getPlayerTotalvalue() {
-    for (const std::shared_ptr<bjCards>& card: deck.getDeck()) {
-        if (card->getnumber() == "A") {
-            if (deck.getTotalValue() > 21) {
-                card->setValue(1);
+int bjHand::getPlayerTotalvalue(bool player) {
+    if (player) {
+        for (const std::shared_ptr<bjCards> &card: deck.getDeck()) {
+            if (card->getnumber() == "A") {
+                if (deck.getTotalValue() > 21) {
+                    card->setValue(1);
+                }
             }
         }
     }
@@ -80,8 +82,8 @@ bjHand::bjHand(bjHand *pHand) {
 
 bjHand::bjHand() = default;
 
-void bjHand::showValue() {
-    printf("The cards have a value of: %i\n", getPlayerTotalvalue());
+void bjHand::showValue(bool player) {
+    printf("The cards have a value of: %i\n", getPlayerTotalvalue(player));
 }
 
 int bjHand::getDealerTotalValue() {

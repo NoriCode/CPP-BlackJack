@@ -1,0 +1,65 @@
+TBD:
+
+
+
+
+Done:
+    Philip B, [01.07.20 16:34]
+    Trennlinie zwischen den Ausgaben
+
+    Lukas Pensler, [01.07.20 16:45]
+    wenn man beim Split, mit den ersten karten gewinnt, dann gewinnt man, der zweite stapel karten wird nicht mehr aufgerufen
+
+    Lukas Pensler, [01.07.20 16:23]
+    possible invalid choice at split
+
+    Lukas Pensler, [01.07.20 16:23]
+    split geht immer und immer wieder, split geht nicht
+
+    Lukas Pensler, [01.07.20 16:24]
+    gesplittete karten werden beim ersten mit angezeigt
+
+    Lukas Pensler, [01.07.20 16:25]
+    es ist nicht erkennbar, welches deck, beim split erkennbar ist
+
+    Lukas Pensler, [01.07.20 17:02]
+    ix GRAMMER, you have LOST, klingt falsch und ist falsch, bitte in, YOU LOST aendern
+
+    Lukas Pensler, [01.07.20 16:17]
+    tldr for rules needed
+
+    Lukas Pensler, [01.07.20 16:27]
+    beim neuen Spiel werden keine PENISE abgefangen
+
+    Lukas Pensler, [01.07.20 16:27]
+    beim neues spiel, fehlt die zweite Option
+
+    Lukas Pensler, [01.07.20 16:52]
+    kasten um alle ausgaben bauen, um es uebersichlicher zu machen, + Punkt, wenn es aussehen wuerde wie ein Tisch
+
+    Lukas Pensler, [01.07.20 16:56]
+    Beim stand werden die karten vom dealer nicht angezeigt
+
+    Lukas Pensler, [01.07.20 16:19]
+    fix Letter Break
+
+    Lukas Pensler, [01.07.20 16:26]
+    Es wird kein win screen gezeigt
+
+    Lukas Pensler, [01.07.20 16:28]
+    beim setzen kann man einen Double eingeben, breaks game
+
+    Lukas Pensler, [01.07.20 16:35]
+    Beim Verlieren anzeigen, welcher Wert angezeigt wurde
+
+    Lukas Pensler, [01.07.20 16:38]
+    bei Value 20, spiel beendet, keine Information ob win oder Loose, vlt unentschieden
+        Game_1.txt
+
+    Lukas Pensler, [01.07.20 16:49]
+    bei 4 karten, stand, werden keine karten angezeigt, bei einem weiteren stand, karten value ist 0, dannach loose
+        Game_2.txt
+
+    Lukas Pensler, [01.07.20 16:58]
+    stand der chips wird nicht richtig angezeigt, vergisst welche karten gesetzt wurden
+        Game_3.txt

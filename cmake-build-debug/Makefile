@@ -150,33 +150,6 @@ bjCards.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjCards.cpp.s
 .PHONY : bjCards.cpp.s
 
-bjDealer.o: bjDealer.cpp.o
-
-.PHONY : bjDealer.o
-
-# target to build an object file
-bjDealer.cpp.o:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.o
-.PHONY : bjDealer.cpp.o
-
-bjDealer.i: bjDealer.cpp.i
-
-.PHONY : bjDealer.i
-
-# target to preprocess a source file
-bjDealer.cpp.i:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.i
-.PHONY : bjDealer.cpp.i
-
-bjDealer.s: bjDealer.cpp.s
-
-.PHONY : bjDealer.s
-
-# target to generate assembly for a file
-bjDealer.cpp.s:
-	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/bjDealer.cpp.s
-.PHONY : bjDealer.cpp.s
-
 bjDeck.o: bjDeck.cpp.o
 
 .PHONY : bjDeck.o
@@ -339,6 +312,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+old_code_thats_for_future_project/bjDealer.o: old_code_thats_for_future_project/bjDealer.cpp.o
+
+.PHONY : old_code_thats_for_future_project/bjDealer.o
+
+# target to build an object file
+old_code_thats_for_future_project/bjDealer.cpp.o:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.o
+.PHONY : old_code_thats_for_future_project/bjDealer.cpp.o
+
+old_code_thats_for_future_project/bjDealer.i: old_code_thats_for_future_project/bjDealer.cpp.i
+
+.PHONY : old_code_thats_for_future_project/bjDealer.i
+
+# target to preprocess a source file
+old_code_thats_for_future_project/bjDealer.cpp.i:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.i
+.PHONY : old_code_thats_for_future_project/bjDealer.cpp.i
+
+old_code_thats_for_future_project/bjDealer.s: old_code_thats_for_future_project/bjDealer.cpp.s
+
+.PHONY : old_code_thats_for_future_project/bjDealer.s
+
+# target to generate assembly for a file
+old_code_thats_for_future_project/bjDealer.cpp.s:
+	$(MAKE) -f CMakeFiles/CCPP_Exam.dir/build.make CMakeFiles/CCPP_Exam.dir/old_code_thats_for_future_project/bjDealer.cpp.s
+.PHONY : old_code_thats_for_future_project/bjDealer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -351,9 +351,6 @@ help:
 	@echo "... bjCards.o"
 	@echo "... bjCards.i"
 	@echo "... bjCards.s"
-	@echo "... bjDealer.o"
-	@echo "... bjDealer.i"
-	@echo "... bjDealer.s"
 	@echo "... bjDeck.o"
 	@echo "... bjDeck.i"
 	@echo "... bjDeck.s"
@@ -372,6 +369,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... old_code_thats_for_future_project/bjDealer.o"
+	@echo "... old_code_thats_for_future_project/bjDealer.i"
+	@echo "... old_code_thats_for_future_project/bjDealer.s"
 .PHONY : help
 
 

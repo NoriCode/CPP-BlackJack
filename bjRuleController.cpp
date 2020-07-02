@@ -20,7 +20,7 @@ void bjRuleController::playerWin() {
 }
 
 void bjRuleController::playerLoose() {
-    printf("\nYou have lost.\n");
+    printf("\nYou lost.\n");
 }
 
 void bjRuleController::playerTie() {
@@ -60,3 +60,29 @@ int bjRuleController::getMinBet() const {
 int bjRuleController::getMaxBet() const {
     return maxBet;
 }
+
+int bjRuleController::winLossTieControll(int pValue, int dValue) {
+
+    if (pValue > 21) {
+        playerLoose();
+        return 3;
+    } else if (pValue == 21) {
+        if (dValue == 21) {
+            playerTie();
+            return 2;
+        }
+    } else {
+        if (dValue <= 21) {
+            if (pValue < dValue) {
+                playerLoose();
+                return 3;
+            } else if (pValue == dValue) {
+                playerTie();
+                return 2;
+            }
+        }
+    }
+    playerWin();
+    return 1;
+}
+

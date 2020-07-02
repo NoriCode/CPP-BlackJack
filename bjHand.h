@@ -27,8 +27,6 @@ public:
 
     bool canSplit();
 
-    int getPlayerTotalvalue();
-
     int getDealerTotalValue();
 
     int getBetAmount() const;
@@ -48,6 +46,10 @@ public:
     void showfirstCard();
 
     void showValue();
+
+    int getPlayerTotalvalue(bool player);
+
+    void showValue(bool player);
 };
 
 
