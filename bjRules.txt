@@ -1,5 +1,6 @@
 Rules used as a baseline for this Game, some rules are modified:
 https://bicyclecards.com/how-to-play/blackjack/
+
     Cards:
         played with 6 Decks with french deck (2 - 10, B, D, K ,A)
         reshuffeld when 75 cards are left

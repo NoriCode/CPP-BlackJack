@@ -6,7 +6,6 @@
 #include "bjHand.h"
 #include "bjDeck.h"
 #include "bjPlayer.h"
-#include "old_code_thats_for_future_project/bjDealer.h"
 
 
 class blackJack {
