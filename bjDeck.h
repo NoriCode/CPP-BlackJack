@@ -28,7 +28,7 @@ private:
 
 public:
 
-    void addCardtoDeck(const std::shared_ptr<bjCards>& card);
+    void addCardtoDeck(const std::shared_ptr<bjCards> &card);
 
     std::vector<std::shared_ptr<bjCards>> getDeck();
 
@@ -43,7 +43,7 @@ public:
     void reshuffelIfNeeded(int trigger);
 
 
-    void collectPlayedCards(const std::shared_ptr<bjCards>& card);
+    void collectPlayedCards(const std::shared_ptr<bjCards> &card);
 };
 
 

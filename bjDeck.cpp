@@ -4,7 +4,7 @@
 #include <random>
 #include "bjCards.h"
 
-void bjDeck::addCardtoDeck(const std::shared_ptr<bjCards>& card) {
+void bjDeck::addCardtoDeck(const std::shared_ptr<bjCards> &card) {
     deck.push_back(card);
 }
 
@@ -25,7 +25,7 @@ void bjDeck::reduceCardCounter() {
     cardCounter--;
 }
 
-void bjDeck::collectPlayedCards(const std::shared_ptr<bjCards>& card) {
+void bjDeck::collectPlayedCards(const std::shared_ptr<bjCards> &card) {
 
     playedCards.push_back(card);
     //deck.erase(deck.at(0)));
@@ -69,7 +69,7 @@ std::string bjDeck::getNumberX(int x) {
 
 int bjDeck::getTotalValue() {
     int value = 0;
-    for (const std::shared_ptr<bjCards>& card : deck) {
+    for (const std::shared_ptr<bjCards> &card : deck) {
         value += card->getValue();
     }
     return value;

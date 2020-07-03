@@ -1,7 +1,5 @@
 
 #include "bjPlayer.h"
-#include <cstdio>
-#include <regex>
 #include <utility>
 
 void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card) {
@@ -16,7 +14,7 @@ int bjPlayer::getValue(bool player) {
 
 
 void bjPlayer::resetHand() {
-    playerCards = new bjHand();
+    playerCards = bjHand();
 }
 
 bool bjPlayer::isBroke(int min) const {
@@ -61,6 +59,10 @@ int bjPlayer::getChips() const {
 
 void bjPlayer::showFirstCard() {
     playerCards.showfirstCard();
+}
+
+bjPlayer::bjPlayer() {
+
 }
 
 

@@ -8,7 +8,7 @@ void bjDealer::givePlayercard(std::shared_ptr<bjCards> card) {
 
 
 int bjDealer::getValue() {
-   // return main.getPlayerTotalvalue();
+    // return main.getPlayerTotalvalue();
     return 0;
 }
 

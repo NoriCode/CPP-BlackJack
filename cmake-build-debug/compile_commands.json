@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/main.cpp.o -c /home/nori/CCPP_Exam/main.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/main.cpp.o -c /home/nori/CCPP_Exam/main.cpp",
   "file": "/home/nori/CCPP_Exam/main.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o -c /home/nori/CCPP_Exam/bjRuleController.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjRuleController.cpp.o -c /home/nori/CCPP_Exam/bjRuleController.cpp",
   "file": "/home/nori/CCPP_Exam/bjRuleController.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o -c /home/nori/CCPP_Exam/bjCards.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjCards.cpp.o -c /home/nori/CCPP_Exam/bjCards.cpp",
   "file": "/home/nori/CCPP_Exam/bjCards.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o -c /home/nori/CCPP_Exam/bjHand.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjHand.cpp.o -c /home/nori/CCPP_Exam/bjHand.cpp",
   "file": "/home/nori/CCPP_Exam/bjHand.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o -c /home/nori/CCPP_Exam/blackJack.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/blackJack.cpp.o -c /home/nori/CCPP_Exam/blackJack.cpp",
   "file": "/home/nori/CCPP_Exam/blackJack.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o -c /home/nori/CCPP_Exam/bjDeck.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjDeck.cpp.o -c /home/nori/CCPP_Exam/bjDeck.cpp",
   "file": "/home/nori/CCPP_Exam/bjDeck.cpp"
 },
 {
   "directory": "/home/nori/CCPP_Exam/cmake-build-debug",
-  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic  -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o -c /home/nori/CCPP_Exam/bjPlayer.cpp",
+  "command": "/usr/bin/c++     -Wall -Wextra -Wpedantic -Werror -O0 -g   -std=gnu++14 -o CMakeFiles/CCPP_Exam.dir/bjPlayer.cpp.o -c /home/nori/CCPP_Exam/bjPlayer.cpp",
   "file": "/home/nori/CCPP_Exam/bjPlayer.cpp"
 }
 ]

@@ -6,11 +6,13 @@
 
 void blackJack::game() {
     while (mm != EXIT) {
-        menu();
-        if (mm == EXIT) {
-            gs = static_cast<gameState>(2);
+        if (gs == LEAVE) {
+            menu();
         }
-        while (gs != LEAVE) {
+        if (mm == EXIT) {
+            exitGame();
+        }
+       // while (gs != LEAVE) {
             if (mm == PLAY) {
                 if (gs == NEWGAME) {
                     newGame();
@@ -33,9 +35,13 @@ void blackJack::game() {
                             po = static_cast<playerOption>(2);
                             gs = static_cast<gameState>(2);
                             if (p->getValue(true) == 21) {
-                                printf("\nyou have a BlackJack\n");
+                                printf("\n\n\n\n******************************************\n");
+                                printf("You have a BlackJack\n");
+                                printf("******************************************\n");
                             } else {
+                                printf("\n\n\n\n******************************************\n");
                                 printf("\nYou have over 21.\n");
+                                printf("\n\n\n\n******************************************\n");
                             }
                             printf("\nYour turn ends automaticly.\n");
                             break;
@@ -55,11 +61,11 @@ void blackJack::game() {
                     }
                 }
                 //dealer phase
-                printf("\n\n\n\n-------------------------------------\n");
+                printf("\n\n\n\n------------------------------------------\n");
                 printf("Dealer Turn\n");
-                printf("-------------------------------------");
+                                printf("------------------------------------------\n");
 
-                printf("\nThe Dealer has this cards: \n");
+                printf("The Dealer has this cards: \n");
                 d->showAllCards();
 
 
@@ -89,12 +95,17 @@ void blackJack::game() {
                 p->resetHand();
                 d->resetHand();
                 kickPlayerIfBroke();
+                printDivider();
                 playAnotherRound();
             } else if (mm == RULES) {
                 bjRuleController::printRules();
-                 menu();
+                 gs = static_cast<gameState>(2);
+                 po = static_cast<playerOption>(4);
+                 mm = static_cast<mainMenu>(4);
+                 ps = static_cast<playerStatus>(2);
             }
-        }
+       // menu();
+        //}
     }
     exitGame();
 }
@@ -137,8 +148,6 @@ void blackJack::menu() {
 
 
         if (correctIn < 1 || correctIn > 3) {
-
-            std::cin >> in;
             correctIn = inputcheck(in);
         } else {
             invalid = false;
@@ -154,7 +163,7 @@ void blackJack::menu() {
 }
 
 void blackJack::exitGame() {
-    mm = EXIT;
+    exit(0);
 }
 
 
@@ -165,7 +174,7 @@ void blackJack::newGame() {
 }
 
 void blackJack::showCards() {
-    printf("\nThe open Card of the dealer is: \n");
+    printf("The open Card of the dealer is: \n");
     d->showFirstCard();
 
     printf("You have this Cards: \n");
@@ -177,17 +186,16 @@ void blackJack::playAnotherRound() {
     std::string in;
     int correctIn;
     printf("Do you want to play a new round?\n");
+    printf("Any other Value brings you to the menu. \n");
 
 
-    printf("0- no\n");
     printf("1 - yes\n");
 
     printf("Your choice: ");
     std::cin >> in;
     correctIn = inputcheck(in);
 
-    if (correctIn < 0 || correctIn > 1) {
-        printf("Wrong input so back to the menu");
+    if (correctIn != 1) {
         correctIn = 2;
     }
     for (int i = 0; i < 100; ++i) {
@@ -208,17 +216,22 @@ void blackJack::draw() {
 void blackJack::playerRoundOptions() {
     std::string in;
     int correctIn;
+    bool invalid = true;
+    while (invalid) {
+        printf("\n\nYour options are\n");
 
-    printf("\n\nYour options are\n");
-
-    printf("1 -> hit\n");
-    printf("2 -> stand\n");
-    printf("Your choice: ");
-    std::cin >> in;
-    correctIn = inputcheck(in);
-
-    while (correctIn < 1 || correctIn > 2) {
+        printf("1 -> hit\n");
+        printf("2 -> stand\n");
+        printf("Your choice: ");
+        std::cin >> in;
         correctIn = inputcheck(in);
+
+
+        if (correctIn < 1 || correctIn > 2) {
+            correctIn = inputcheck(in);
+        } else {
+            invalid = false;
+        }
     }
 
     printf("\n\n");
@@ -246,9 +259,9 @@ blackJack::blackJack(std::nullptr_t) {}
 blackJack::blackJack() = default;
 
 void blackJack::printDivider() {
-    printf("\n\n\n\n-------------------------------------\n");
-    printf("Next Action\n");
-    printf("-------------------------------------");
+    printf("\n\n\n\n------------------------------------------\n");
+    printf("\t\t\t\tNext Action\n");
+    printf("------------------------------------------\n");
 }
 
 int blackJack::inputcheck(std::string in) {
@@ -261,8 +274,9 @@ int blackJack::inputcheck(std::string in) {
 }
 
 void blackJack::wrongInput() {
-    printf("\n-------------------------------------\n");
+    printf("\n------------------------------------------\n");
     printf("You have entered an Invalid Number\n");
+    printf("------------------------------------------\n");
     printf("Please enter again:\n");
 }
 
@@ -270,7 +284,7 @@ void blackJack::bet() {
     int playerBet = 0;
     std::string in;
 
-    printf("\nYou have %i chips, place your bet.\n", p->getChips());
+    printf("You have %i chips, place your bet.\n", p->getChips());
     printf("Your minimum bet is %i\n", bjR->getMinBet());
     printf("Your maximum bet is %i\n", bjR->getMaxBet());
     printf("Place your bet: ");

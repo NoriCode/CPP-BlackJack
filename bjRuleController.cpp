@@ -16,15 +16,18 @@ void bjRuleController::printRules() {
 }
 
 void bjRuleController::playerWin() {
-    printf("\nYou have won your bet is multiplied by 1.5\n");
+    printf("\n\n\n\n******************************************\n");
+    printf("You have won your bet is multiplied by 1.5\n");
 }
 
 void bjRuleController::playerLoose() {
-    printf("\nYou lost.\n");
+    printf("\n\n\n\n******************************************\n");
+    printf("You lost.\n");
 }
 
 void bjRuleController::playerTie() {
-    printf("\nTie. You get your bet back\n");
+    printf("\n\n\n\n******************************************\n");
+    printf("Tie. You get your bet back\n");
 }
 
 bjRuleController::bjRuleController() {

@@ -76,9 +76,6 @@ int bjHand::getPlayerTotalvalue(bool player) {
     return deck.getTotalValue();
 }
 
-bjHand::bjHand(bjHand *pHand) {
-
-}
 
 bjHand::bjHand() = default;
 

@@ -13,7 +13,7 @@ private:
 public:
 
 
-   bjHand(bjHand *pHand);
+    bjHand(bjHand *pHand);
 
     bjHand();
 

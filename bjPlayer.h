@@ -15,8 +15,10 @@ private:
 
 public:
     explicit bjPlayer(int c = 0) : chips(c) {
-        playerCards = new bjHand();
+
+        playerCards = bjHand();
     };
+
     void resetHand();
 
     bool isBroke(int min) const;

@@ -17,7 +17,7 @@ private:
     explicit blackJack(std::nullptr_t pVoid);
 
     enum playerOption {
-        HIT=1, STAND
+        HIT = 1, STAND
     };
 
     enum gameState {
@@ -34,7 +34,7 @@ private:
         LOSS
     };
 
-    gameState gs = static_cast<gameState>(1);
+    gameState gs = static_cast<gameState>(2);
     playerOption po = static_cast<playerOption>(4);
     mainMenu mm = static_cast<mainMenu>(4);
     playerStatus ps = static_cast<playerStatus>(2);
@@ -88,11 +88,11 @@ public:
 
     void leave();
 
-    void printDivider();
+    static void printDivider();
 
-    int inputcheck(std::string in);
+    static int inputcheck(std::string in);
 
-    void wrongInput();
+    static void wrongInput();
 };
 
 
