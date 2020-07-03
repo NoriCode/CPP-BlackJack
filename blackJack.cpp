@@ -260,7 +260,7 @@ blackJack::blackJack() = default;
 
 void blackJack::printDivider() {
     printf("\n\n\n\n------------------------------------------\n");
-    printf("\t\t\t\tNext Action\n");
+    printf("\t\tNext Action\n");
     printf("------------------------------------------\n");
 }
 

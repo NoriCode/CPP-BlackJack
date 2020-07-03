@@ -1,7 +1,8 @@
 /cmake-build-debug/
-plan.txt
 /CCPP_Exam
-CCPP_Exam.out
-test.tar.xz
+/.idea
+*.o
+*.out
+gedanken_read_me.txt
 
 
