@@ -2,6 +2,14 @@
 #include "bjRuleController.h"
 #include <fstream>
 
+bjRuleController::bjRuleController() {
+    dealerMaxPoints = 17;
+    reshuffelTrigger = 75;
+    numberOfDecks = 6;
+    initChips = 1000;
+    minBet = 2;
+    maxBet = 500;
+}
 void bjRuleController::printRules() {
     std::string line;
     std::ifstream file;
@@ -19,27 +27,19 @@ void bjRuleController::printRules() {
 
 void bjRuleController::playerWin() {
     printf("\n\n\n\n******************************************\n");
-    printf("You have won your bet is multiplied by 2\n");
+    printf("\t\tYou have won your bet is multiplied by 2\n");
 }
 
 void bjRuleController::playerLoose() {
     printf("\n\n\n\n******************************************\n");
-    printf("You lost.\n");
+    printf("\t\tYou lost.\n");
 }
 
 void bjRuleController::playerTie() {
     printf("\n\n\n\n******************************************\n");
-    printf("Tie. You get your bet back\n");
+    printf("\t\tTie. You get your bet back\n");
 }
 
-bjRuleController::bjRuleController() {
-    dealerMaxPoints = 17;
-    reshuffelTrigger = 75;
-    numberOfDecks = 6;
-    initChips = 1000;
-    minBet = 2;
-    maxBet = 500;
-}
 
 
 int bjRuleController::getDealerMaxPoints() const {
