@@ -1,7 +1,10 @@
+//Topic 14:  Object Orientation: Interface vs. Implementation *
+
 #ifndef CCPP_EXAM_BJRULECONTROLLER_H
 #define CCPP_EXAM_BJRULECONTROLLER_H
 
 #include <iostream>
+#include "enums.h"
 
 class bjRuleController {
 private:
@@ -37,7 +40,7 @@ public:
 
     int getMaxBet() const;
 
-    int winLossTieControll(int pValue, int dValue);
+    static playerStatus winLossTieControll(int pValue, int dValue);
 
 };
 

@@ -1,3 +1,4 @@
+//Topic 14:  Object Orientation: Interface vs. Implementation *
 #include "bjCards.h"
 
 void bjCards::setValue(int v) {
@@ -8,11 +9,7 @@ int bjCards::getValue() const {
     return value;
 }
 
-int bjCards::whoAmI() {
-    printf("%s, %s \n", symbol.c_str(), number.c_str());
-    return 0;
+void bjCards::whoAmI() {
+    printf("%s, %s \n", getSymbol().c_str(), getNumber().c_str());
 }
 
-std::string bjCards::getnumber() {
-    return number;
-}

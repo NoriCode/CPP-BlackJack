@@ -1,3 +1,4 @@
+//Topic 14:  Object Orientation: Interface vs. Implementation *
 
 #ifndef CCPP_EXAM_BJHAND_H
 #define CCPP_EXAM_BJHAND_H
@@ -5,47 +6,28 @@
 #include "bjCards.h"
 #include "bjDeck.h"
 
+//Topic 5: Daten: Datentypen
 class bjHand {
 private:
-    int betAmount{};
+    unsigned int betAmount{};
     bjDeck deck;
-    bool amIReal{};
 public:
-
-
-    bjHand(bjHand *pHand);
 
     bjHand();
 
-    void split();
-
-    int givePlayerBetBack() const;
+    unsigned int givePlayerBetBack() const;
 
     void resetBetamount();
 
-    void giveCard(std::shared_ptr<bjCards> card);
+    void giveCard(const std::shared_ptr<bjCards> &card);
 
-    bool canSplit();
-
-    int getDealerTotalValue();
-
-    int getBetAmount() const;
-
-    int payout() const;
-
-    std::shared_ptr<bjCards> removeFirstCard();
+    unsigned int payout() const;
 
     void showcards();
 
-    void bet(int playerBet);
-
-    void clear();
-
-    bool exist() const;
+    void bet(unsigned int playerBet);
 
     void showfirstCard();
-
-    void showValue();
 
     int getPlayerTotalvalue(bool player);
 

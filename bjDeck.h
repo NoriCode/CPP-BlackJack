@@ -1,3 +1,4 @@
+//Topic 13:  Object Orientation: Inheritance
 
 #ifndef CCPP_EXAM_BJDECK_H
 #define CCPP_EXAM_BJDECK_H
@@ -10,8 +11,15 @@
 
 class bjDeck {
 private:
+    //Topic 26: Häufige fehlerquellen -> keine Uninitialisierten variablen
+
+
+    //Topic 21: wichtige Container der C++-Standardbibliothek
+    //Topic 28: smart pointers
     std::vector<std::shared_ptr<bjCards>> deck;
     int cardCounter;
+    //Topic 21: wichtige Container der C++-Standardbibliothek
+    //Topic 28: smart pointers
     std::vector<std::shared_ptr<bjCards>> playedCards;
 
     void reduceCardCounter();
@@ -33,8 +41,6 @@ public:
     std::vector<std::shared_ptr<bjCards>> getDeck();
 
     std::shared_ptr<bjCards> playFirstCardFromStack();
-
-    void collectPlayedCards(bjCards *card);
 
     void generatePlayCardsAndAddtoDeck(int maxDecks);
 

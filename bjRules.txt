@@ -31,7 +31,7 @@ https://bicyclecards.com/how-to-play/blackjack/
 
     Payout:
         win:
-            1.5 Times your bet
+            2 Times your bet
         tie:
             your bet
         loose:

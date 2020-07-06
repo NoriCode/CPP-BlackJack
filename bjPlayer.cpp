@@ -1,10 +1,9 @@
-
+//Topic 13:  Object Orientation: Inheritance
 #include "bjPlayer.h"
-#include <utility>
 
-void bjPlayer::givePlayercard(std::shared_ptr<bjCards> card) {
+void bjPlayer::givePlayercard(const std::shared_ptr<bjCards> &card) {
 
-    playerCards.giveCard(std::move(card));
+    playerCards.giveCard(card);
 }
 
 int bjPlayer::getValue(bool player) {
@@ -49,7 +48,7 @@ void bjPlayer::printValue(bool player) {
 
 void bjPlayer::bet(int bet) {
     chips -= bet;
-    playerCards.bet(bet);
+    playerCards.bet(static_cast<unsigned int>(bet));
 }
 
 int bjPlayer::getChips() const {
@@ -61,8 +60,6 @@ void bjPlayer::showFirstCard() {
     playerCards.showfirstCard();
 }
 
-bjPlayer::bjPlayer() {
-
-}
+bjPlayer::bjPlayer() = default;
 
 

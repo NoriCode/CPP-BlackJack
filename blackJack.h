@@ -1,3 +1,4 @@
+//Topic 14:  Object Orientation: Interface vs. Implementation *
 #ifndef CCPP_EXAM_BLACKJACK_H
 #define CCPP_EXAM_BLACKJACK_H
 
@@ -6,33 +7,17 @@
 #include "bjHand.h"
 #include "bjDeck.h"
 #include "bjPlayer.h"
-
+#include "enums.h"
 
 class blackJack {
 
 private:
     blackJack();
 
+    //Topic 23: Design Patterns Signleton
     explicit blackJack(std::nullptr_t pVoid);
 
-    enum playerOption {
-        HIT = 1, STAND
-    };
-
-    enum gameState {
-        NEWGAME = 1, LEAVE, PLAYING
-    };
-
-    enum mainMenu {
-        PLAY = 1, RULES, EXIT
-    };
-
-    enum playerStatus {
-        VICTORY = 0,
-        TIE,
-        LOSS
-    };
-
+    //Topic 26: Häufige fehlerquellen -> keine Uninitialisierten variablen
     gameState gs = static_cast<gameState>(2);
     playerOption po = static_cast<playerOption>(4);
     mainMenu mm = static_cast<mainMenu>(4);
@@ -42,9 +27,9 @@ private:
     bjDeck cD;
 
 
+    //Topic 17: Object Orientation: Object Lifecycle
     bjPlayer *p = new bjPlayer(bjR->getInitChips());
     bjPlayer *d = new bjPlayer(0);
-    // bjDealer *d = new bjDealer();
 
 
     void newGame();
@@ -63,16 +48,13 @@ private:
 
     void kickPlayerIfBroke();
 
-    void exitGame();
-
-    void checkEarlyVictoryCondidtion();
-
     void bet();
 
 
 public:
-    // explicit blackJack(bjRuleController *pController) : bjR() {    }
 
+
+    //Topic 23: Design Patterns Singleton
     static blackJack *getInstance() {
         static blackJack s(nullptr);
         return &s;
@@ -82,10 +64,7 @@ public:
 
     void operator=(const blackJack &) = delete;
 
-
     void game();
-
-    void leave();
 
     static void printDivider();
 

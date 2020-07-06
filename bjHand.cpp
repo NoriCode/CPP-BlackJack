@@ -1,61 +1,34 @@
+//Topic 14:  Object Orientation: Interface vs. Implementation *
 
 #include "bjHand.h"
 
-#include <utility>
 
-void bjHand::split() {
-}
-
-bool bjHand::canSplit() {
-    return deck.getDeck().at(0)->getValue() == deck.getDeck().at(1)->getValue();
-}
-
-int bjHand::getBetAmount() const {
-    return betAmount;
-}
-
-int bjHand::payout() const {
-    return (int) betAmount * 1.5;
+unsigned int bjHand::payout() const {
+    //Topic 8: Daten Bitoperation
+    return betAmount << 1u;
 }
 
 void bjHand::resetBetamount() {
     betAmount = 0;
 }
 
-std::shared_ptr<bjCards> bjHand::removeFirstCard() {
-    return deck.getDeck().front();
-}
-
-void bjHand::giveCard(std::shared_ptr<bjCards> card) {
-    amIReal = true;
-    deck.addCardtoDeck(std::move(card));
+void bjHand::giveCard(const std::shared_ptr<bjCards> &card) {
+    deck.addCardtoDeck(card);
 }
 
 void bjHand::showcards() {
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     for (const std::shared_ptr<bjCards> &card: deck.getDeck()) {
         card->whoAmI();
     }
 }
 
-void bjHand::bet(int playerBet) {
+void bjHand::bet(unsigned int playerBet) {
     betAmount = playerBet;
 }
 
-int bjHand::givePlayerBetBack() const {
+unsigned int bjHand::givePlayerBetBack() const {
     return betAmount;
-}
-
-void bjHand::clear() {
-
-    for (std::shared_ptr<bjCards> card: deck.getDeck()) {
-        card.reset();
-    }
-
-    amIReal = false;
-}
-
-bool bjHand::exist() const {
-    return amIReal;
 }
 
 void bjHand::showfirstCard() {
@@ -64,9 +37,14 @@ void bjHand::showfirstCard() {
 
 
 int bjHand::getPlayerTotalvalue(bool player) {
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (player) {
+        //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
+        //Topic 26: Häufige fehlerquellen -> Index out of Bounds wird durch for each abgefangen
         for (const std::shared_ptr<bjCards> &card: deck.getDeck()) {
-            if (card->getnumber() == "A") {
+            //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
+            if (card->getNumber() == "A") {
+                //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
                 if (deck.getTotalValue() > 21) {
                     card->setValue(1);
                 }
@@ -81,9 +59,4 @@ bjHand::bjHand() = default;
 
 void bjHand::showValue(bool player) {
     printf("The cards have a value of: %i\n", getPlayerTotalvalue(player));
-}
-
-int bjHand::getDealerTotalValue() {
-
-    return deck.getTotalValue();
 }

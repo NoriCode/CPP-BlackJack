@@ -1,13 +1,15 @@
+//Topic 13:  Object Orientation: Inheritance
 #include "bjRuleController.h"
 #include <fstream>
-#include <iostream>
 
 void bjRuleController::printRules() {
     std::string line;
     std::ifstream file;
     file.open("bjRules.txt");
 
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (file.is_open()) {
+        //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
         while (std::getline(file, line)) {
             std::cout << line << std::endl;
         }
@@ -17,7 +19,7 @@ void bjRuleController::printRules() {
 
 void bjRuleController::playerWin() {
     printf("\n\n\n\n******************************************\n");
-    printf("You have won your bet is multiplied by 1.5\n");
+    printf("You have won your bet is multiplied by 2\n");
 }
 
 void bjRuleController::playerLoose() {
@@ -64,28 +66,29 @@ int bjRuleController::getMaxBet() const {
     return maxBet;
 }
 
-int bjRuleController::winLossTieControll(int pValue, int dValue) {
+  playerStatus bjRuleController::winLossTieControll(int pValue, int dValue) {
 
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (pValue > 21) {
         playerLoose();
-        return 3;
+        return LOSS;
     } else if (pValue == 21) {
         if (dValue == 21) {
             playerTie();
-            return 2;
+            return TIE;
         }
     } else {
         if (dValue <= 21) {
             if (pValue < dValue) {
                 playerLoose();
-                return 3;
+                return LOSS;
             } else if (pValue == dValue) {
                 playerTie();
-                return 2;
+                return TIE;
             }
         }
     }
     playerWin();
-    return 1;
+    return VICTORY;
 }
 

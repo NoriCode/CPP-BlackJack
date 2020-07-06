@@ -1,31 +1,27 @@
-//
-// Created by philip_nori on 19.06.20.
-//
-
+//Topic 14:  Object Orientation: Interface vs. Implementation *
 #ifndef CCPP_EXAM_BJCARDS_H
 #define CCPP_EXAM_BJCARDS_H
 
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
+#include <utility>
+#include "playingCard.h"
 
-class bjCards {
-protected:
-
-    std::string symbol;
-
-    std::string number;
+//Topic 13: Object Orientation: Inheritance
+class bjCards : public playingCard {
+private:
     int value;
 
 public:
-    explicit bjCards(std::string s = "nori", std::string n = "0", int v = 0) : symbol(s), number(n), value(v) {}
+    //Topic 26: Häufige fehlerquellen -> keine Uninitialisierten variablen
+    explicit bjCards(std::string s = "nori", std::string n = "0", int v = 0) : playingCard(std::move(s), std::move(n)),
+                                                                               value(v) {}
 
     void setValue(int v);
 
     int getValue() const;
 
-    int whoAmI();
-
-    std::string getnumber();
+    void whoAmI() override;
 
 };
 

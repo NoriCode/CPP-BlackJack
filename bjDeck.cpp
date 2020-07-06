@@ -1,8 +1,7 @@
+//Topic 13:  Object Orientation: Inheritance
 
 #include "bjDeck.h"
-#include <algorithm>
 #include <random>
-#include "bjCards.h"
 
 void bjDeck::addCardtoDeck(const std::shared_ptr<bjCards> &card) {
     deck.push_back(card);
@@ -28,33 +27,38 @@ void bjDeck::reduceCardCounter() {
 void bjDeck::collectPlayedCards(const std::shared_ptr<bjCards> &card) {
 
     playedCards.push_back(card);
-    //deck.erase(deck.at(0)));
-    deck.empty();
     reduceCardCounter();
 }
 
 void bjDeck::generatePlayCardsAndAddtoDeck(int maxDecks) {
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     for (int i = 0; i < maxDecks; ++i) {
+        //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
         for (int j = 0; j < 13; j++) {
             int value = j + 2;
+            //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
             if (value > 10) {
                 value = 10;
+                //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
                 if (j == 12) {
                     value = 11;
                 }
             }
-            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("hearts", getNumberX(j), value)));
-            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("bells", getNumberX(j), value)));
-            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("leaves", getNumberX(j), value)));
-            addCardtoDeck(static_cast<std::shared_ptr<bjCards>>(new bjCards("acorns", getNumberX(j), value)));
+            //Topic 17: Object Orientation: Object Lifecycle
+            addCardtoDeck(std::make_shared<bjCards>("hearts", getNumberX(j), value));
+            addCardtoDeck(std::make_shared<bjCards>("bells", getNumberX(j), value));
+            addCardtoDeck(std::make_shared<bjCards>("leaves", getNumberX(j), value));
+            addCardtoDeck(std::make_shared<bjCards>("acorns", getNumberX(j), value));
         }
         deckShuffel();
     }
     deckShuffel();
-    setCardCounter(deck.size());
+
+    setCardCounter(static_cast<int>(deck.size()));
 }
 
 void bjDeck::deckShuffel() {
+    //Topic 22: wichtige Algorithmen der C++-Standardbibliothek
     std::shuffle(deck.begin(), deck.end(), std::mt19937(std::random_device()()));
 }
 
@@ -69,6 +73,8 @@ std::string bjDeck::getNumberX(int x) {
 
 int bjDeck::getTotalValue() {
     int value = 0;
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
+    //Topic 26: Häufige fehlerquellen -> Index out of Bounds wird durch for each abgefangen
     for (const std::shared_ptr<bjCards> &card : deck) {
         value += card->getValue();
     }
@@ -76,6 +82,7 @@ int bjDeck::getTotalValue() {
 }
 
 void bjDeck::reshuffelIfNeeded(int trigger) {
+    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (cardCounter <= trigger) {
         deckShuffel();
     }

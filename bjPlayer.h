@@ -1,3 +1,4 @@
+//Topic 13:  Object Orientation: Inheritance
 #ifndef CCPP_EXAM_BJPLAYER_H
 #define CCPP_EXAM_BJPLAYER_H
 
@@ -7,6 +8,7 @@
 
 class bjPlayer {
 private:
+    //Topic 26: Häufige fehlerquellen -> keine Uninitialisierten variablen
     bjPlayer();
 
     bjHand playerCards;
@@ -15,7 +17,7 @@ private:
 
 public:
     explicit bjPlayer(int c = 0) : chips(c) {
-
+        //Topic 17: Object Orientation: Object Lifecycle
         playerCards = bjHand();
     };
 
@@ -31,7 +33,7 @@ public:
 
     void showAllCards();
 
-    void givePlayercard(std::shared_ptr<bjCards> card);
+    void givePlayercard(const std::shared_ptr<bjCards> &card);
 
     void bet(int bet);
 
