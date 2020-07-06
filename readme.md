@@ -1,6 +1,6 @@
 
 # Blackjack
-##Disclaimer
+## Disclaimer
 I am not a nativ speaker and a person who rarely writes in english. Please Inform me if you find a typo or some grammar issues.
 
 This is my final C/C++ exam after a 4 months course.
@@ -9,7 +9,7 @@ I used [Clion](https://www.jetbrains.com/clion/)  and anything that is included 
 
 Use this programm on your own risk.
 
-##The Game
+## The Game
 
 This [Rules](https://bicyclecards.com/how-to-play/blackjack/) used as a baseline for this Game, some rules are modified:
 ```Regeln
@@ -220,30 +220,30 @@ Your choice:
 This project was just my exam and is in the best state I am able to programm. If you can find any bugs left in the code or some better ways to solve some functions of the game. Create a pull request. I dont guarantee that I will look at them.
 
 ## Explaining some stuff
-###bjCards
+### bjCards
 The Cards that are used in this game. Each Card has a "unique" combination of Symbol, number and value.
 
-###bjDeck:
+### bjDeck:
 Here are the cards stored.
 
-###bjHand:
+### bjHand:
 Here are the bet from the player and his cards stored.
 
-###bjPlayer:
+### bjPlayer:
 This is the player and the dealer. Both use in most cases the same functions. The difference between player and dealer is that the dealer has always 0 chips.
 
-###bjRuleController:
+### bjRuleController:
 This is the place where the rules are stored. 
 
-###blackJack:
+### blackJack:
 This is the class where the game takes place.
 
-###enums:
+### enums:
 These are my enums, they are in an extra ".h" for convenience purposes.
 
-###main:
+### main:
 The only reason this exist is that I needed a place to start the game. 
 
-###playingCard:
+### playingCard:
 This is just an Interface for a normal card, without any funtions.
 
