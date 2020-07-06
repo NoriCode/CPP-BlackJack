@@ -66,7 +66,7 @@ int bjRuleController::getMaxBet() const {
     return maxBet;
 }
 
-  playerStatus bjRuleController::winLossTieControll(int pValue, int dValue) {
+playerStatus bjRuleController::winLossTieControll(int pValue, int dValue) {
 
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (pValue > 21) {

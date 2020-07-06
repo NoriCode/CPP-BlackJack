@@ -1,15 +1,11 @@
-//
-// Created by nori on 06.07.20.
-//
-
 #ifndef CCPP_EXAM_ENUMS_H
 #define CCPP_EXAM_ENUMS_H
 enum playerOption {
-    HIT = 1, STAND
+    HIT = 1, STAND, PREGAME
 };
 
 enum gameState {
-    NEWGAME = 1, LEAVE, PLAYING
+    NEWGAME = 1, LEAVE, PLAYING, ENDTURN
 };
 
 enum mainMenu {

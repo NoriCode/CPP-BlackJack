@@ -48,7 +48,7 @@ void bjPlayer::printValue(bool player) {
 
 void bjPlayer::bet(int bet) {
     chips -= bet;
-    playerCards.bet(static_cast<unsigned int>(bet));
+    playerCards.bet(bet);
 }
 
 int bjPlayer::getChips() const {

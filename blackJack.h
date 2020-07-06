@@ -17,11 +17,12 @@ private:
     //Topic 23: Design Patterns Signleton
     explicit blackJack(std::nullptr_t pVoid);
 
+
     //Topic 26: Häufige fehlerquellen -> keine Uninitialisierten variablen
-    gameState gs = static_cast<gameState>(2);
-    playerOption po = static_cast<playerOption>(4);
-    mainMenu mm = static_cast<mainMenu>(4);
-    playerStatus ps = static_cast<playerStatus>(2);
+    gameState gs = LEAVE;
+    playerOption po = PREGAME;
+    playerStatus ps = TIE;
+    mainMenu mm = RULES;
 
     bjRuleController *bjR = new bjRuleController();
     bjDeck cD;
@@ -46,7 +47,7 @@ private:
 
     void playerRoundOptions();
 
-    void kickPlayerIfBroke();
+    bool checkIfBroke();
 
     void bet();
 

@@ -1,11 +1,8 @@
 //Topic 14:  Object Orientation: Interface vs. Implementation *
-
 #include "bjHand.h"
 
-
-unsigned int bjHand::payout() const {
-    //Topic 8: Daten Bitoperation
-    return betAmount << 1u;
+ int bjHand::payout() const {
+    return betAmount * 2;
 }
 
 void bjHand::resetBetamount() {
@@ -23,11 +20,11 @@ void bjHand::showcards() {
     }
 }
 
-void bjHand::bet(unsigned int playerBet) {
+void bjHand::bet(int playerBet) {
     betAmount = playerBet;
 }
 
-unsigned int bjHand::givePlayerBetBack() const {
+ int bjHand::givePlayerBetBack() const {
     return betAmount;
 }
 

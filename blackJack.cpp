@@ -40,8 +40,8 @@ void blackJack::game() {
 
                     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
                     if (p->getValue(true) >= 21) {
-                        po = static_cast<playerOption>(2);
-                        gs = static_cast<gameState>(2);
+                        po = PREGAME;
+                        gs = LEAVE;
 
                         //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
                         if (p->getValue(true) == 21) {
@@ -68,13 +68,13 @@ void blackJack::game() {
                     } else if (po == STAND) {
                         printf("\nYou:\n");
                         p->printValue(true);
-                        gs = static_cast<gameState>(4);
+                        gs = ENDTURN;
                     }
                 }
             }
             //dealer phase
             printf("\n\n\n\n------------------------------------------\n");
-            printf("Dealer Turn\n");
+            printf("\t\tDealer Turn\n");
             printf("------------------------------------------\n");
 
             printf("The Dealer has this cards: \n");
@@ -95,21 +95,28 @@ void blackJack::game() {
             d->printValue(false);
 
             //cashout
-            ps = static_cast<playerStatus>(bjR->winLossTieControll(p->getValue(true), d->getValue(false)));
+            ps = static_cast<playerStatus>(bjRuleController::winLossTieControll(p->getValue(true), d->getValue(false)));
 
 
             //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-            if (ps == VICTORY) {
-                p->payWinSum();
-            } else if (ps == TIE) {
-                p->giveBetBack();
-            } else if (ps == LOSS) {
-                p->collectBet();
+            switch (ps) {
+                case VICTORY:
+                    p->payWinSum();
+                    break;
+                case TIE:
+                    p->giveBetBack();
+                    break;
+                case LOSS:
+                    p->collectBet();
+                    break;
             }
 
             p->resetHand();
             d->resetHand();
-            kickPlayerIfBroke();
+            if (checkIfBroke()) {
+                printf("\nBouncer: You dont own enough Chips to play. You have to leave the Casino\n");
+                return;
+            }
             printDivider();
             playAnotherRound();
         } else if (mm == RULES) {
@@ -131,19 +138,10 @@ void blackJack::drawInitialCards() {
 
 }
 
-void blackJack::kickPlayerIfBroke() {
+bool blackJack::checkIfBroke() {
 
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-    if (p->isBroke(bjR->getMinBet())) {
-        mm = static_cast<mainMenu>(3);
-        printf("\nBouncer: You dont own enough Chips to play. You have to leave the Casino\n");
-        exit(1);
-    }
-
-    //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-    if (mm == EXIT) {
-        exit(0);
-    }
+    return p->isBroke(bjR->getMinBet());
 }
 
 void blackJack::menu() {
@@ -152,7 +150,7 @@ void blackJack::menu() {
     std::regex regexPattern("-?[0-9]+.?[0-9]+");
 
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-    do {
+    while (true) {
         printf("Welcome to Blackjack\n");
         printf("Your options are:\n");
         printf("1 - Play\n");
@@ -167,14 +165,13 @@ void blackJack::menu() {
         if (correctIn <= 3 && correctIn >= 1) {
             break;
         }
-    } while (true);
+    }
     printf("\n\n");
 
 
     mm = static_cast<mainMenu>(correctIn);
-    gs = static_cast<gameState>(1);
-    po = static_cast<playerOption>(4);
-    ps = static_cast<playerStatus>(4);
+    gs = NEWGAME;
+    po = PREGAME;
 }
 
 
@@ -200,7 +197,9 @@ void blackJack::playAnotherRound() {
     printf("Any other Value brings you to the menu. \n");
 
 
+    printf("0 - no\n");
     printf("1 - yes\n");
+
 
     printf("Your choice: ");
     std::cin >> in;
@@ -208,19 +207,19 @@ void blackJack::playAnotherRound() {
 
 
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-    if (correctIn != 1) {
-        correctIn = 2;
+    if (correctIn == 1) {
+        gs = NEWGAME;
+    } else {
+        gs = LEAVE;
     }
 
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     for (int i = 0; i < 100; ++i) {
         printf("\n\n");
     }
-    gs = static_cast<gameState>(correctIn);
 }
 
 void blackJack::draw() {
-
     //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
     if (po == HIT) {
         p->givePlayercard(cD.playFirstCardFromStack());
@@ -233,7 +232,7 @@ void blackJack::playerRoundOptions() {
     std::string in;
 
     int correctIn;
-    do {
+    while (true) {
         printf("\n\nYour options are\n");
 
         printf("1 -> hit\n");
@@ -244,16 +243,19 @@ void blackJack::playerRoundOptions() {
 
 
         //Topic 9: Kontrollfluß: grundlegende Kontrollstrukturen
-        if (correctIn <= 2 && correctIn >= 1) {
-            break;
+        switch (correctIn) {
+            case 1:
+                po = HIT;
+                printf("\n\n");
+                return;
+            case 2:
+                po = STAND;
+                printf("\n\n");
+                return;
+            default:
+                break;
         }
-    } while (true);
-
-    printf("\n\n");
-
-    //Topic 6: Daten : Umwandlung
-    po = static_cast<playerOption>(correctIn);
-
+    }
 }
 
 blackJack::blackJack(std::nullptr_t) {}
