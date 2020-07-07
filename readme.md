@@ -248,3 +248,5 @@ The only reason this exist is that I needed a place to start the game.
 ### playingCard:
 This is just an Interface for a normal card, without any funtions.
 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
