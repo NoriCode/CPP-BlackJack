@@ -12,7 +12,8 @@ Use this programm on your own risk.
 ## The Game
 
 This [Rules](https://bicyclecards.com/how-to-play/blackjack/) used as a baseline for this Game, some rules are modified:
-```Regeln
+```
+Regeln
     Cards:
         played with 6 Decks with french deck (2 - 10, B, D, K ,A)
         reshuffeld when 75 cards are left
@@ -95,13 +96,13 @@ You can modify some rules in the "bjRuleController.cpp" file.
 
 ## Installation
 
-```bash
+```
 $ ./build.sh
 ```
 
 ## Usage
 
-```bash
+```
 $ ./blackJack.out
 ```
 ## How to play
@@ -110,7 +111,7 @@ You can only enter a number. You have to repeat your input if you enter a number
 
 ### Start of the game
 
-```bash
+```
 Welcome to Blackjack
 Your options are:
 1 - Play
@@ -124,7 +125,7 @@ You have to enter a Value between 2 and 500. The value has to be less than your 
 
 The Values are defined in the bjRuleController.h
 
-```bash
+```
 ------------------------------------------
 		Next Action
 ------------------------------------------
@@ -140,7 +141,7 @@ Displayed are your cards and the open card of the dealer.
 You wont see this screen if your cards have a value of 21 or more. The value of your cards is calculated in the background. The exact value of the cards is not display because it would remove a the skill part of blackjack. The player has in this case a value of 13.
 
 
-```bash
+```
 ------------------------------------------
 		Next Action
 ------------------------------------------
@@ -159,7 +160,7 @@ Your choice:
 
 ### Hit
 If you choose to draw another card this screen will repeat but with an additional card. The value of your ace is always calculated to be the best case for your round. The Player has in this case a value of 14.
-```bash
+```
 ------------------------------------------
 		Next Action
 ------------------------------------------
@@ -180,7 +181,7 @@ Your choice:
 
 ### Stand
 This screen repeats with every card the dealer draws. He draws until he has a value of 17 or above. The dealer has in this case a value of 20.
-```bash
+```
 ------------------------------------------
 		Dealer Turn
 ------------------------------------------
@@ -190,7 +191,7 @@ acorns, A
 ```
 ### Round end
 
-```bash
+```
 You:
 The cards have a value of: 16
 
