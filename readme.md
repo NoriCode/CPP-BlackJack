@@ -7,7 +7,7 @@ This is my final C/C++ exam after a 4 months course.
 
 I used [Clion](https://www.jetbrains.com/clion/)  and anything that is included to clean my code and optimize some parts.
 
-Use this programm on your own risk.
+Use this program on your own risk.
 
 ## The Game
 

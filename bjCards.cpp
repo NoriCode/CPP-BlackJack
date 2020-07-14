@@ -12,4 +12,3 @@ int bjCards::getValue() const {
 void bjCards::whoAmI() {
     printf("%s, %s \n", getSymbol().c_str(), getNumber().c_str());
 }
-
