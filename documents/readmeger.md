@@ -1,17 +1,13 @@
 
 # Blackjack
-## Disclaimer
-I am not a nativ speaker and a person who rarely writes in english. Please Inform me if you find a typo or some grammar issues.
+## Vorwort
+Das Program wurde mit [Clion](https://www.jetbrains.com/clion/) erstellt. Zustätzlich wurde ClangTidy verwendet um Teile des Codes zu optimieren. 
 
-This is my final C/C++ exam after a 4 months course.
+Verwendung auf eigene Gefahr. 
 
-I used [Clion](https://www.jetbrains.com/clion/)  and anything that is included to clean my code and optimize some parts.
+## Das Spiel
 
-Use this program on your own risk.
-
-## The Game
-
-This [Rules](https://bicyclecards.com/how-to-play/blackjack/) used as a baseline for this Game, some rules are modified:
+Diese [Regeln](https://bicyclecards.com/how-to-play/blackjack/) sind die Basis für diese Umsetzung von Blackjack. Einige Regeln wurden verändert. Die Regeln für diese Version von Blackjack sind folgende:
 ```
 Regeln
     Cards:
@@ -81,8 +77,8 @@ Regeln
        +--------+-----------+--------+--------+
 
 ```
-### Change a few rules
-You can modify some rules in the "bjRuleController.cpp" file. 
+### Anpassen der Regeln
+Einige Regeln können in der "bjRuleController.cpp" verändert werden. 
    ```C++
    bjRuleController::bjRuleController() {
        dealerMaxPoints = 17;
@@ -100,17 +96,17 @@ You can modify some rules in the "bjRuleController.cpp" file.
 $ ./build.sh
 ```
 
-## Usage
+## Starten des Spiels
 
 ```
 $ ./blackJack.out
 ```
-## How to play
+## Beispielhafter Spielablauf
 ### Important Information
-You can only enter a number. You have to repeat your input if you enter a number that is not shown on your screen. The only exception to this is the end screen, here can you enter any number between 0 and 9.
+Du kannst nur Nummern eingeben. Bei eingabe einer Zahl die nicht zur Auswahl steht musst du deine Eingabe wiederholen. Mit Ausnahme vom Endscreen hier wird jede Nummer von 0 bis 9 akzeptiert
 
-### Start of the game
-Enter 1 or 2 or 3 to choose one of these options.
+### Start des Spiels
+Gebe 1 oder 2 oder 3 ein um eine der entsprechenden Optionen auszuwählen.
 ```
 Welcome to Blackjack
 Your options are:
@@ -121,10 +117,9 @@ Your choice:
 ```
 
 ### Bet Screen
-You have to enter a Value between 2 and 500. The value has to be less than your chips. There is an other screen if you are not able to bet.
+Du musst einen Wert zwischen 2 und 500 eingeben. Der Wert muss außerdem niedriger sein als die Gesamtanzahl deiner Chips. Solltest du nicht genug chips haben zum Wetten wird dir ein anderer Bildschirm angezeigt. 
 
-The Values are defined in the bjRuleController.h
-
+Die Werte stehen in der "bjRuleController.h" 
 
 ```
 ------------------------------------------
@@ -136,10 +131,10 @@ Your maximum bet is 500
 Place your bet: 
 ```
 
-### Your turn
-Displayed are your cards and the open card of the dealer.
+### Deine Runde
+Es werden deine Karten und die offenen Karte des Dealers angezeigt.
 
-You wont see this screen if your cards have a value of 21 or more. The value of your cards is calculated in the background. The exact value of the cards is not display because it would remove a the skill part of blackjack. The player has in this case a value of 13.
+Der Bildschirm wird dir nicht angzeigt wenn deine Karten einen Wert von 21 oder höher haben. Der Wert wird im Hintergrund berechnet. Damit das Spiel nicht zu stark vereinfacht wird bekommst du den Wert nicht angezeigt. Der Spieler hat in diesem Fall einen Wert von 13.
 
 
 ```
@@ -160,7 +155,7 @@ Your choice:
 ```
 
 ### Hit
-If you choose to draw another card this screen will repeat but with an additional card. The value of your ace is always calculated to be the best case for your round. The Player has in this case a value of 14.
+Wenn du dich dafür entscheidest eine Karte zu ziehen wird dir dieser Bildschirm angezigt. Der Wert deiner Karten ist immer für den best Case berechnet. Das heißt das Ass hat den Wert "1" wenn du über 21 kommen würdest. Der Spieler hat in diesem Fall den wert 14.
 ```
 ------------------------------------------
 		Next Action
@@ -181,7 +176,7 @@ Your choice:
 
 
 ### Stand
-This screen repeats with every card the dealer draws. He draws until he has a value of 17 or above. The dealer has in this case a value of 20.
+Dieser Bildschirm wird mit jeder neu gezogenen Karte des Dealers angzeigt. Der Dealer zieht bis er einen Wert von 17 oder höher hat. Der Dealer hat einen Wert von 20.
 ```
 ------------------------------------------
 		Dealer Turn
@@ -218,36 +213,33 @@ Any other Value brings you to the menu.
 Your choice:
 ```
 
-## Contributing
-This project was just my exam and is in the best state I am able to programm. If you can find any bugs left in the code or some better ways to solve some functions of the game. Create a pull request. I dont guarantee that I will look at them.
-
-## Explaining some stuff
+## Ein paar Erläuterungen
 ### bjCards
-The Cards that are used in this game. Each Card has a "unique" combination of Symbol, number and value.
+Die Karten die in diesem Spiel verwendet werden. Jede Karte hat eine "einzigartige" Kombination aus Symbol, Zahl und Wert.
 
 ### bjDeck:
-Here are the cards stored.
+Das Deck besteht aus der in der bjRuleController.h definierten anzahl an Spieldecks mit je 52 Karten.
 
 ### bjHand:
-Here are the bet from the player and his cards stored.
+Die Karten und Wette des Spielers.
 
 ### bjPlayer:
-This is the player and the dealer. Both use in most cases the same functions. The difference between player and dealer is that the dealer has always 0 chips.
+Das ist der Spieler und der Dealer. Beide nutzen die selben Funktionen. Der unterschied besteht darin das der Dealer immer 0 Chips besitzt.
 
 ### bjRuleController:
-This is the place where the rules are stored. 
+Hier werden die Regeln des Spiels verwaltet. 
 
 ### blackJack:
-This is the class where the game takes place.
+Das ist das eigentliche Spiel.
 
 ### enums:
-These are my enums, they are in an extra ".h" for convenience purposes.
+Hier stehen die Enums für das Spiel. Die sind der Einfachkeit halber ausgelagert.
 
 ### main:
-The only reason this exist is that I needed a place to start the game. 
+Hier wird das SPiel gestartet 
 
 ### playingCard:
-This is just an Interface for a normal card, without any funtions.
+Ein Interface für die Normale Karten ohne Funktionen.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
