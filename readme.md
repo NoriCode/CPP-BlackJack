@@ -5,9 +5,11 @@ I am not a nativ speaker and a person who rarely writes in english. Please Infor
 
 This is my final C/C++ exam after a 4 months course.
 
-I used [Clion](https://www.jetbrains.com/clion/)  and anything that is included to clean my code and optimize some parts.
+I used [Clion](https://www.jetbrains.com/clion/) and anything that is included to clean my code and optimize some parts.
 
 Use this program on your own risk.
+
+Thanks to [Simon Struck](https://github.com/AnyTimeTraveler) for cleaning the repository and showing me how to clean my code.
 
 ## The Game
 
