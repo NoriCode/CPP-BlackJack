@@ -1,7 +1,7 @@
 
 # Blackjack
 ## Disclaimer
-I am not a nativ speaker and a person who rarely writes in english. Please Inform me if you find a typo or some grammar issues.
+I am not a nativ speaker and a person who rarely writes in english. Please inform me if you find a typo or some grammar issues.
 
 This is my final C/C++ exam after a 4 months course.
 
