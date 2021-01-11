@@ -11,6 +11,18 @@ Use this program on your own risk.
 
 Thanks to [Simon Struck](https://github.com/AnyTimeTraveler) for cleaning the repository and showing me how to clean my code.
 
+
+
+## General Information
+
+[Hochschule](https://en.wikipedia.org/wiki/Hochschule): [Hochschule Emden/Leer](https://www.hs-emden-leer.de/en/)
+
+Faculties: [Informatik](https://www.hs-emden-leer.de/en/current-students/faculties/technology/study-programs/computer-science)
+
+Supervising lecturer: [Prof. Dr. Carsten Link](http://www.technik-emden.de/~clink/)
+
+Period of origin: summer semester 2020
+
 ## The Game
 
 This [Rules](https://bicyclecards.com/how-to-play/blackjack/) used as a baseline for this Game, some rules are modified:
