@@ -1,0 +1,1 @@
+This project was just my exam and is in the best state I am able to programm. If you find any bugs left in the code or some better ways to solve some functions of the game. Create a pull request. I dont guarantee that I will look at them.
